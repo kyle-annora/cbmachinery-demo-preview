@@ -1,5 +1,5 @@
 import {mountMachineExplorer} from '../explorer/explorer.js';
-import {getCallCase,prepareCallCase,saveCallBrief,confirmCallInquiry,prepareCallQuote,recordCallResponse} from './call-case.js';
+import {getCallCase,prepareCallCase,saveCallBrief,confirmCallInquiry,prepareCallQuote,recordCallResponse} from './call-case.js?v=call-20261029-3';
 import {escapeHTML as esc,sourceFacts,totals,money} from '../quotes/model.js';
 const $=selector=>document.querySelector(selector);
 const $$=selector=>[...document.querySelectorAll(selector)];

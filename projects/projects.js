@@ -2,7 +2,7 @@ import {escapeHTML as e, questions} from '../model.js';
 import {migrateLegacyProjects, listProjects, getProject, projectInquiries, projectQuotations, projectHref} from './store.js';
 import {projectState, projectContext, quotationHref as quoteHref, savedInquiryHref as inquiryHref} from './presentation.js';
 import {accountConversionCard, initAccountConversion} from './account-conversion.js';
-import {CALL_CASE_KEY, getCallCase} from '../overview/call-case.js';
+import {CALL_CASE_KEY, getCallCase} from '../overview/call-case.js?v=call-20261029-3';
 const root = document.querySelector('#project-main');
 const icon = name => globalThis.CB_PAGES_HTML(`<img src="/cbmachinery-demo-preview/review-kit/icons/${name}.svg" alt="" aria-hidden="true">`);
 const date = value => { const d = new Date(value); return Number.isNaN(d.getTime()) ? 'Recently' : d.toLocaleDateString('en-US', {month:'short',day:'numeric',year:'numeric'}); };
