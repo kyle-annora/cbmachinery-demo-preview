@@ -14,13 +14,20 @@ let warning = '';
 try { migrateLegacyProjects(); } catch { warning = 'Browser storage is unavailable. Existing records may still be visible; new changes cannot be saved.'; }
 function hero(kicker, title, description, extra = '') { return `<section class="pj-hero"><div class="site-wrap"><p class="pj-kicker">${kicker}</p><h1>${title}</h1><p class="pj-intro">${description}</p>${extra}</div></section>`; }
 function empty(title, description) { root.innerHTML = hero('MY PROJECTS',title,description) + globalThis.CB_PAGES_HTML(`<div class="site-wrap pj-empty"><a class="btn btn-primary" href="/cbmachinery-demo-preview/request/?new=1">Start an inquiry ${icon('arrow-right')}</a>${localNote}${warning ? `<p role="alert">${e(warning)}</p>` : ''}</div>`); }
+function draftInquiryHref(project) {
+  try {
+    const call = getCallCase();
+    if (call?.phase === 'brief' && call.projectId === project.id) return '/overview/#brief';
+  } catch {}
+  return '/request/?project='+encodeURIComponent(project.id);
+}
 function list() {
   const projects = listProjects();
   if (!projects.length) return empty('Your next project starts here.', 'Continue a saved inquiry or return to a quotation. Your projects will appear here as you work.');
   const accountProject = projects.find(p => projectInquiries(p).length);
   root.innerHTML = hero('MY PROJECTS', 'Pick up where you left off.', 'Your inquiries and quotations, together in one place.') + globalThis.CB_PAGES_HTML(`<section class="site-wrap pj-content"><div class="pj-list-heading"><h2 id="pj-list-title">${projects.length} ${projects.length===1?'project':'projects'}</h2><a class="btn btn-secondary pj-link pj-new-inquiry" href="/cbmachinery-demo-preview/request/?new=1">Start a new inquiry ${icon('arrow-right')}</a></div>${accountConversionCard(accountProject, {}, {compact:true})}<div class="pj-list-columns" aria-hidden="true"><span>Project</span><span>Documents</span><span>Last updated</span><span>Quick action</span></div><ul class="pj-project-list" role="list" aria-labelledby="pj-list-title">${projects.map(p => {
     const quotes = projectQuotations(p), records = projectInquiries(p), state = projectState(p, records, quotes), data = state.currentData;
-    const title = projectTitle(p), context = projectContext(data), action = state.primaryAction;
+    const title = projectTitle(p), context = projectContext(data), action = state.hasDraft && !state.latestQuote ? {...state.primaryAction,href:draftInquiryHref(p)} : state.primaryAction;
     return globalThis.CB_PAGES_HTML(`<li class="pj-project-row" data-state="${state.kind}"><div class="pj-project-title"><h3><a class="pj-project-name" href="${projectHref(p.id)}" aria-label="View ${e(title)} project, reference ${e(p.id)}">${e(title)}</a></h3><p class="pj-project-company">${e(data.company || p.company || 'Company to add')}</p>${context?`<p class="pj-project-context">${e(context)}</p>`:''}</div>${stateMarkup(state)}<div class="pj-project-meta"><time datetime="${e(p.updatedAt || '')}">${e(date(p.updatedAt))}</time><span>${e(p.id)}</span></div><a class="btn btn-secondary pj-row-action" href="${action.href}" aria-label="${e(action.label)} for ${e(title)}, reference ${e(p.id)}${state.latestQuote?`, revision ${state.latestQuote.revision}`:''}">${action.label}${icon('arrow-right')}</a></li>`);
   }).join('')}</ul>${localNote}${warning?`<p role="alert">${e(warning)}</p>`:''}</section>`);
 }
@@ -40,7 +47,7 @@ function detail(project) {
   const latest = state.latestInquiry, q = state.latestQuote, data = state.currentData;
   const openQuestions = state.hasDraft ? questions({...data,files:data.files||[]}) : data.questions || questions({...data,files:data.files||[]});
   document.title = `${projectTitle(project)} | C&B Machinery`;
-  const primary = state.hasDraft ? globalThis.CB_PAGES_HTML(`<a class="btn btn-primary" href="/cbmachinery-demo-preview/request/?project=${encodeURIComponent(project.id)}">Continue inquiry ${icon('arrow-right')}</a>`) : q ? globalThis.CB_PAGES_HTML(`<a class="btn btn-secondary" href="${quoteHref(q)}">View quotation ${icon('arrow-right')}</a>`) : latest ? globalThis.CB_PAGES_HTML(`<a class="btn btn-secondary" href="${inquiryHref(latest)}">View inquiry document ${icon('arrow-right')}</a>`) : '';
+  const primary = state.hasDraft ? globalThis.CB_PAGES_HTML(`<a class="btn btn-primary" href="${draftInquiryHref(project)}">Continue inquiry ${icon('arrow-right')}</a>`) : q ? globalThis.CB_PAGES_HTML(`<a class="btn btn-secondary" href="${quoteHref(q)}">View quotation ${icon('arrow-right')}</a>`) : latest ? globalThis.CB_PAGES_HTML(`<a class="btn btn-secondary" href="${inquiryHref(latest)}">View inquiry document ${icon('arrow-right')}</a>`) : '';
   const quoteSource = state.quoteInquiry;
   const quoteSourceNote = q ? globalThis.CB_PAGES_HTML(`<p class="pj-quote-source">Based on inquiry ${e(q.requestId || 'reference not recorded')}${quoteSource?.savedAt?` · saved ${e(date(quoteSource.savedAt))}`:''}.${state.hasDraft?' Your current draft is separate from this quotation.':latest && latest.submissionId!==q.requestId?' This quotation references an earlier saved inquiry.':''}${state.hasQuoteInquiryDocument?globalThis.CB_PAGES_HTML(` <a class="pj-link" href="${inquiryHref(quoteSource)}">View source inquiry ${icon('arrow-up-right')}</a>`):''}</p>`) : '';
   root.innerHTML = hero(globalThis.CB_PAGES_HTML(`<a class="pj-back" href="/cbmachinery-demo-preview/projects/">${icon('arrow-right')} My projects</a>`), e(projectTitle(project)), e(data.company || project.company || 'Your grinding application'), `<div class="pj-hero-meta">${stateMarkup(state)}<span>${e(project.id)}</span><span>Updated ${e(date(project.updatedAt))}</span></div>`) + globalThis.CB_PAGES_HTML(`<div class="pj-actionbar"><div class="site-wrap"><p>${state.hasDraft?'Your draft is saved. Continue when you’re ready.':q?'Your saved quotation is ready to view.':'Your inquiry is saved. Your requirements are all here.'}</p>${primary}</div></div>${latest?`<div class="site-wrap pj-conversion-wrap">${accountConversionCard(project, data)}</div>`:''}<div class="site-wrap pj-content pj-detail-grid"><div>

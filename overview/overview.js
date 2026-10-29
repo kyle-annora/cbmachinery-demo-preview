@@ -11,7 +11,7 @@ const chapter=()=>page===0?0:page<3?1:3;
 const facts=(data,limit=6)=>`<dl class="facts">${sourceFacts(data).slice(0,limit).map(([name,value])=>`<div class="fact"><dt>${esc(name)}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>`;
 function failure(error){const box=$('#call-error');box.hidden=false;box.textContent=error?.message||'The example could not be saved. Check browser storage and try again.';box.tabIndex=-1;box.focus();}
 function clearError(){$('#call-error').hidden=true;}
-function ensureCase(){caseData=getCallCase()||prepareCallCase();return caseData;}
+function ensureCase(){caseData=prepareCallCase();return caseData;}
 function renderBrief(){
  const data=ensureCase(); const form=$('#call-brief');
  for(const key of ['material','diameter','thickness','volume','description']) {form.elements[key].value=data.brief[key]||'';form.elements[key].disabled=data.phase!=='brief';}
@@ -26,7 +26,7 @@ function saveBrief(){
 function renderReview(){$('#review-facts').innerHTML=facts(caseData.brief)+`<div class="review-notes"><span class="label">APPLICATION NOTES</span><p>${esc(caseData.brief.description||'To discuss')}</p></div>`;}
 function renderHandoff(){
  const d=caseData;
- $('#handoff-content').innerHTML=globalThis.CB_PAGES_HTML(`<div class="handoff-grid"><article class="case-surface"><div class="surface-top"><span class="label">CUSTOMER PROJECT</span><span class="case-status">Inquiry confirmed</span></div><h2>Ring gear</h2><p>Example Powertrain Co. · Alex Morgan</p>${facts(d.inquiry,6)}<div class="review-notes"><span class="label">CUSTOMER APPLICATION NOTES</span><p>${esc(d.inquiry.description||'To discuss')}</p></div><p class="record-reference">${esc(d.projectId)}<br>${esc(d.requestId)}</p><a class="text-link" href="/cbmachinery-demo-preview/inquiry-document/?request=${encodeURIComponent(d.requestId)}" target="_blank" rel="noopener">Open the inquiry summary <span aria-hidden="true">↗</span></a></article><article class="case-surface handoff-team"><div class="surface-top"><span class="label">C&B TEAM · THE SAME BRIEF</span></div><h2>Review. Clarify.<br>Prepare the scope.</h2><p>The submitted dimensions and production target remain attached to the project.</p><ol class="team-tasks"><li>Review the part and required faces.</li><li>Clarify the drawing and surface specifications.</li><li>Define the equipment and handling scope.</li><li>Prepare an approved quotation.</li></ol><a class="text-link" href="/cbmachinery-demo-preview/demo/requests/?id=${encodeURIComponent(d.requestId)}" target="_blank" rel="noopener">Open C&B receiving detail <span aria-hidden="true">↗</span></a></article></div>`);
+ $('#handoff-content').innerHTML=globalThis.CB_PAGES_HTML(`<div class="handoff-grid"><article class="case-surface"><div class="surface-top"><span class="label">CUSTOMER PROJECT</span><span class="case-status">Inquiry confirmed</span></div><h2>Ring gear</h2><p>Example Powertrain Co. · Alex Morgan</p>${facts(d.inquiry,6)}<div class="review-notes"><span class="label">CUSTOMER APPLICATION NOTES</span><p>${esc(d.inquiry.description||'To discuss')}</p></div><p class="record-reference">${esc(d.projectId)}<br>${esc(d.requestId)}</p><a class="text-link" href="/cbmachinery-demo-preview/inquiry-document/?request=${encodeURIComponent(d.requestId)}" target="_blank" rel="noopener">Open the inquiry summary <span aria-hidden="true">↗</span></a></article><article class="case-surface handoff-team"><div class="surface-top"><span class="label">C&B TEAM · THE SAME BRIEF</span></div><h2>Review. Clarify.<br>Prepare the scope.</h2><p>The submitted dimensions and production target remain attached to the project.</p><ol class="team-tasks"><li>Review the part and required faces.</li><li>Clarify the drawing and surface specifications.</li><li>Define the equipment and handling scope.</li><li>Prepare an approved quotation.</li></ol>${d.quotation?globalThis.CB_PAGES_HTML(`<a class="text-link" href="/cbmachinery-demo-preview/demo/requests/${encodeURIComponent(d.requestId)}/" target="_blank" rel="noopener">Open C&B receiving detail <span aria-hidden="true">↗</span></a>`):''}</article></div>`);
 }
 function renderQuotation(){
  const d=caseData,q=d.quotation,t=totals(q.items);
@@ -82,6 +82,13 @@ $('#call-next').addEventListener('click',next);
 $('#call-back').addEventListener('click',()=>{if(page===1&&nodeIndex>0){selectNode(nodeIndex-1);return;}go(Math.max(0,page-1));});
 $$('[data-chapter]').forEach(button=>button.addEventListener('click',()=>go(Number(button.dataset.chapter))));
 $$('[data-node]').forEach((button,i)=>button.addEventListener('click',()=>selectNode(i)));
+$('#call-brief').addEventListener('input',()=>{
+ if(page!==3||caseData?.phase!=='brief')return;
+ const form=$('#call-brief');
+ if(!form.checkValidity()){ $('[data-panel="3"] .case-status').textContent='Check entered values';return; }
+ try{saveBrief();$('[data-panel="3"] .case-status').textContent='Example draft saved';}
+ catch(error){failure(error);}
+});
 $('#call-brief').addEventListener('submit',event=>{event.preventDefault();if(page===3)next();});
 window.addEventListener('hashchange',()=>{const index=hashes.indexOf(location.hash.slice(1));if(index>=0&&index!==page)go(index);});
 window.addEventListener('storage',event=>{if(event.key?.startsWith('cb-customer-call-v1:')){try{caseData=getCallCase();if(page>=3&&page<=6)go(page,{focus:false});}catch(error){failure(error);}}});

@@ -128,7 +128,14 @@ export function prepareCallCase() {
   let plan = read(CALL_CASE_KEY);
   if (plan) {
     validatePlan(plan);
-    if (plan.ready) return result(plan);
+    if (plan.ready) {
+      const pending = inspect(plan,true);
+      // Resume only an action that already wrote this case's own record.
+      // Merely returning to the presentation never starts a future stage.
+      if (!plan.confirmed && pending.inquiry) return confirmCallInquiry();
+      if (!plan.quoted && pending.bundle) return prepareCallQuote();
+      return result(plan);
+    }
   } else {
     plan = allocatePlan();
     // Reserve identities first, so a retry never creates another project.
