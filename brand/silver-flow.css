@@ -1,0 +1,116 @@
+/* Inquiry extension of the approved silver system. Task bands carry the
+   geometric identity; data, form controls and documents stay quiet and flat. */
+.flow-body.cb-silver{--on-stage:#272b2c;--stage-body:#555e5b;--stage-muted:#69716e;--stage-panel:#f6f7f6;--stage-raised:#e3e6e5;--stage-border:#cdd2cf;--emphasis:#272b2c;background:#fff}
+.flow-body.cb-silver .btn{border-radius:3px}
+.flow-body.cb-silver .flow-hero{position:relative;isolation:isolate;overflow:hidden;background:#e3e6e5}
+.flow-body.cb-silver .flow-hero::after{content:"";position:absolute;inset:0 0 0 auto;width:34%;z-index:-1;pointer-events:none;background:url('./assets/precision-field-mobile.svg') center/cover no-repeat;opacity:.45}
+.flow-body.cb-silver .flow-top{position:relative;z-index:1}
+.flow-body.cb-silver .step-heading h1{color:#272b2c;font-size:clamp(34px,3.3vw,46px);letter-spacing:-.04em}
+.flow-body.cb-silver .brand-emphasis{color:inherit}
+.flow-body.cb-silver .flow-title{font-size:10px;font-weight:600;letter-spacing:.13em;color:#59635f}
+.flow-body.cb-silver .stepper li{color:#69716e}
+.flow-body.cb-silver .stepper li>span{border-color:#aab3ae;color:#59635f}
+.flow-body.cb-silver .stepper li.active{color:#272b2c}
+.flow-body.cb-silver .stepper li.active>span{background:#272b2c;border-color:#272b2c;color:#fff}
+.flow-body.cb-silver .stepper li.complete{color:#555e5b}
+.flow-body.cb-silver .stepper li.complete>span{background:transparent;border-color:#b8bfbc;color:#555e5b}
+.flow-body.cb-silver .workspace-grid{gap:56px;padding-top:38px!important}
+.flow-body.cb-silver .choice{border-color:#cdd2cf;border-radius:3px}
+.flow-body.cb-silver .choice.selected{background:#eef0ef;border-color:#59635f;box-shadow:inset 0 0 0 1px #59635f}
+.flow-body.cb-silver .choice-radio{border-color:#aab3ae}
+.flow-body.cb-silver .choice.selected .choice-radio{border-color:#59635f}
+.flow-body.cb-silver .field input,.flow-body.cb-silver .field textarea,.flow-body.cb-silver .field select{border-color:#bdc5c0;border-radius:3px}
+.flow-body.cb-silver .field input:focus,.flow-body.cb-silver .field textarea:focus,.flow-body.cb-silver .field select:focus{border-color:#741d35}
+.flow-body.cb-silver .field input::placeholder,.flow-body.cb-silver .field textarea::placeholder{color:#79817d}
+.flow-body.cb-silver .file-area{background:#f6f7f6;border-color:#aab3ae;border-radius:3px}
+.flow-body.cb-silver .file-button{border-color:#b8bfbc;border-radius:3px}
+.flow-body.cb-silver .context-panel{background:#f6f7f6;color:#272b2c;border-radius:3px}
+.flow-body.cb-silver .context-content{padding:25px}
+.flow-body.cb-silver .part-scene{background:url('./assets/precision-field-mobile.svg') center/100% 100% no-repeat}
+.flow-body.cb-silver .part-scene.ring-scene img{max-width:225px;max-height:150px}
+.flow-body.cb-silver .live-dot::before{background:#59635f}
+.flow-body.cb-silver .engineer-note{padding:0;background:transparent}
+.flow-body.cb-silver .engineer-note .flow-icon{filter:none}
+.flow-body.cb-silver .context-content>.text-link{color:#272b2c;min-height:36px}
+.flow-body.cb-silver .source-note,.flow-body.cb-silver .precision,.flow-body.cb-silver .privacy-note,.flow-body.cb-silver .original-description{border-radius:3px}
+.flow-body.cb-silver .discuss-group{background:#f6f7f6;border-radius:3px}
+.flow-body.cb-silver .discuss-group li::marker{color:#59635f}
+.flow-body.cb-silver .review-handoff{background:#e3e6e5;color:#272b2c;border-radius:3px}
+.flow-body.cb-silver .review-handoff h2{color:#272b2c}
+.flow-body.cb-silver .review-handoff .text-link{color:#272b2c}
+.flow-body.cb-silver .review-handoff .handoff-meta{margin-bottom:21px}
+.flow-body.cb-silver .review-handoff .handoff-disclosure{font-size:12px;color:#59635f}
+.flow-body.cb-silver .form-actions{position:sticky;bottom:0;z-index:3;background:#fff;padding:18px 0;margin-top:24px;gap:20px}
+.flow-body.cb-silver #workspace[data-step="1"] .question-panel .form-actions{margin-top:18px}
+.flow-body.cb-silver .next-button{background:#741d35;border-color:#741d35;min-height:50px}
+.flow-body.cb-silver .notice{background:#eef0ef;color:#424c47;border-radius:3px}
+.flow-body.cb-silver .notice[role=alert]{background:#f6f7f6;color:#741d35}
+.flow-body.cb-silver .text-link{color:#424c47}
+.flow-body.cb-silver .group-title>.text-link{min-height:44px}
+.flow-body.cb-silver .flow-footer{background:#f6f7f6}
+@media(max-width:1100px){.flow-body.cb-silver .workspace-grid{gap:32px}}
+@media(max-width:760px){
+  .flow-body.cb-silver .flow-hero::after{display:none}
+  .flow-body.cb-silver .workspace-grid{gap:25px;padding-top:26px!important}
+  .flow-body.cb-silver .context-content{padding:6px 22px 24px}
+  .flow-body.cb-silver .context-panel>summary{color:#272b2c}
+  .flow-body.cb-silver .part-scene.ring-scene img{max-width:210px;max-height:145px}
+  .flow-body.cb-silver .form-actions{padding-bottom:max(18px,env(safe-area-inset-bottom));gap:15px}
+  .flow-body.cb-silver .step-heading h1{font-size:35px}
+  .flow-body.cb-silver .next-button{min-width:137px;font-size:14px!important;padding:13px 16px!important}
+  .flow-body.cb-silver .review-handoff{padding:24px}
+}
+@media print{
+  .flow-body.cb-silver .flow-hero::after,.flow-body.cb-silver .form-actions{display:none!important}
+  .flow-body.cb-silver .flow-hero,.flow-body.cb-silver .review-handoff,.flow-body.cb-silver .context-panel{background:#fff!important;color:#000!important}
+}
+
+/* A predictable action position on each step; draft saving is passive status. */
+.flow-body.cb-silver .form-actions > .next-button { min-width: 196px; }
+@media (max-width: 760px) {
+  .flow-body.cb-silver .form-actions > .next-button { min-width: 0; flex: 0 1 196px; }
+  .flow-body.cb-silver .form-actions > .back-button { flex: 0 0 auto; }
+  .flow-body.cb-silver .form-actions > .small-muted { max-width: 105px; }
+}
+@media (max-width: 440px) {
+  .flow-body.cb-silver .form-actions { gap: 12px; align-items: stretch; flex-wrap: wrap; }
+  .flow-body.cb-silver .form-actions > .btn {
+    min-height: 50px; padding: 12px !important; font-size: 13px !important; gap: 8px !important;
+  }
+  .flow-body.cb-silver .form-actions > .next-button { min-width: max-content; flex: 0 1 auto; white-space: nowrap; }
+}
+
+/* Two-step intake: optional technical detail expands inside the same page. */
+.flow-body.cb-silver .intake-section { min-width: 0; scroll-margin-top: 24px; }
+.flow-body.cb-silver .intake-section:focus-visible { outline: 2px solid #741d35; outline-offset: 6px; }
+.flow-body.cb-silver .intake-section-heading { margin-bottom: 23px; }
+.flow-body.cb-silver .intake-section-heading h2 { margin: 0; font-size: 25px; font-weight: 400; letter-spacing: -.6px; color: #272b2c; }
+.flow-body.cb-silver .intake-section-heading p { margin: 9px 0 0; font-size: 13px; color: #69716e; line-height: 1.6; }
+.flow-body.cb-silver .intake-requirements { margin: 10px 0 38px; background: #f6f7f6; padding: 0; border-radius: 3px; }
+.flow-body.cb-silver .intake-requirements > summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 22px; list-style: none; cursor: pointer; }
+.flow-body.cb-silver .intake-requirements > summary::-webkit-details-marker, .flow-body.cb-silver .intake-timing > summary::-webkit-details-marker { display: none; }
+.flow-body.cb-silver .intake-requirements > summary strong { display: block; font-size: 16px; font-weight: 500; color: #272b2c; }
+.flow-body.cb-silver .intake-requirements > summary span > span { display: block; font-size: 12px; color: #69716e; margin-top: 6px; line-height: 1.6; }
+.flow-body.cb-silver .intake-requirements > summary .flow-icon, .flow-body.cb-silver .intake-timing > summary .flow-icon { width: 17px; height: 17px; flex-shrink: 0; }
+.flow-body.cb-silver .intake-requirements[open] > summary .flow-icon, .flow-body.cb-silver .intake-timing[open] > summary .flow-icon { transform: rotate(180deg); }
+.flow-body.cb-silver .intake-requirements .intake-section { padding: 10px 22px 24px; }
+.flow-body.cb-silver .intake-requirements .file-area { padding-inline: 0; margin-bottom: 0; }
+.flow-body.cb-silver .intake-contact { padding-top: 2px; }
+.flow-body.cb-silver .intake-timing { margin: 8px 0 22px; }
+.flow-body.cb-silver .intake-timing > summary { display: flex; align-items: center; gap: 12px; min-height: 44px; list-style: none; cursor: pointer; font-size: 13px; color: #424c47; }
+.flow-body.cb-silver .intake-timing > summary span { color: #69716e; font-size: 11px; }
+.flow-body.cb-silver .intake-timing > summary .flow-icon { margin-left: auto; }
+.flow-body.cb-silver .intake-timing > .field-grid { margin-top: 15px; }
+.flow-body.cb-silver .stepper { gap: 35px; }
+.flow-body.cb-silver .project-access { display: inline-flex; min-height: 44px; align-items: center; }
+@media (max-width: 760px) {
+  .flow-body.cb-silver .stepper { width: auto; justify-content: flex-start; gap: 30px; }
+  .flow-body.cb-silver .stepper li { flex: 0 0 auto; flex-direction: row; align-items: center; font-size: 12px; gap: 9px; }
+  .flow-body.cb-silver .stepper li:not(:last-child)::after { display: none; }
+  .flow-body.cb-silver #workspace[data-step="1"] .workspace-grid { flex-direction: column; }
+  .flow-body.cb-silver .intake-section-heading h2 { font-size: 23px; }
+  .flow-body.cb-silver .intake-requirements { padding: 0; margin-bottom: 30px; }
+  .flow-body.cb-silver .intake-requirements > summary { padding: 18px 17px; }
+  .flow-body.cb-silver .intake-requirements .intake-section { padding-inline: 17px; }
+  .flow-body.cb-silver .project-access { display: inline-flex; font-size: 12px; }
+}

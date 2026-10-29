@@ -1,0 +1,54 @@
+{
+  "/machines/": {
+    "title": "Grinding Machines",
+    "description": "Compare C&B double-disc and clamp-bore grinding machines. Explore a robotic system and start a guided application brief."
+  },
+  "/machines/double-disc/": {
+    "title": "Double-Disc Grinding Machines",
+    "description": "Explore horizontal and vertical double-disc grinding, robotic handling and ring gear face-grinding applications."
+  },
+  "/machines/clamp-bore/": {
+    "title": "Clamp-Bore Face Grinders",
+    "description": "Explore C&B single- and double-spindle clamp-bore face grinding and prepare your application requirements."
+  },
+  "/rebuilds/": {
+    "title": "Machine Rebuilding & Re-Engineering",
+    "description": "Explore C&B machine rebuilding, re-engineering, retooling and controls upgrades for existing grinders."
+  },
+  "/services/": {
+    "title": "Machine Service & Support",
+    "description": "Explore machine service, spindle rebuilding, automation, control retrofits, hand scraping and production grinding."
+  },
+  "/applications/": {
+    "title": "Grinding Applications",
+    "description": "Explore C&B grinding applications across powertrain, aerospace, bearings and other part families."
+  },
+  "/applications/auto-heavy-powertrain/": {
+    "title": "Auto & Heavy Powertrain Grinding",
+    "description": "Explore ring gears, connecting rods, gears and cover applications from C&B\u2019s published powertrain portfolio."
+  },
+  "/inventory/": {
+    "title": "Published Machine Inventory",
+    "description": "Browse published C&B grinding equipment listings and discuss availability, tooling and application fit."
+  },
+  "/resources/": {
+    "title": "Resources & Company Updates",
+    "description": "Watch C&B equipment in action, read company updates and prepare a clear grinding application brief."
+  },
+  "/about-us/": {
+    "title": "About C&B Machinery",
+    "description": "Meet the Michigan-based team and grinding capabilities behind C&B Machinery."
+  },
+  "/contact-us/": {
+    "title": "Contact C&B Machinery",
+    "description": "Call, email or prepare a guided grinding inquiry for C&B Machinery in New Hudson, Michigan."
+  },
+  "/resources/quote-preparation/": {
+    "title": "Prepare Your Grinding Brief",
+    "description": "A practical guide to the part, technical requirements and production information in a useful C&B inquiry."
+  },
+  "/resources/double-disc-grinding/": {
+    "title": "Understand Double-Disc Grinding",
+    "description": "An introduction to opposing-face grinding, finished requirements and handling, with an interactive ring gear example."
+  }
+}

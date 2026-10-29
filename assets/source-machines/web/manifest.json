@@ -1,0 +1,512 @@
+{
+  "summary": {
+    "optimizedOriginals": 24,
+    "imageInstances": 59,
+    "pages": [
+      "/machines/index.html",
+      "/machines/clamp-bore/index.html",
+      "/machines/clamp-bore/double-spindle/index.html",
+      "/machines/rebuilds/index.html",
+      "/machines/rebuilds/barber-colman/index.html",
+      "/machines/rebuilds/thompson/index.html",
+      "/machines/rebuilds/mattison/index.html",
+      "/machines/rebuilds/blanchard/index.html",
+      "/machines/rebuilds/centerless/index.html",
+      "/machines/rebuilds/gardner/index.html",
+      "/machines/rebuilds/besly/index.html",
+      "/inventory/index.html",
+      "/inventory/stock-16223-giustina-cb-r242-double-disc-grinding-machine/index.html",
+      "/new/index.html",
+      "/applications/magnetics/index.html",
+      "/applications/knife-tools/index.html",
+      "/used/index.html",
+      "/vertical-turning-lathes/index.html",
+      "/rebuilds/index.html"
+    ],
+    "originalUniqueBytes": 47109854,
+    "largestDeliveryUniqueBytes": 4243430,
+    "originalInstanceBytes": 120561774,
+    "deliveryInstanceBytes": 11710376,
+    "note": "Original files retained. Delivery images downloaded only from source-provided rendered_url/srcset URLs; no image re-encoding or editing. Mechanical/app content HTML only, shared navigation CSS preserved.",
+    "verification": {
+      "deliveryImageInstances": 59,
+      "missingFiles": [],
+      "largestVariantWidth": 1080,
+      "globalCSSLinksPreserved": true
+    }
+  },
+  "assets": [
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/stock-machine-reman-e1991eb.png",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2017/05/stock-machine-reman.png",
+      "originalBytes": 941653,
+      "variants": [
+        {
+          "width": 300,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2017/05/stock-machine-reman.png?resize=300%2C227&ssl=1",
+          "local": "/assets/source-machines/web/stock-machine-reman-e1991eb-300.png",
+          "bytes": 30995,
+          "actualWidth": 300,
+          "actualHeight": 227
+        },
+        {
+          "width": 1048,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2017/05/stock-machine-reman.png?w=1048&ssl=1",
+          "local": "/assets/source-machines/web/stock-machine-reman-e1991eb-1048.png",
+          "bytes": 264723,
+          "actualWidth": 1048,
+          "actualHeight": 794
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/giustina-cb-r242-30--762mm-wheels-swing-arm-stock-16223-44b211f.jpg",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2019/02/giustina-cb-r242-30%E2%80%B3-762mm-wheels-swing-arm-stock-16223.jpg",
+      "originalBytes": 1234479,
+      "variants": [
+        {
+          "width": 300,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2019/02/giustina-cb-r242-30%E2%80%B3-762mm-wheels-swing-arm-stock-16223.jpg?resize=300%2C223&ssl=1",
+          "local": "/assets/source-machines/web/giustina-cb-r242-30--762mm-wheels-swing-arm-stock-16223-44b211f-300.jpg",
+          "bytes": 16868,
+          "actualWidth": 300,
+          "actualHeight": 223
+        },
+        {
+          "width": 1080,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2019/02/giustina-cb-r242-30%E2%80%B3-762mm-wheels-swing-arm-stock-16223.jpg?resize=1080%2C804&ssl=1",
+          "local": "/assets/source-machines/web/giustina-cb-r242-30--762mm-wheels-swing-arm-stock-16223-44b211f-1080.jpg",
+          "bytes": 129481,
+          "actualWidth": 1080,
+          "actualHeight": 804
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/01061-Blanchard-18A2-c7e3281.jpg",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/01061-Blanchard-18A2.jpg",
+      "originalBytes": 745881,
+      "variants": [
+        {
+          "width": 1080,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2019/03/01061-Blanchard-18A2.jpg?w=1080&ssl=1",
+          "local": "/assets/source-machines/web/01061-Blanchard-18A2-c7e3281-1080.jpg",
+          "bytes": 90842,
+          "actualWidth": 1080,
+          "actualHeight": 810
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/Blanchard-Grind-and-Wire-Brush-c9ff944.jpg",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/Blanchard-Grind-and-Wire-Brush.jpg",
+      "originalBytes": 688148,
+      "variants": [
+        {
+          "width": 1080,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2019/03/Blanchard-Grind-and-Wire-Brush.jpg?w=1080&ssl=1",
+          "local": "/assets/source-machines/web/Blanchard-Grind-and-Wire-Brush-c9ff944-1080.jpg",
+          "bytes": 51302,
+          "actualWidth": 1080,
+          "actualHeight": 625
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/DSCN1609-a146a8d.jpg",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/DSCN1609.jpg",
+      "originalBytes": 633443,
+      "variants": [
+        {
+          "width": 1080,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2019/03/DSCN1609.jpg?w=1080&ssl=1",
+          "local": "/assets/source-machines/web/DSCN1609-a146a8d-1080.jpg",
+          "bytes": 163080,
+          "actualWidth": 1080,
+          "actualHeight": 810
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/IMG-20200723-090558-e718031.png",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2020/08/IMG_20200723_090558.png",
+      "originalBytes": 9670638,
+      "variants": [
+        {
+          "width": 300,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2020/08/IMG_20200723_090558.png?resize=300%2C217&ssl=1",
+          "local": "/assets/source-machines/web/IMG-20200723-090558-e718031-300.png",
+          "bytes": 25939,
+          "actualWidth": 300,
+          "actualHeight": 217
+        },
+        {
+          "width": 1080,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2020/08/IMG_20200723_090558.png?resize=1080%2C782&ssl=1",
+          "local": "/assets/source-machines/web/IMG-20200723-090558-e718031-1080.png",
+          "bytes": 257968,
+          "actualWidth": 1080,
+          "actualHeight": 782
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/Barber-Colman-6-10-Spindle-and-Tooling-1-13b4ba8.jpg",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2020/11/Barber-Colman-6-10-Spindle-and-Tooling-1.jpg",
+      "originalBytes": 1058841,
+      "variants": [
+        {
+          "width": 480,
+          "url": "https://www.cbmachinery.com/wp-content/uploads/2020/11/Barber-Colman-6-10-Spindle-and-Tooling-1-480x360.jpg",
+          "local": "/assets/source-machines/web/Barber-Colman-6-10-Spindle-and-Tooling-1-13b4ba8-480.jpg",
+          "bytes": 33462,
+          "actualWidth": 480,
+          "actualHeight": 360
+        },
+        {
+          "width": 1080,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2020/11/Barber-Colman-6-10-Spindle-and-Tooling-1.jpg?resize=1080%2C810&ssl=1",
+          "local": "/assets/source-machines/web/Barber-Colman-6-10-Spindle-and-Tooling-1-13b4ba8-1080.jpg",
+          "bytes": 160795,
+          "actualWidth": 1080,
+          "actualHeight": 810
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/PB074220-8e7c376.png",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2020/11/PB074220.png",
+      "originalBytes": 5938248,
+      "variants": [
+        {
+          "width": 400,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2020/11/PB074220.png?resize=400%2C250&ssl=1",
+          "local": "/assets/source-machines/web/PB074220-8e7c376-400.png",
+          "bytes": 37063,
+          "actualWidth": 400,
+          "actualHeight": 250
+        },
+        {
+          "width": 1080,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2020/11/PB074220.png?resize=1080%2C677&ssl=1",
+          "local": "/assets/source-machines/web/PB074220-8e7c376-1080.png",
+          "bytes": 209353,
+          "actualWidth": 1080,
+          "actualHeight": 677
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/Rebuilt-Barber-Colman-Gear-Hobbing-Machine-After-2e5a11b.jpg",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2020/11/Rebuilt-Barber-Colman-Gear-Hobbing-Machine-After.jpg",
+      "originalBytes": 665184,
+      "variants": [
+        {
+          "width": 480,
+          "url": "https://www.cbmachinery.com/wp-content/uploads/2020/11/Rebuilt-Barber-Colman-Gear-Hobbing-Machine-After-480x591.jpg",
+          "local": "/assets/source-machines/web/Rebuilt-Barber-Colman-Gear-Hobbing-Machine-After-2e5a11b-480.jpg",
+          "bytes": 32521,
+          "actualWidth": 480,
+          "actualHeight": 591
+        },
+        {
+          "width": 1080,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2020/11/Rebuilt-Barber-Colman-Gear-Hobbing-Machine-After.jpg?resize=1080%2C1330&ssl=1",
+          "local": "/assets/source-machines/web/Rebuilt-Barber-Colman-Gear-Hobbing-Machine-After-2e5a11b-1080.jpg",
+          "bytes": 152542,
+          "actualWidth": 1080,
+          "actualHeight": 1330
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/Rebuilt-Barber-Colman-Gear-Hobbing-Machine-Before-47b3bfc.jpg",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2020/11/Rebuilt-Barber-Colman-Gear-Hobbing-Machine-Before.jpg",
+      "originalBytes": 4263241,
+      "variants": [
+        {
+          "width": 480,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2020/11/Rebuilt-Barber-Colman-Gear-Hobbing-Machine-Before.jpg?resize=480%2C557&ssl=1",
+          "local": "/assets/source-machines/web/Rebuilt-Barber-Colman-Gear-Hobbing-Machine-Before-47b3bfc-480.jpg",
+          "bytes": 75401,
+          "actualWidth": 480,
+          "actualHeight": 557
+        },
+        {
+          "width": 1080,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2020/11/Rebuilt-Barber-Colman-Gear-Hobbing-Machine-Before.jpg?resize=1080%2C1254&ssl=1",
+          "local": "/assets/source-machines/web/Rebuilt-Barber-Colman-Gear-Hobbing-Machine-Before-47b3bfc-1080.jpg",
+          "bytes": 321284,
+          "actualWidth": 1080,
+          "actualHeight": 1254
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/cutot1-c9f3894.png",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2020/11/cutot1.png",
+      "originalBytes": 1021897,
+      "variants": [
+        {
+          "width": 480,
+          "url": "https://www.cbmachinery.com/wp-content/uploads/2020/11/cutot1-480x426.png",
+          "local": "/assets/source-machines/web/cutot1-c9f3894-480.png",
+          "bytes": 180176,
+          "actualWidth": 480,
+          "actualHeight": 426
+        },
+        {
+          "width": 1080,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2020/11/cutot1.png?resize=1080%2C959&ssl=1",
+          "local": "/assets/source-machines/web/cutot1-c9f3894-1080.png",
+          "bytes": 347708,
+          "actualWidth": 1080,
+          "actualHeight": 959
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/Centerless-Grinder-1-7a869b1.jpg",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-1.jpg",
+      "originalBytes": 704911,
+      "variants": [
+        {
+          "width": 400,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-1.jpg?resize=400%2C284&ssl=1",
+          "local": "/assets/source-machines/web/Centerless-Grinder-1-7a869b1-400.jpg",
+          "bytes": 30641,
+          "actualWidth": 400,
+          "actualHeight": 284
+        },
+        {
+          "width": 800,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-1.jpg?zoom=2&resize=400%2C284&ssl=1",
+          "local": "/assets/source-machines/web/Centerless-Grinder-1-7a869b1-800.jpg",
+          "bytes": 94786,
+          "actualWidth": 800,
+          "actualHeight": 568
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/Centerless-Grinder-11-fa712ef.jpg",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-11.jpg",
+      "originalBytes": 776956,
+      "variants": [
+        {
+          "width": 400,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-11.jpg?resize=400%2C284&ssl=1",
+          "local": "/assets/source-machines/web/Centerless-Grinder-11-fa712ef-400.jpg",
+          "bytes": 32856,
+          "actualWidth": 400,
+          "actualHeight": 284
+        },
+        {
+          "width": 800,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-11.jpg?zoom=2&resize=400%2C284&ssl=1",
+          "local": "/assets/source-machines/web/Centerless-Grinder-11-fa712ef-800.jpg",
+          "bytes": 104623,
+          "actualWidth": 800,
+          "actualHeight": 568
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/Centerless-Grinder-12-341a903.jpg",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-12.jpg",
+      "originalBytes": 740674,
+      "variants": [
+        {
+          "width": 400,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-12.jpg?resize=400%2C284&ssl=1",
+          "local": "/assets/source-machines/web/Centerless-Grinder-12-341a903-400.jpg",
+          "bytes": 32175,
+          "actualWidth": 400,
+          "actualHeight": 284
+        },
+        {
+          "width": 800,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-12.jpg?zoom=2&resize=400%2C284&ssl=1",
+          "local": "/assets/source-machines/web/Centerless-Grinder-12-341a903-800.jpg",
+          "bytes": 101165,
+          "actualWidth": 800,
+          "actualHeight": 568
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/Centerless-Grinder-13-0d3b8ff.jpg",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-13.jpg",
+      "originalBytes": 772516,
+      "variants": [
+        {
+          "width": 400,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-13.jpg?resize=400%2C284&ssl=1",
+          "local": "/assets/source-machines/web/Centerless-Grinder-13-0d3b8ff-400.jpg",
+          "bytes": 33417,
+          "actualWidth": 400,
+          "actualHeight": 284
+        },
+        {
+          "width": 800,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-13.jpg?zoom=2&resize=400%2C284&ssl=1",
+          "local": "/assets/source-machines/web/Centerless-Grinder-13-0d3b8ff-800.jpg",
+          "bytes": 104670,
+          "actualWidth": 800,
+          "actualHeight": 568
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/Centerless-Grinder-15-f4559dc.jpg",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-15.jpg",
+      "originalBytes": 748228,
+      "variants": [
+        {
+          "width": 400,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-15.jpg?resize=400%2C284&ssl=1",
+          "local": "/assets/source-machines/web/Centerless-Grinder-15-f4559dc-400.jpg",
+          "bytes": 34214,
+          "actualWidth": 400,
+          "actualHeight": 284
+        },
+        {
+          "width": 800,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-15.jpg?zoom=2&resize=400%2C284&ssl=1",
+          "local": "/assets/source-machines/web/Centerless-Grinder-15-f4559dc-800.jpg",
+          "bytes": 106335,
+          "actualWidth": 800,
+          "actualHeight": 568
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/IMG-7304-background-removed-transparent-no-feet-f2954e3.png",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2023/07/IMG_7304_background-removed_transparent_no-feet.png",
+      "originalBytes": 2584344,
+      "variants": [
+        {
+          "width": 1080,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2023/07/IMG_7304_background-removed_transparent_no-feet.png?w=1080&ssl=1",
+          "local": "/assets/source-machines/web/IMG-7304-background-removed-transparent-no-feet-f2954e3-1080.png",
+          "bytes": 445647,
+          "actualWidth": 1079,
+          "actualHeight": 1045
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/IMG-7304-background-removed-no-feet-no-control-panel-f458f76.png",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2023/08/IMG_7304_background-removed_no-feet-no-control-panel.png",
+      "originalBytes": 1438430,
+      "variants": [
+        {
+          "width": 480,
+          "url": "https://www.cbmachinery.com/wp-content/uploads/2023/08/IMG_7304_background-removed_no-feet-no-control-panel-480x574.png",
+          "local": "/assets/source-machines/web/IMG-7304-background-removed-no-feet-no-control-panel-f458f76-480.png",
+          "bytes": 269126,
+          "actualWidth": 480,
+          "actualHeight": 574
+        },
+        {
+          "width": 1080,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2023/08/IMG_7304_background-removed_no-feet-no-control-panel.png?resize=1080%2C1291&ssl=1",
+          "local": "/assets/source-machines/web/IMG-7304-background-removed-no-feet-no-control-panel-f458f76-1080.png",
+          "bytes": 477017,
+          "actualWidth": 1080,
+          "actualHeight": 1291
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/30in-CB-Double-Disc-Grinder-with-Robot-Automation-d4d1a40.png",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2025/02/30in-CB-Double-Disc-Grinder-with-Robot-Automation.png",
+      "originalBytes": 5153713,
+      "variants": [
+        {
+          "width": 480,
+          "url": "https://www.cbmachinery.com/wp-content/uploads/2025/02/30in-CB-Double-Disc-Grinder-with-Robot-Automation-480x360.png",
+          "local": "/assets/source-machines/web/30in-CB-Double-Disc-Grinder-with-Robot-Automation-d4d1a40-480.png",
+          "bytes": 186882,
+          "actualWidth": 480,
+          "actualHeight": 360
+        },
+        {
+          "width": 1080,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2025/02/30in-CB-Double-Disc-Grinder-with-Robot-Automation.png?resize=1080%2C810&ssl=1",
+          "local": "/assets/source-machines/web/30in-CB-Double-Disc-Grinder-with-Robot-Automation-d4d1a40-1080.png",
+          "bytes": 255804,
+          "actualWidth": 1080,
+          "actualHeight": 810
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/Rebuild-Retool-EMAG-VSC-250-VTL-Back-scaled-d6b4a5b.jpg",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2025/03/Rebuild-Retool-EMAG-VSC-250-VTL-Back-scaled.jpg",
+      "originalBytes": 799744,
+      "variants": [
+        {
+          "width": 480,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2025/03/Rebuild-Retool-EMAG-VSC-250-VTL-Back-scaled.jpg?resize=400%2C284&ssl=1",
+          "local": "/assets/source-machines/web/Rebuild-Retool-EMAG-VSC-250-VTL-Back-scaled-d6b4a5b-480.jpg",
+          "bytes": 29527,
+          "actualWidth": 400,
+          "actualHeight": 284
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/Rebuild-Retool-EMAG-VSC-250-VTL-Front-scaled-70f33cc.jpg",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2025/03/Rebuild-Retool-EMAG-VSC-250-VTL-Front-scaled.jpg",
+      "originalBytes": 823495,
+      "variants": [
+        {
+          "width": 480,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2025/03/Rebuild-Retool-EMAG-VSC-250-VTL-Front-scaled.jpg?resize=400%2C284&ssl=1",
+          "local": "/assets/source-machines/web/Rebuild-Retool-EMAG-VSC-250-VTL-Front-scaled-70f33cc-480.jpg",
+          "bytes": 29416,
+          "actualWidth": 400,
+          "actualHeight": 284
+        }
+      ]
+    },
+    {
+      "group": "machines",
+      "original": "/assets/source-machines/Rebuild-Retool-EMAG-VSC-250-VTL-Side-scaled-abe510c.jpg",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2025/03/Rebuild-Retool-EMAG-VSC-250-VTL-Side-scaled.jpg",
+      "originalBytes": 854179,
+      "variants": [
+        {
+          "width": 480,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2025/03/Rebuild-Retool-EMAG-VSC-250-VTL-Side-scaled.jpg?resize=400%2C284&ssl=1",
+          "local": "/assets/source-machines/web/Rebuild-Retool-EMAG-VSC-250-VTL-Side-scaled-abe510c-480.jpg",
+          "bytes": 32267,
+          "actualWidth": 400,
+          "actualHeight": 284
+        }
+      ]
+    }
+  ]
+}

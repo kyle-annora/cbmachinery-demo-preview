@@ -1,0 +1,97 @@
+{
+  "source_page": "https://www.cbmachinery.com/",
+  "section": "Customers and Partners",
+  "verified": "2026-10-28",
+  "items": [
+    {
+      "name": "Fanuc",
+      "file": "fanuc.png",
+      "source": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2023/06/Fanuc_logo-1-e1686584142521.png?resize=318%2C56&ssl=1",
+      "bytes": 3697,
+      "type": "image/png",
+      "width": 318,
+      "height": 56
+    },
+    {
+      "name": "Ford",
+      "file": "ford.jpg",
+      "source": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2016/10/ford2.jpg?resize=140%2C56&ssl=1",
+      "bytes": 5055,
+      "type": "image/jpeg",
+      "width": 140,
+      "height": 56
+    },
+    {
+      "name": "Allison Transmission",
+      "file": "allison-transmission.jpg",
+      "source": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2016/10/allison-tran2.jpg?resize=200%2C56&ssl=1",
+      "bytes": 24301,
+      "type": "image/jpeg",
+      "width": 200,
+      "height": 56
+    },
+    {
+      "name": "FCA",
+      "file": "fca.png",
+      "source": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2023/06/1200px-Fiat_Chrysler_Automobiles_logo.svg_-e1686582259724.png?resize=152%2C56&ssl=1",
+      "bytes": 3173,
+      "type": "image/png",
+      "width": 152,
+      "height": 56
+    },
+    {
+      "name": "GKN",
+      "file": "gkn.jpg",
+      "source": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2016/10/gkn2.jpg?resize=200%2C49&ssl=1",
+      "bytes": 16096,
+      "type": "image/jpeg",
+      "width": 200,
+      "height": 49
+    },
+    {
+      "name": "RIDGID",
+      "file": "ridgid.jpg",
+      "source": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2016/10/ridgid.jpg?resize=200%2C55&ssl=1",
+      "bytes": 16693,
+      "type": "image/jpeg",
+      "width": 200,
+      "height": 55
+    },
+    {
+      "name": "Federal Mogul",
+      "file": "federal-mogul.jpg",
+      "source": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2016/10/federal-mogul-corporation-logo.jpg?resize=200%2C54&ssl=1",
+      "bytes": 25541,
+      "type": "image/jpeg",
+      "width": 200,
+      "height": 54
+    },
+    {
+      "name": "BorgWarner",
+      "file": "borgwarner.jpg",
+      "source": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2023/06/BorgWarner_new_Logo-1-jpg-e1686585938916.webp?resize=1080%2C237&ssl=1",
+      "bytes": 23243,
+      "type": "image/jpeg",
+      "width": 1080,
+      "height": 237
+    },
+    {
+      "name": "General Motors",
+      "file": "gm.jpg",
+      "source": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2023/06/GM_Brandmark_2021_Gradient-e1686582141856.webp?resize=56%2C56&ssl=1",
+      "bytes": 2062,
+      "type": "image/jpeg",
+      "width": 56,
+      "height": 56
+    },
+    {
+      "name": "AMT \u2014 The Association for Manufacturing Technology",
+      "file": "amt.png",
+      "source": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2023/06/AMT-Logo_final_tagline-1-e1686582242543.png?resize=170%2C56&ssl=1",
+      "bytes": 3956,
+      "type": "image/png",
+      "width": 170,
+      "height": 56
+    }
+  ]
+}

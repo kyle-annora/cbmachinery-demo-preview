@@ -1,0 +1,186 @@
+/* Interaction roles for the public demo, loaded after page styles.
+   Burgundy advances the journey. Silver/graphite offers choices and utilities.
+   Explorer controls are owned by their local orange/ink-wine components. */
+.cb-site {
+  --ui-action: #741d35;
+  --ui-action-hover: #541426;
+  --ui-action-active: #43101f;
+  --ui-neutral-hover: #e3e6e5;
+  --ui-neutral-active: #d7ddda;
+  --ui-control-ink: #272b2c;
+  --ui-control-edge: #89958e;
+  --ui-focus: #741d35;
+}
+.cb-site :is(.sp-hero, .sp-cta, .sp-dark, .sp-feature-card, .cb-immersive) {
+  --ui-action: #8f2d46;
+  --ui-action-hover: #a03751;
+  --ui-action-active: #76253a;
+  --ui-neutral-hover: #3a2c31;
+  --ui-neutral-active: #514047;
+  --ui-control-ink: #f6f3ee;
+  --ui-control-edge: #a99b98;
+  --ui-focus: #e8d8af;
+}
+.cb-site :is(.fi-hero, .silver-product-hero) { --ui-neutral-hover: #f6f7f6; }
+/* Markup components below deliberately exclude the Explorer's own buttons. */
+.cb-site :is(a[href], button, summary, .file-button):not(:is([data-machine-presentation] *, [data-machine-explorer] *, [data-ring-explorer] *, .sf-header *)) {
+  -webkit-tap-highlight-color: #59635f24;
+  transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease, opacity 150ms ease;
+  text-underline-offset: .25em;
+  text-decoration-thickness: 1px;
+}
+.cb-site :is(button:not(:disabled), summary, .file-button) { cursor: pointer; }
+.cb-site :is(a[href], button, summary, input, textarea, select):not(:is([data-machine-presentation] *, [data-machine-explorer] *, [data-ring-explorer] *, .sf-header *)):focus-visible {
+  outline: 2px solid var(--ui-focus);
+  outline-offset: 4px;
+}
+.cb-site :is(.search-field, .sp-search-label):focus-within { border-color: #741d35; outline: 2px solid #741d35; outline-offset: 3px; }
+.cb-site :is(.search-field, .sp-search-label) input:focus-visible { outline: none; }
+.cb-site .file-button:has(+ input:focus-visible) { outline: 2px solid #741d35; outline-offset: 4px; }
+.cb-site :is(button:disabled, [aria-disabled="true"]) { opacity: .5; cursor: not-allowed; box-shadow: none; }
+
+.cb-site :is(.q-text-button, .desk-record-action) { color: #555e5b; }
+.cb-site .btn:hover { transform: none; }
+
+/* Secondary content actions: a visible, stable outline between a filled
+   conversion button and a plain navigation link. Local surface tokens support
+   both the silver marketing pages and their ink-wine sections. */
+.cb-site .btn.btn-secondary {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  width: fit-content; max-width: 100%; min-height: 48px; padding: 12px 20px;
+  background: transparent; border: 1px solid var(--ui-control-edge);
+  border-radius: 3px; color: var(--ui-control-ink); font-size: 14px;
+  font-weight: 500; line-height: 1.5; text-decoration: none; box-shadow: none;
+}
+.cb-site .btn.btn-secondary > :is(img, svg) { width: 16px; height: 16px; flex-shrink: 0; }
+.cb-site :is(.sp-hero, .sp-cta, .sp-dark, .sp-feature-card, .cb-immersive) .btn-secondary > img { filter: brightness(0) invert(1); }
+.cb-site .btn[hidden] { display: none !important; }
+.cb-site :is(.fi-actions, .product-intro-actions, .sp-actions) { align-items: stretch; }
+.cb-site :is(.fi-actions, .product-intro-actions, .sp-actions) .btn-secondary {
+  font-size: 13px; padding: 12px 18px;
+}
+.cb-site :is(.home-family-copy, .home-company-copy, .home-resource-stack) .btn-secondary { margin-top: 6px; }
+@media (max-width: 760px) {
+  .cb-site :is(.fi-actions, .product-intro-actions, .sp-actions) .btn-secondary { font-size: 12px; padding-inline: 14px; }
+}
+
+/* Every primary keeps its role in rest, hover, pressed and disabled states. */
+.cb-site :is(.btn-primary, .fi-button, .q-button.q-primary) {
+  --ui-button-bg: var(--ui-action);
+  background-color: var(--ui-button-bg);
+  color: #fff;
+}
+.cb-site :is(.fi-equipment-tabs button, .sp-tabs button, .sp-filter button) { min-height: 44px; }
+.cb-site :is(.menu-close, .search-close, .announcement-close, .q-icon-button, .remove-file) { min-width: 44px; min-height: 44px; border-radius: 3px; }
+.cb-site .site-header :is(.nav-link, .search-trigger, .mobile-menu, .nav-projects) { border-radius: 3px; }
+.cb-site .site-header :is(.nav-link[aria-expanded="true"], .search-trigger[aria-expanded="true"], .mobile-menu[aria-expanded="true"]) {
+  background-color: #e3e6e5; color: #272b2c;
+}
+.cb-site .site-header .nav-link[aria-current="page"] { color: #272b2c; text-decoration: underline; text-underline-offset: 6px; }
+.cb-site .fi-equipment-tabs button[aria-pressed="true"] { background: #fff; border-color: #89958e; color: #272b2c; }
+.cb-site :is(.sp-tabs button[aria-selected="true"], .sp-filter button[aria-pressed="true"]) {
+  background-color: #272b2c; border-color: #272b2c; color: #fff;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  /* Plain links gain an underline; they never turn into filled CTAs. */
+  .cb-site a[href]:not(:is(.btn, .fi-button, .q-button, .logo, .id-logo, .skip-link, .id-skip, .q-skip, .sp-card-link, .sp-family-image, .sp-resource-image, .sp-resource-text, .home-family-photo, .home-support-photo, .home-application-visual, .home-news-feature, .machine-family, [data-machine-presentation] *, [data-machine-explorer] *, [data-ring-explorer] *, .sf-header *, [aria-disabled="true"])):hover {
+    text-decoration: underline;
+  }
+  .cb-site :is(.btn-primary, .fi-button, .q-button.q-primary):not(:disabled):not([aria-disabled="true"]):hover {
+    background-color: var(--ui-action-hover); border-color: var(--ui-action-hover); color: #fff; text-decoration: none;
+  }
+  .cb-site :is(.btn-secondary, .q-button:not(.q-primary), .file-button):not(:disabled):not([aria-disabled="true"]):hover {
+    background-color: var(--ui-neutral-hover); border-color: var(--ui-control-edge); color: var(--ui-control-ink); text-decoration: none;
+  }
+  .cb-site .site-header :is(.nav-link, .search-trigger, .mobile-menu, .nav-projects):not(:disabled):hover {
+    background-color: #eef0ef; color: #272b2c; text-decoration: none;
+    box-shadow: inset 0 -2px 0 #89958e;
+  }
+  .cb-site .site-header :is(.nav-link, .search-trigger, .mobile-menu, .nav-projects)[aria-expanded="true"]:hover { background-color: #d7ddda; }
+  .cb-site :is(.menu-close, .search-close, .announcement-close, .q-icon-button, .remove-file):not(:disabled):hover {
+    background-color: #e3e6e5; color: #272b2c;
+  }
+  .cb-site :is(.socials a, .cb-footer-socials a):hover { background-color: #e3e6e5; border-radius: 3px; }
+  .cb-site .search-result:hover { background-color: #e3e6e5; color: #272b2c; text-decoration: none; }
+  .cb-site .machine-family:hover { background-color: #f6f7f6; }
+  .cb-site .sp-card-link:hover { background-color: #f6f7f6; text-decoration: none; }
+  .cb-site .sp-card-link:hover :is(h3, .sp-link) { text-decoration: underline; text-underline-offset: .22em; }
+  .cb-site .machine-family:hover :is(h3, span) { color: #272b2c; text-decoration: underline; }
+  .cb-site :is(.home-family-photo, .home-support-photo, .home-application-visual, .sp-family-image, .sp-resource-image, .sp-resource-text):hover { opacity: .86; }
+  .cb-site .home-news-feature:hover h3 { text-decoration: underline; }
+  .cb-site .q-saved-versions .q-revision-link:hover { background-color: #e3e6e5; }
+  .cb-site .cb-footer a:hover { color: #272b2c; }
+  .cb-site :is(.fi-equipment-tabs button, .sp-tabs button, .sp-filter button):not(:disabled):hover {
+    background-color: #d7ddda; border-color: #89958e; color: #272b2c;
+  }
+  .cb-site :is(.sp-tabs button[aria-selected="true"], .sp-filter button[aria-pressed="true"]):hover {
+    background-color: #414a45; border-color: #414a45; color: #fff;
+  }
+  .cb-site .fi-equipment-tabs button[aria-pressed="true"]:hover { background-color: #f6f7f6; border-color: #59635f; }
+  .cb-site :is(.back-button, .text-link, .q-text-button, .record-secondary-button):not(:disabled):hover {
+    color: #272b2c; text-decoration: underline; text-decoration-thickness: 2px;
+  }
+  .cb-site :is(.q-back, .q-revision-link, .record-quiet-link, .record-discussion-link, .record-home-link, .id-back, .id-handoff-link, .desk-record-action, .desk-quote-link):hover { color: #272b2c; text-decoration: underline; }
+  .flow-body.cb-silver .choice:not(:disabled):hover { background: #e3e6e5; border-color: #89958e; }
+  .flow-body.cb-silver .choice.selected:not(:disabled):hover { background: #d7ddda; border-color: #59635f; }
+  .cb-site :is(.precision, .context-panel, .record-saved-summary, .record-options, .q-details, .q-saved-versions, .intake-requirements, .intake-timing, .sp-faq details, .app-faq-list details, .demo-controls) > summary:hover {
+    background-color: #e3e6e5; color: #272b2c;
+  }
+  .cb-site .demo-controls button:not(:disabled):hover { background: #e3e6e5; color: #272b2c; }
+  .cb-site :is(.field, .q-field, .q-item, .desk-list-head) :is(input, textarea, select):not(:disabled):hover { border-color: #89958e; }
+}
+
+/* Pressed feedback is brief and never confused with a persistent selection. */
+.cb-site :is(.btn-primary, .fi-button, .q-button.q-primary):not(:disabled):active {
+  background-color: var(--ui-action-active); border-color: var(--ui-action-active); color: #fff;
+  box-shadow: inset 0 2px 0 #0003;
+}
+.cb-site :is(.btn-secondary, .q-button:not(.q-primary), .file-button, .menu-close, .search-close, .announcement-close, .q-icon-button, .remove-file):not(:disabled):not([aria-disabled="true"]):active {
+  background-color: var(--ui-neutral-active); box-shadow: inset 0 2px 0 #272b2c18;
+}
+.cb-site :is(.back-button, .q-text-button, .record-secondary-button):not(:disabled):active { color: #272b2c; background-color: #e3e6e5; }
+.cb-site .site-header :is(.nav-link, .search-trigger, .mobile-menu, .nav-projects):active { background-color: #d7ddda; }
+.cb-site :is(.sp-tabs button, .sp-filter button, .fi-equipment-tabs button):not(:disabled):active { box-shadow: inset 0 2px 0 #0003; }
+.flow-body.cb-silver .choice:not(:disabled):active { background-color: #d7ddda; }
+
+.cb-site :is(.btn-primary, .fi-button, .q-button.q-primary):is(:disabled, [aria-disabled="true"]) {
+  background-color: var(--ui-action); border-color: var(--ui-action); color: #fff; box-shadow: none;
+}
+
+
+/* Hit-region contract: the visible root owns padding, hover and click.
+   Decorative descendants cannot intercept a pointer or create a second zone. */
+.cb-site :is(.btn, .fi-button, .q-button, .nav-link, .nav-projects, .search-trigger, .mobile-menu, .menu-close, .search-close, .announcement-close, .q-icon-button, .remove-file, .file-button) > :is(img, svg) { pointer-events: none; }
+.cb-site :is(.sp-card-link, .machine-family, .search-result, .home-family-photo, .home-support-photo, .home-application-visual, .sp-resource-image, .sp-resource-text) > * { pointer-events: none; }
+.cb-site :is(.menu-close, .search-close, .announcement-close, .q-icon-button, .remove-file) {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; min-width: 44px; min-height: 44px;
+  flex: 0 0 44px; padding: 12px;
+}
+.cb-site :is(.socials a, .cb-footer-socials a) {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; flex: 0 0 44px;
+}
+.cb-site :is(.record-options, .q-saved-versions) > summary {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; min-height: 44px; box-sizing: border-box;
+  padding: 11px 12px; border-radius: 3px; text-align: left;
+}
+.cb-site :is(.record-options, .q-saved-versions, .intake-requirements, .intake-timing) > summary > img { pointer-events: none; flex-shrink: 0; }
+.cb-site :is(.precision, .q-details, .intake-timing, .sp-faq details, .app-faq-list details) > summary {
+  min-height: 44px; box-sizing: border-box; padding: 12px; border-radius: 3px;
+}
+.cb-site .q-saved-versions ul { padding: 6px; scroll-padding-block: 6px; }
+.cb-site .q-saved-versions .q-revision-link {
+  display: flex; width: 100%; min-height: 44px; padding: 10px 12px; border-radius: 3px;
+}
+.cb-site .search-result { padding: 14px 12px; border-radius: 3px; }
+.cb-site .sp-card-link:focus-visible :is(h3, .sp-link) { text-decoration: underline; text-underline-offset: .22em; }
+
+@media (prefers-reduced-motion: reduce) {
+  .cb-site :is(a[href], button, summary, .file-button):not(:is([data-machine-presentation] *, [data-machine-explorer] *, [data-ring-explorer] *, .sf-header *)) { transition: none; }
+}
+@media print {
+  .cb-site :is(a[href], button, summary):focus-visible { outline: none; }
+}

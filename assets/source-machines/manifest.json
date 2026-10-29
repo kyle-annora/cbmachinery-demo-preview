@@ -1,0 +1,616 @@
+[
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2016/10/ford2.jpg",
+    "file": "/assets/source-machines/ford2-9c4c592.jpg",
+    "bytes": 5055
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2016/10/gm2.jpg",
+    "file": "/assets/source-machines/gm2-ee99115.jpg",
+    "bytes": 2186
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/05/stock-machine-reman.png",
+    "file": "/assets/source-machines/stock-machine-reman-e1991eb.png",
+    "bytes": 941653
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/Giustina-rotary.jpg",
+    "file": "/assets/source-machines/Giustina-rotary-49829e9.jpg",
+    "bytes": 91872
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/c-b-besly-single-disc-grinder.jpg",
+    "file": "/assets/source-machines/c-b-besly-single-disc-grinder-ea89624.jpg",
+    "bytes": 229907
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/conventional-rotary-carrier-tooling.jpg",
+    "file": "/assets/source-machines/conventional-rotary-carrier-tooling-0bf3c0c.jpg",
+    "bytes": 27397
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/double-disc-grinder-base.png",
+    "file": "/assets/source-machines/double-disc-grinder-base-aad3ef3.png",
+    "bytes": 439038
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/dual-spindle-grinding-machine.jpg",
+    "file": "/assets/source-machines/dual-spindle-grinding-machine-2b57d69.jpg",
+    "bytes": 155927
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/gardner-park-and-grind-reman-re-engineer.jpg",
+    "file": "/assets/source-machines/gardner-park-and-grind-reman-re-engineer-0a47f7d.jpg",
+    "bytes": 173253
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/giustina-c-b-rotary-grinding-machine.jpg",
+    "file": "/assets/source-machines/giustina-c-b-rotary-grinding-machine-06500e2.jpg",
+    "bytes": 286707
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/giustina-re-engineer-grinding-machine.jpg",
+    "file": "/assets/source-machines/giustina-re-engineer-grinding-machine-79ed8ca.jpg",
+    "bytes": 227102
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/horizontal-double-disc-base.png",
+    "file": "/assets/source-machines/horizontal-double-disc-base-b84af1a.png",
+    "bytes": 60006
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/park-and-grind-tooling-layout.jpg",
+    "file": "/assets/source-machines/park-and-grind-tooling-layout-69c703d.jpg",
+    "bytes": 80970
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/park-and-grind-tooling.png",
+    "file": "/assets/source-machines/park-and-grind-tooling-03cc457.png",
+    "bytes": 340582
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/re-engineer-machine-options.png",
+    "file": "/assets/source-machines/re-engineer-machine-options-3000720.png",
+    "bytes": 503293
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/re-engineered-gardner-grinder.jpg",
+    "file": "/assets/source-machines/re-engineered-gardner-grinder-d0cc5a7.jpg",
+    "bytes": 211528
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/recip-slide.jpg",
+    "file": "/assets/source-machines/recip-slide-7c800d8.jpg",
+    "bytes": 188332
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/reciprocator-tooling-double-disc.png",
+    "file": "/assets/source-machines/reciprocator-tooling-double-disc-c860cac.png",
+    "bytes": 227058
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/rotary-carrier-tooling.png",
+    "file": "/assets/source-machines/rotary-carrier-tooling-a149593.png",
+    "bytes": 282344
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/rotary-plunge-tooling-option.jpg",
+    "file": "/assets/source-machines/rotary-plunge-tooling-option-26a66ca.jpg",
+    "bytes": 34952
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/ss-cb-spindle-grinding.jpg",
+    "file": "/assets/source-machines/ss-cb-spindle-grinding-2d99634.jpg",
+    "bytes": 128067
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/swing-arm-example-diagram.jpg",
+    "file": "/assets/source-machines/swing-arm-example-diagram-43fe9ba.jpg",
+    "bytes": 35507
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/swing-arm-tooling.png",
+    "file": "/assets/source-machines/swing-arm-tooling-6f18f9d.png",
+    "bytes": 184039
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/through-feed-grinder-tooling.png",
+    "file": "/assets/source-machines/through-feed-grinder-tooling-9148fd8.png",
+    "bytes": 236917
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/tooling-option-clamp-bore-grinding-machine.png",
+    "file": "/assets/source-machines/tooling-option-clamp-bore-grinding-machine-3318046.png",
+    "bytes": 112565
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/tooling-slide-ss-cb-pic.jpg",
+    "file": "/assets/source-machines/tooling-slide-ss-cb-pic-6e1fcb9.jpg",
+    "bytes": 143463
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/06/vertical-double-disc-grinder.png",
+    "file": "/assets/source-machines/vertical-double-disc-grinder-2385f29.png",
+    "bytes": 37405
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/07/c-b-grinding-accessory-disc-wheel-storage-and-transfer-cart.png",
+    "file": "/assets/source-machines/c-b-grinding-accessory-disc-wheel-storage-and-transfer-cart-86bcd57.png",
+    "bytes": 474024
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/07/disc-grinding-wheel-change-assist-cart-c-b-accessory.png",
+    "file": "/assets/source-machines/disc-grinding-wheel-change-assist-cart-c-b-accessory-81f1b3f.png",
+    "bytes": 394708
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/08/american-roller-bearing-logo.jpg",
+    "file": "/assets/source-machines/american-roller-bearing-logo-f6282b2.jpg",
+    "bytes": 16429
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/08/compressor-cylinder-heads.jpg",
+    "file": "/assets/source-machines/compressor-cylinder-heads-0a34070.jpg",
+    "bytes": 18395
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2017/08/sun-gears.jpg",
+    "file": "/assets/source-machines/sun-gears-643b9e1.jpg",
+    "bytes": 16114
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/02/besly-dh-23%E2%80%B3-584mm-wheels-rotary-or-swing-arm-stock-12052.jpg",
+    "file": "/assets/source-machines/besly-dh-23--584mm-wheels-rotary-or-swing-arm-stock-12052-067a3b1.jpg",
+    "bytes": 91704
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/02/besly-dv2-23%E2%80%B3-584mm-wheels-thru-feed-stock-12123.jpg",
+    "file": "/assets/source-machines/besly-dv2-23--584mm-wheels-thru-feed-stock-12123-e2871a5.jpg",
+    "bytes": 386407
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/02/cb-cbv-3-clamp-bore-grinder-stock-16181.jpg",
+    "file": "/assets/source-machines/cb-cbv-3-clamp-bore-grinder-stock-16181-54f7206.jpg",
+    "bytes": 146483
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/02/cb-dg-2h-horizontal-double-disc-30%E2%80%B3-762mm-wheels-swing-arm-stock-16095.jpg",
+    "file": "/assets/source-machines/cb-dg-2h-horizontal-double-disc-30--762mm-wheels-swing-arm-stock-16095-c8dc653.jpg",
+    "bytes": 167205
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/02/clamp-bore-face-grinding-microfinishing-machine.jpg",
+    "file": "/assets/source-machines/clamp-bore-face-grinding-microfinishing-machine-51063f1.jpg",
+    "bytes": 206479
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/02/gardner-sdg-2-23%E2%80%B3-584mm-wheels-rotary-stock-15227.jpg",
+    "file": "/assets/source-machines/gardner-sdg-2-23--584mm-wheels-rotary-stock-15227-978a36c.jpg",
+    "bytes": 171934
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/02/giustina-cb-r242-30%E2%80%B3-762mm-wheels-swing-arm-stock-16223.jpg",
+    "file": "/assets/source-machines/giustina-cb-r242-30--762mm-wheels-swing-arm-stock-16223-44b211f.jpg",
+    "bytes": 1234479
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/02/giustina-cb-r242-36%E2%80%B3-914mm-wheels-swing-arm-stock-16221.jpg",
+    "file": "/assets/source-machines/giustina-cb-r242-36--914mm-wheels-swing-arm-stock-16221-9382fb2.jpg",
+    "bytes": 189763
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/02/mattison-multi-spindle-grinding-machine.jpg",
+    "file": "/assets/source-machines/mattison-multi-spindle-grinding-machine-deed4c6.jpg",
+    "bytes": 436369
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/02/reciprocator-double-disc-grinding-machine-cell-with-robots-e1552650340202.jpg",
+    "file": "/assets/source-machines/reciprocator-double-disc-grinding-machine-cell-with-robots-e1552650340202-36a0014.jpg",
+    "bytes": 225304
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/02/reengineered-besly-swing-arm-double-disc-grinding-machine.jpg",
+    "file": "/assets/source-machines/reengineered-besly-swing-arm-double-disc-grinding-machine-5219650.jpg",
+    "bytes": 105098
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/01061-Blanchard-18A2.jpg",
+    "file": "/assets/source-machines/01061-Blanchard-18A2-c7e3281.jpg",
+    "bytes": 745881
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/06162sm.jpg",
+    "file": "/assets/source-machines/06162sm-dfbcaf5.jpg",
+    "bytes": 30962
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/100C-5-gauge.jpg",
+    "file": "/assets/source-machines/100C-5-gauge-390cd07.jpg",
+    "bytes": 58199
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/100C-5-tooling..jpg",
+    "file": "/assets/source-machines/100C-5-tooling-6e021ea.jpg",
+    "bytes": 76530
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/12089-small.jpg",
+    "file": "/assets/source-machines/12089-small-bb59340.jpg",
+    "bytes": 67198
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/6A049-Model.jpg",
+    "file": "/assets/source-machines/6A049-Model-92b2594.jpg",
+    "bytes": 174796
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/Blanchard-Grind-and-Wire-Brush.jpg",
+    "file": "/assets/source-machines/Blanchard-Grind-and-Wire-Brush-c9ff944.jpg",
+    "bytes": 688148
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/Blanchard.jpg",
+    "file": "/assets/source-machines/Blanchard-f7d87a1.jpg",
+    "bytes": 408411
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/Capture.jpg",
+    "file": "/assets/source-machines/Capture-e23259a.jpg",
+    "bytes": 95377
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/DSCN0977.jpg",
+    "file": "/assets/source-machines/DSCN0977-36d86ec.jpg",
+    "bytes": 175378
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/DSCN1609.jpg",
+    "file": "/assets/source-machines/DSCN1609-a146a8d.jpg",
+    "bytes": 633443
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/DSCN3641.jpg",
+    "file": "/assets/source-machines/DSCN3641-3291004.jpg",
+    "bytes": 121165
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/DSCN3657.jpg",
+    "file": "/assets/source-machines/DSCN3657-ca8da35.jpg",
+    "bytes": 224633
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/DSCN3668.jpg",
+    "file": "/assets/source-machines/DSCN3668-5dfaf26.jpg",
+    "bytes": 226978
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/Ford-Livonia-tooling-drawing.jpg",
+    "file": "/assets/source-machines/Ford-Livonia-tooling-drawing-18874cc.jpg",
+    "bytes": 80362
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/Mattison-72C4.jpg",
+    "file": "/assets/source-machines/Mattison-72C4-1bdc5b9.jpg",
+    "bytes": 63353
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/Thompson-Surface-grinder.jpg",
+    "file": "/assets/source-machines/Thompson-Surface-grinder-c03a520.jpg",
+    "bytes": 460241
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/Thompson-surface-grinder-2.jpg",
+    "file": "/assets/source-machines/Thompson-surface-grinder-2-a96157d.jpg",
+    "bytes": 351069
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/cinci.jpg",
+    "file": "/assets/source-machines/cinci-f661f7e.jpg",
+    "bytes": 175741
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/gear.gif",
+    "file": "/assets/source-machines/gear-44aabf8.gif",
+    "bytes": 3215
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/gear.jpg",
+    "file": "/assets/source-machines/gear-ac45161.jpg",
+    "bytes": 184035
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/grinder.gif",
+    "file": "/assets/source-machines/grinder-942b88f.gif",
+    "bytes": 58022
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/grinder.jpg",
+    "file": "/assets/source-machines/grinder-4087261.jpg",
+    "bytes": 30358
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/inside.gif",
+    "file": "/assets/source-machines/inside-3ffb5ed.gif",
+    "bytes": 13766
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/mattison-100C5.jpg",
+    "file": "/assets/source-machines/mattison-100C5-4af4e0c.jpg",
+    "bytes": 79245
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/mattison-gauge.jpg",
+    "file": "/assets/source-machines/mattison-gauge-4a618cb.jpg",
+    "bytes": 32362
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/outer-race.jpg",
+    "file": "/assets/source-machines/outer-race-5eb5fe5.jpg",
+    "bytes": 181226
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/park-pawl.jpg",
+    "file": "/assets/source-machines/park-pawl-4bcdce0.jpg",
+    "bytes": 183539
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/rings_inside.jpg",
+    "file": "/assets/source-machines/rings-inside-f707d73.jpg",
+    "bytes": 16797
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/scan0001.jpg",
+    "file": "/assets/source-machines/scan0001-9fc9605.jpg",
+    "bytes": 339911
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/tooling.jpg",
+    "file": "/assets/source-machines/tooling-a25c54c.jpg",
+    "bytes": 33051
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2019/03/transfer-shaft-1.jpg",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2020/08/IMG_20200723_090558.png",
+    "file": "/assets/source-machines/IMG-20200723-090558-e718031.png",
+    "bytes": 9670638
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2020/08/front-view.jpg",
+    "file": "/assets/source-machines/front-view-7c52cd8.jpg",
+    "bytes": 180757
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2020/11/Barber-Colman-6-10-Spindle-and-Tooling-1.jpg",
+    "file": "/assets/source-machines/Barber-Colman-6-10-Spindle-and-Tooling-1-13b4ba8.jpg",
+    "bytes": 1058841
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2020/11/PB074220.png",
+    "file": "/assets/source-machines/PB074220-8e7c376.png",
+    "bytes": 5938248
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2020/11/PB084245-small.jpg",
+    "file": "/assets/source-machines/PB084245-small-d6dacc5.jpg",
+    "bytes": 440670
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2020/11/Rebuilt-Barber-Colman-Gear-Hobbing-Machine-After.jpg",
+    "file": "/assets/source-machines/Rebuilt-Barber-Colman-Gear-Hobbing-Machine-After-2e5a11b.jpg",
+    "bytes": 665184
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2020/11/Rebuilt-Barber-Colman-Gear-Hobbing-Machine-Before.jpg",
+    "file": "/assets/source-machines/Rebuilt-Barber-Colman-Gear-Hobbing-Machine-Before-47b3bfc.jpg",
+    "bytes": 4263241
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2020/11/cutot1.png",
+    "file": "/assets/source-machines/cutot1-c9f3894.png",
+    "bytes": 1021897
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2020/11/rod-in-fixture.jpg",
+    "file": "/assets/source-machines/rod-in-fixture-532532c.jpg",
+    "bytes": 157594
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2020/11/wheel-layout.png",
+    "file": "/assets/source-machines/wheel-layout-fd3ff60.png",
+    "bytes": 26334
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/04/20220228_104823-2-scaled.jpg",
+    "file": "/assets/source-machines/20220228-104823-2-scaled-b2ab548.jpg",
+    "bytes": 502622
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-1.jpg",
+    "file": "/assets/source-machines/Centerless-Grinder-1-7a869b1.jpg",
+    "bytes": 704911
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-10-rotated.jpg",
+    "file": "/assets/source-machines/Centerless-Grinder-10-rotated-8844765.jpg",
+    "bytes": 275915
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-11.jpg",
+    "file": "/assets/source-machines/Centerless-Grinder-11-fa712ef.jpg",
+    "bytes": 776956
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-12.jpg",
+    "file": "/assets/source-machines/Centerless-Grinder-12-341a903.jpg",
+    "bytes": 740674
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-13.jpg",
+    "file": "/assets/source-machines/Centerless-Grinder-13-0d3b8ff.jpg",
+    "bytes": 772516
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-14.jpg",
+    "file": "/assets/source-machines/Centerless-Grinder-14-d41ecb9.jpg",
+    "bytes": 397496
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-15.jpg",
+    "file": "/assets/source-machines/Centerless-Grinder-15-f4559dc.jpg",
+    "bytes": 748228
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-16-rotated.jpg",
+    "file": "/assets/source-machines/Centerless-Grinder-16-rotated-7831390.jpg",
+    "bytes": 348347
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-2.jpg",
+    "file": "/assets/source-machines/Centerless-Grinder-2-172e9f1.jpg",
+    "bytes": 408525
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-3.jpg",
+    "file": "/assets/source-machines/Centerless-Grinder-3-9e8e064.jpg",
+    "bytes": 347112
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-5.jpg",
+    "file": "/assets/source-machines/Centerless-Grinder-5-8b05624.jpg",
+    "bytes": 324041
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-6.jpg",
+    "file": "/assets/source-machines/Centerless-Grinder-6-350fad3.jpg",
+    "bytes": 404681
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-7.jpg",
+    "file": "/assets/source-machines/Centerless-Grinder-7-dff26f4.jpg",
+    "bytes": 333838
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-8-rotated.jpg",
+    "file": "/assets/source-machines/Centerless-Grinder-8-rotated-072ee5b.jpg",
+    "bytes": 304251
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinder-9.jpg",
+    "file": "/assets/source-machines/Centerless-Grinder-9-a375528.jpg",
+    "bytes": 401773
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinding-Machine-After.jpg",
+    "file": "/assets/source-machines/Centerless-Grinding-Machine-After-896b5e7.jpg",
+    "bytes": 212447
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2022/10/Centerless-Grinding-Machine-Before.jpg",
+    "file": "/assets/source-machines/Centerless-Grinding-Machine-Before-e994242.jpg",
+    "bytes": 418663
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2023/05/Barber-Colman-Logo.png",
+    "file": "/assets/source-machines/Barber-Colman-Logo-c23d40d.png",
+    "bytes": 24529
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2023/05/Besly-Double-Disc-Machine-Logo-jpg.webp",
+    "file": "/assets/source-machines/Besly-Double-Disc-Machine-Logo-jpg-5e73b89.webp",
+    "bytes": 10756
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2023/05/Gardner-Double-Disc-Machine-Logo-jpg.webp",
+    "file": "/assets/source-machines/Gardner-Double-Disc-Machine-Logo-jpg-c4a7585.webp",
+    "bytes": 19650
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2023/05/Giustina-CB-International-Logo.png",
+    "file": "/assets/source-machines/Giustina-CB-International-Logo-69db59c.png",
+    "bytes": 11945
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2023/05/Mattison-Machine-Works-Logo.png",
+    "file": "/assets/source-machines/Mattison-Machine-Works-Logo-1de0d85.png",
+    "bytes": 16744
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2023/05/cinci-jpg.webp",
+    "file": "/assets/source-machines/cinci-jpg-549c506.webp",
+    "bytes": 68876
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2023/05/cropped-cincinnati-machines-logo-jpg.webp",
+    "file": "/assets/source-machines/cropped-cincinnati-machines-logo-jpg-03a59bc.webp",
+    "bytes": 14588
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2023/07/IMG_7304_background-removed_transparent_no-feet.png",
+    "file": "/assets/source-machines/IMG-7304-background-removed-transparent-no-feet-f2954e3.png",
+    "bytes": 2584344
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2023/08/IMG_7304_background-removed_no-feet-no-control-panel.png",
+    "file": "/assets/source-machines/IMG-7304-background-removed-no-feet-no-control-panel-f458f76.png",
+    "bytes": 1438430
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2023/10/CBV-Series-Overview.png",
+    "file": "/assets/source-machines/CBV-Series-Overview-f1cd6d3.png",
+    "bytes": 64482
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2023/10/Closeup-Gripper-with-Part-scaled.webp",
+    "file": "/assets/source-machines/Closeup-Gripper-with-Part-scaled-61e303c.webp",
+    "bytes": 185678
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2023/10/Specifications.png",
+    "file": "/assets/source-machines/Specifications-194e5cc.png",
+    "bytes": 129654
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2024/10/CB-Machinery-7-Point-Dresser-Diamond-jpg.webp",
+    "file": "/assets/source-machines/CB-Machinery-7-Point-Dresser-Diamond-jpg-372e6a8.webp",
+    "bytes": 28496
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2025/02/30in-CB-Double-Disc-Grinder-with-Robot-Automation.png",
+    "file": "/assets/source-machines/30in-CB-Double-Disc-Grinder-with-Robot-Automation-d4d1a40.png",
+    "bytes": 5153713
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2025/02/CB-Giustina-R242-Fully-Rebuilt-30in-Base-Horizontal-Double-Disc-Grinders-scaled.webp",
+    "file": "/assets/source-machines/CB-Giustina-R242-Fully-Rebuilt-30in-Base-Horizontal-Double-Disc-Grinders-scaled-88e54e7.webp",
+    "bytes": 214792
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2025/03/Rebuild-Retool-EMAG-VSC-250-VTL-Back-scaled.jpg",
+    "file": "/assets/source-machines/Rebuild-Retool-EMAG-VSC-250-VTL-Back-scaled-d6b4a5b.jpg",
+    "bytes": 799744
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2025/03/Rebuild-Retool-EMAG-VSC-250-VTL-Front-scaled.jpg",
+    "file": "/assets/source-machines/Rebuild-Retool-EMAG-VSC-250-VTL-Front-scaled-70f33cc.jpg",
+    "bytes": 823495
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2025/03/Rebuild-Retool-EMAG-VSC-250-VTL-Side-scaled.jpg",
+    "file": "/assets/source-machines/Rebuild-Retool-EMAG-VSC-250-VTL-Side-scaled-abe510c.jpg",
+    "bytes": 854179
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2025/05/CB-Wheel-Storage-Cart-for-Centerless-Grinding-Wheels-Front-View-scaled.png",
+    "file": "/assets/source-machines/CB-Wheel-Storage-Cart-for-Centerless-Grinding-Wheels-Front-View-scaled-5eaef51.png",
+    "bytes": 61747
+  },
+  {
+    "source": "https://www.cbmachinery.com/wp-content/uploads/2026/10/CB-Wheel-Storage-Cart-for-Centerless-Grinding-Wheels-Top-View-scaled.png",
+    "file": "/assets/source-machines/CB-Wheel-Storage-Cart-for-Centerless-Grinding-Wheels-Top-View-scaled-18f1ee9.png",
+    "bytes": 143622
+  }
+]

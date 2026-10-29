@@ -1,0 +1,80 @@
+{
+  "summary": {
+    "optimizedOriginals": 24,
+    "imageInstances": 59,
+    "pages": [
+      "/machines/index.html",
+      "/machines/clamp-bore/index.html",
+      "/machines/clamp-bore/double-spindle/index.html",
+      "/machines/rebuilds/index.html",
+      "/machines/rebuilds/barber-colman/index.html",
+      "/machines/rebuilds/thompson/index.html",
+      "/machines/rebuilds/mattison/index.html",
+      "/machines/rebuilds/blanchard/index.html",
+      "/machines/rebuilds/centerless/index.html",
+      "/machines/rebuilds/gardner/index.html",
+      "/machines/rebuilds/besly/index.html",
+      "/inventory/index.html",
+      "/inventory/stock-16223-giustina-cb-r242-double-disc-grinding-machine/index.html",
+      "/new/index.html",
+      "/applications/magnetics/index.html",
+      "/applications/knife-tools/index.html",
+      "/used/index.html",
+      "/vertical-turning-lathes/index.html",
+      "/rebuilds/index.html"
+    ],
+    "originalUniqueBytes": 47109854,
+    "largestDeliveryUniqueBytes": 4243430,
+    "originalInstanceBytes": 120561774,
+    "deliveryInstanceBytes": 11710376,
+    "note": "Original files retained. Delivery images downloaded only from source-provided rendered_url/srcset URLs; no image re-encoding or editing. Mechanical/app content HTML only, shared navigation CSS preserved.",
+    "verification": {
+      "deliveryImageInstances": 59,
+      "missingFiles": [],
+      "largestVariantWidth": 1080,
+      "globalCSSLinksPreserved": true
+    }
+  },
+  "assets": [
+    {
+      "group": "applications",
+      "original": "/assets/source-applications/d4ee1f41c4e7.png",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2023/10/Pile-without-background.png",
+      "originalBytes": 3957785,
+      "variants": [
+        {
+          "width": 480,
+          "url": "https://www.cbmachinery.com/wp-content/uploads/2023/10/Pile-without-background-480x360.png",
+          "local": "/assets/source-applications/web/d4ee1f41c4e7-480.png",
+          "bytes": 120253,
+          "actualWidth": 480,
+          "actualHeight": 360
+        },
+        {
+          "width": 1080,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2023/10/Pile-without-background.png?resize=1080%2C810&ssl=1",
+          "local": "/assets/source-applications/web/d4ee1f41c4e7-1080.png",
+          "bytes": 202844,
+          "actualWidth": 1080,
+          "actualHeight": 810
+        }
+      ]
+    },
+    {
+      "group": "applications",
+      "original": "/assets/source-applications/a6a657fa28b6.png",
+      "source": "https://www.cbmachinery.com/wp-content/uploads/2023/11/Pliers_bkgrd_on-angle-1.png",
+      "originalBytes": 893226,
+      "variants": [
+        {
+          "width": 1080,
+          "url": "https://i0.wp.com/www.cbmachinery.com/wp-content/uploads/2023/11/Pliers_bkgrd_on-angle-1.png?w=1080&ssl=1",
+          "local": "/assets/source-applications/web/a6a657fa28b6-1080.png",
+          "bytes": 110251,
+          "actualWidth": 1080,
+          "actualHeight": 1077
+        }
+      ]
+    }
+  ]
+}

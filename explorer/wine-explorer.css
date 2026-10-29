@@ -1,0 +1,27 @@
+/* Explorer has its own fluorescent interaction signal; Quote keeps C&B's wine. */
+.cb-site .mx-explorer{
+ --mx-ink:var(--on-stage,#f6f3ee);
+ --mx-body:var(--stage-body,#c4bab6);
+ --mx-muted:var(--stage-muted,#a99b98);
+ --mx-surface:var(--stage,#21191c);
+ --mx-panel:#261e21;
+ --mx-border:var(--stage-border,#54444a);
+ --mx-steel:var(--explore-accent,#ff5a1f);
+ --mx-selected:var(--explore-accent-wash,#ff5a1f14);
+ --mx-wine:var(--action,#8f2d46);
+ color:var(--mx-ink);color-scheme:dark
+}
+.mx-explorer :is(button[aria-pressed=true],button[aria-current=step])>.mx-icon{filter:brightness(0) saturate(100%) invert(43%) sepia(85%) saturate(2858%) hue-rotate(350deg) brightness(104%) contrast(101%);opacity:1}
+/* Content progression is secondary to Quote; orange marks scene selection. */
+.cb-site .mx-explorer .mx-follow{min-height:44px;background:transparent!important;border-color:#a99b98!important;color:var(--mx-ink)!important}
+.cb-site .mx-explorer .mx-follow>.mx-icon{filter:brightness(0) invert(1);opacity:.85}
+@media(hover:hover) and (pointer:fine){.cb-site .mx-explorer .mx-follow:hover:not(:disabled){background:#3a2c31!important;border-color:#c4c7c4!important;color:var(--mx-ink)!important}}
+.cb-site .mx-explorer .mx-follow:active:not(:disabled){background:#514047!important;border-color:#c4c7c4!important}
+.cb-site .mx-quote{background:var(--mx-wine);border-color:var(--action-edge,#b86c7f);color:#fff!important}
+.cb-site .mx-quote:hover{background:var(--action-hover,#a03751)}
+.cb-site .mx-machine-fallback,.cb-site .mx-official-photo>img{mix-blend-mode:normal}
+.cb-site .mx-ring-scene>.rg-fallback{background:var(--mx-surface)}
+.cb-site .mx-ring-scene .rg-scene-labels text{fill:var(--mx-body);stroke:var(--mx-surface)}
+.cb-site .mx-ring-scene .rg-scene-labels path{stroke:var(--mx-steel)}
+.cb-site .mx-ring-scene .rg-scene-labels circle{fill:var(--mx-steel)}
+.cb-site .mx-explorer.mx-is-expanded{background:var(--mx-surface)}

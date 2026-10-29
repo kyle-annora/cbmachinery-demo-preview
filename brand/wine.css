@@ -1,0 +1,69 @@
+/* Approved C&B palette: shared by the marketing and inquiry journey. */
+.cb-site {
+  --brand: #741d35;
+  --wine: #741d35;
+  --wine-dark: #541426;
+  --stage: #21191c;
+  --stage-panel: #2b2024;
+  --stage-raised: #3a2c31;
+  --stage-hover: #514047;
+  --stage-border: #54444a;
+  --on-stage: #f6f3ee;
+  --stage-body: #c4bab6;
+  --stage-muted: #a99b98;
+  --emphasis: #e8d8af;
+  --explore-accent: #ff5a1f;
+  --explore-accent-bright: #ff895c;
+  --explore-accent-wash: #ff5a1f14;
+  --explore-edge: #62483e;
+  --action: #8f2d46;
+  --action-hover: #a03751;
+  --action-edge: #b86c7f;
+  --ink: #2b2527;
+  --text: #645b5b;
+  --muted: #6c6161;
+  --paper: #fff;
+  --soft: #f4f1ef;
+  --wash: #ece6e2;
+  --line: #ddd5d2;
+  --steel: #6f535c;
+  background: var(--paper);
+  color: var(--ink);
+}
+.cb-site :focus-visible { outline: 3px solid var(--brand); outline-offset: 4px; }
+.cb-site .btn-primary { background: var(--brand); color: #fff; }
+
+body:not(.cb-site) .cb-site .btn-primary:hover,body.flat-industrial .btn-primary:hover{ background: var(--wine-dark); }
+.cb-site .btn-primary .icon { filter: brightness(0) invert(1); }
+.cb-site .btn-secondary { border-color: #bdb1b0; }
+.cb-site .announcement { background: #f1edea; color: var(--text); }
+.cb-site .search-field { border-color: #b8abaa; }
+.cb-site .search-field:focus-within { border-color: var(--brand); outline: 2px solid var(--brand); outline-offset: 2px; }
+.cb-site .search-result small { color: var(--text); }
+.cb-site .machine-family .family-photo { background: var(--soft); }
+
+/* Continuous dark stages, with scoped readable text tokens. */
+.cb-site .cb-immersive {
+  --ink: var(--on-stage);
+  --text: var(--stage-body);
+  --muted: var(--stage-muted);
+  --soft: var(--stage-panel);
+  --wash: var(--stage-raised);
+  --line: var(--stage-border);
+  --steel: var(--emphasis);
+  background: var(--stage);
+  color: var(--on-stage);
+}
+.cb-immersive .brand-emphasis, .cb-immersive em { color: var(--emphasis); font-style: normal; }
+.cb-immersive :focus-visible { outline-color: var(--emphasis); }
+.cb-immersive .btn-primary { background: var(--action); border: 1px solid var(--action-edge); color: #fff; }
+
+body:not(.cb-site) .cb-immersive .btn-primary:hover,body.flat-industrial .cb-immersive .btn-primary:hover{ background: var(--action-hover); }
+.cb-immersive .btn-secondary { background: transparent; color: var(--on-stage); border-color: var(--stage-border); }
+
+body:not(.cb-site) .cb-immersive .btn-secondary:hover,body.flat-industrial .cb-immersive .btn-secondary:hover{ background: var(--stage-raised); }
+.cb-immersive .app-breadcrumb img, .cb-immersive .text-link .icon, .cb-immersive .app-link .icon { filter: brightness(0) invert(1); }
+.cb-immersive .app-breadcrumb { color: var(--stage-body); }
+.cb-immersive .eyebrow { color: var(--stage-body); }
+.cb-immersive .app-intro-helper a { color: var(--on-stage); }
+.cb-site .app-footer { color: var(--text); }

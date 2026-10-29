@@ -1,0 +1,41 @@
+/* Reference lock: approved C&B workspace and project surfaces. Silver canvas,
+   white container, graphite text, wine primary; one main action per state. */
+.patrick-body { min-width:0; }
+.patrick-back { display:inline-flex; align-items:center; min-height:44px; font-size:13px; color:#555e5b; }
+.patrick-main { max-width:960px; margin:auto; padding:54px 36px 38px; }
+.patrick-heading { margin-bottom:32px; max-width:660px; }
+.patrick-heading h1 { font-size:44px; line-height:1.08; letter-spacing:-1.4px; font-weight:400; margin:0 0 20px; text-wrap:balance; }
+.patrick-heading>p:last-child { max-width:580px; margin:0; color:#59635f; font-size:15px; line-height:1.75; }
+.patrick-panel { padding:32px; background:#fff; border:1px solid #cbd2cd; border-radius:4px; }
+.patrick-panel h2 { font-size:25px; line-height:1.2; font-weight:400; letter-spacing:-.6px; margin:0 0 9px; }
+.patrick-panel>div>p:not(.id-eyebrow) { margin:0; font-size:13px; color:#59635f; line-height:1.6; }
+.patrick-fixtures { list-style:none; margin:27px 0 28px; padding:0; }
+.patrick-fixtures li { display:flex; gap:18px; padding:23px 0; border-top:1px solid #e0e5e2; }
+.patrick-fixtures li:last-child { border-bottom:1px solid #e0e5e2; }
+.patrick-number { color:#69736d; font-size:11px; padding-top:3px; }
+.patrick-fixtures strong { font-size:15px; font-weight:600; line-height:1.4; }
+.patrick-fixtures p { font-size:13px; line-height:1.65; color:#59635f; margin:7px 0 0; max-width:640px; }
+.patrick-primary { display:inline-flex; align-items:center; justify-content:center; gap:15px; min-height:48px; padding:13px 21px; border:1px solid #741d35; border-radius:3px; font:600 14px/1.5 Arial,Helvetica,sans-serif; text-decoration:none; }
+.patrick-primary img { width:16px; height:16px; filter:brightness(0) invert(1); pointer-events:none; }
+#patrick-actions { display:flex; flex-wrap:wrap; gap:12px; }
+#patrick-actions .btn-secondary { min-height:48px; }
+#patrick-status:empty { display:none; }
+#patrick-status { margin:19px 0 0; color:#515e55; font-size:13px; line-height:1.6; }
+#patrick-error { margin-top:18px; padding:13px 15px; background:#f7eff1; border-left:3px solid #741d35; font-size:13px; line-height:1.65; color:#741d35; }
+.patrick-panel .patrick-disclosure { margin:21px 0 0; color:#69736d; font-size:11px; line-height:1.65; max-width:680px; }
+.patrick-links { display:flex; flex-wrap:wrap; gap:10px 28px; margin-top:22px; }
+.patrick-links a { display:inline-flex; align-items:center; min-height:44px; font-size:13px; color:#414b45; text-decoration:none; }
+.patrick-footnote { margin:12px 0 0; font-size:11px; line-height:1.6; color:#69736d; max-width:650px; }
+@media(max-width:600px) {
+ .id-toolbar { padding:12px 20px; }
+ .patrick-main { padding:32px 20px; }
+ .patrick-heading h1 { font-size:34px; letter-spacing:-1px; }
+ .patrick-heading>p:last-child { font-size:14px; }
+ .patrick-panel { padding:23px 20px; }
+ .patrick-panel h2 { font-size:23px; }
+ .patrick-fixtures li { gap:12px; }
+ #patrick-actions { display:grid; }
+ #patrick-actions>.btn { width:100%; }
+ .patrick-primary { font-size:13px; }
+ .patrick-links { gap:4px 22px; }
+}

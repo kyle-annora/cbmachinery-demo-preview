@@ -1,0 +1,55 @@
+.application-page{background:#fff;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+.application-page .site-header{position:relative;z-index:20}
+.application-page .utility{position:relative;z-index:21}
+.application-page .app-shell{max-width:1400px;margin:0 auto;padding-left:42px;padding-right:42px}
+.application-page .app-breadcrumb{display:flex;align-items:center;gap:10px;font-size:12px;line-height:1.5;color:var(--text);margin-bottom:44px}
+.app-breadcrumb img{width:13px;height:13px;opacity:.5}
+
+body:not(.cb-site) .app-breadcrumb a:hover,body.flat-industrial .app-breadcrumb a:hover{text-decoration:underline;text-underline-offset:4px}
+.application-page .app-intro{padding-top:28px;padding-bottom:46px}
+.app-intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:end}
+.app-intro h1{font-size:clamp(42px,4.7vw,64px);line-height:1.04;font-weight:500;letter-spacing:-2.3px;margin-top:21px;text-wrap:balance}
+.app-intro-copy{max-width:450px;justify-self:end;padding-bottom:4px}
+.app-intro-copy>p:first-child{font-size:17px;line-height:1.75;color:var(--text)}
+.app-intro-copy .app-intro-helper{font-size:13px;line-height:1.6;color:var(--text);margin-top:18px}
+.app-exploration{padding-bottom:12px}
+.app-static-explanation{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:30px;background:var(--soft)}
+.app-static-explanation p{font-size:16px;line-height:1.7;margin:20px 0}
+.app-context{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;padding-top:100px;padding-bottom:100px}
+.app-context h2,.app-reference h2,.app-faq h2,.app-quote h2{font-size:38px;line-height:1.14;font-weight:500;letter-spacing:-1.15px;margin-top:20px;text-wrap:balance}
+.app-context-copy p,.app-reference-copy p:not(.eyebrow){font-size:16px;line-height:1.8;color:var(--text);margin-bottom:18px}
+.app-context-copy .app-technical-note{font-size:14px;margin-top:26px;margin-bottom:0;max-width:610px}
+.app-reference{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;align-items:center;padding-top:60px;padding-bottom:60px;background:var(--soft)}
+.app-reference-image{display:flex;flex-direction:column;align-items:center;gap:18px}
+.app-reference-image img{width:280px;max-width:100%;height:auto;mix-blend-mode:multiply}
+.app-reference-image span{font-size:12px;color:var(--text)}
+.app-reference-copy h2{margin-bottom:24px}
+.app-reference-copy p{max-width:630px}
+.app-link{display:inline-flex;align-items:center;gap:10px;font-size:14px;line-height:1.6;color:var(--ink);margin-top:6px}
+
+body:not(.cb-site) .app-link:hover,body.flat-industrial .app-link:hover{text-decoration:underline;text-underline-offset:4px}
+.app-link .icon{width:16px;height:16px}
+.app-faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;padding-top:100px;padding-bottom:100px}
+.app-faq-list details{padding:0 0 26px}
+.app-faq-list summary{display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:17px;line-height:1.5;font-weight:500;cursor:pointer;list-style:none;padding:6px 0}
+.app-faq-list summary::-webkit-details-marker{display:none}
+.app-faq-list summary img{width:18px;height:18px;transition:transform .15s}
+.app-faq-list details[open] summary img{transform:rotate(180deg)}
+.app-faq-list details p{font-size:15px;line-height:1.8;color:var(--text);margin-top:12px;max-width:610px}
+.app-faq-list summary:focus-visible{outline:3px solid var(--steel);outline-offset:4px}
+.app-quote{background:var(--soft);padding:65px 0}
+.app-quote-inner{display:flex;align-items:center;justify-content:space-between;gap:70px}
+.app-quote h2{font-size:44px;margin-top:18px}
+.app-quote p:not(.eyebrow){font-size:16px;line-height:1.7;color:var(--text);margin-top:22px}
+.app-quote-action{display:flex;align-items:center;flex-direction:column;gap:15px;flex-shrink:0;padding-right:60px}
+.app-quote-action>span{font-size:12px;color:var(--text)}
+.app-footer{display:flex;align-items:center;justify-content:space-between;gap:45px;padding-top:46px;padding-bottom:46px}
+.app-footer p,.app-footer a{font-size:12px;line-height:1.8;color:var(--text)}
+.app-footer p{margin-top:10px}
+.app-footer-contact{display:flex;flex-direction:column;gap:6px}
+.app-footer-review{text-align:right}
+.app-footer-review>a{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:1100px){.application-page .app-shell{padding-left:28px;padding-right:28px}.app-intro-grid,.app-context,.app-reference,.app-faq{gap:50px}.app-context h2,.app-reference h2,.app-faq h2{font-size:34px}.app-quote-action{padding-right:0}}
+@media(max-width:800px){.app-intro-grid{grid-template-columns:1fr;gap:24px}.app-intro-copy{justify-self:start;max-width:600px}.app-intro h1{font-size:48px;letter-spacing:-1.7px}.application-page .app-breadcrumb{margin-bottom:30px}.application-page .app-intro{padding-top:20px;padding-bottom:34px}.app-intro-copy>p:first-child{font-size:16px}.app-context,.app-faq{grid-template-columns:1fr;gap:30px;padding-top:65px;padding-bottom:65px}.app-reference{grid-template-columns:1fr;gap:30px;padding-top:38px;padding-bottom:40px}.app-reference-image{align-items:flex-start}.app-reference-copy h2{font-size:32px}.app-quote-inner{align-items:flex-start;flex-direction:column;gap:30px}.app-quote-action{align-items:flex-start}.app-footer{flex-wrap:wrap;gap:30px}.app-footer-review{text-align:left}.app-static-explanation{grid-template-columns:1fr}.app-quote h2{font-size:38px}}
+@media(max-width:520px){.application-page .app-shell{padding-left:20px;padding-right:20px}.application-page .app-breadcrumb{gap:7px;font-size:11px}.app-intro h1{font-size:42px}.app-intro-grid{gap:22px}.app-intro-copy .app-intro-helper{margin-top:14px}.app-context,.app-faq{padding-top:52px;padding-bottom:52px}.app-context h2,.app-faq h2{font-size:30px}.app-reference h2{font-size:30px}.app-context-copy p,.app-reference-copy p:not(.eyebrow){font-size:15px}.app-faq-list summary{font-size:16px}.app-quote{padding:45px 0}.app-quote h2{font-size:36px}.app-footer{align-items:flex-start;flex-direction:column;padding-top:35px;padding-bottom:35px}.app-footer>div:first-child img{width:144px;height:auto}}
+@media(prefers-reduced-motion:reduce){.app-faq-list summary img{transition:none}}

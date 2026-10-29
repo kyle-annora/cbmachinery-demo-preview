@@ -1,0 +1,37 @@
+/* Approved flat silver direction. Light-page tokens stay separate from the
+   ink-wine Explorer, which owns its local surface and interaction colors. */
+body.cb-silver {
+  --ink: #272b2c;
+  --text: #555e5b;
+  --muted: #69716e;
+  --paper: #fff;
+  --soft: #f6f7f6;
+  --wash: #e3e6e5;
+  --line: #cdd2cf;
+  --steel: #59635f;
+  --on-stage: #f6f7f6;
+  --stage-body: #c4c7c4;
+  --stage-muted: #a5aaa7;
+  background: var(--paper);
+  color: var(--ink);
+}
+.cb-silver *, .cb-silver *::before, .cb-silver *::after { box-sizing: border-box; }
+.cb-silver .utility { background: #fff; color: #555e5b; border: 0; }
+.cb-silver .site-header { background: #fff; box-shadow: none; border: 0; }
+.cb-silver .announcement { background: #f6f7f6; color: #555e5b; }
+.cb-silver .btn-primary { background: #741d35; color: #fff; border-color: #741d35; border-radius: 3px; }
+
+body:not(.cb-site) .cb-silver .btn-primary:hover,body.flat-industrial .cb-silver .btn-primary:hover{ background: #541426; border-color: #541426; }
+.cb-silver .cb-immersive .btn-primary { border-color: var(--action-edge); }
+.cb-silver .btn-secondary { border-color: #b8bfbc; border-radius: 3px; }
+.cb-silver .cb-immersive .btn-secondary { border-color: var(--stage-border); }
+.cb-silver .nav-quote { color: #fff; }
+.cb-silver .mega-menu, .cb-silver .search-panel { background: #fff; border-radius: 3px; }
+.cb-silver .search-field { border-color: #b8bfbc; }
+.cb-silver .search-field:focus-within { border-color: var(--brand); }
+.cb-silver .machine-family .family-photo { background: #f6f7f6; }
+.cb-silver .cb-footer { background: #fff; color: #272b2c; }
+.cb-silver .cb-footer p, .cb-silver .cb-footer address, .cb-silver .cb-footer-bottom { color: #59635f; }
+.cb-silver :focus-visible { outline: 2px solid #741d35; outline-offset: 5px; }
+.cb-silver .cb-immersive :focus-visible { outline-color: #e8d8af; }
+@media(prefers-reduced-motion:reduce) { .cb-silver { scroll-behavior: auto; } }

@@ -1,0 +1,90 @@
+/* Reference lock: C&B's equipment and approved flat silver direction are primary.
+   Vercel contributes disciplined geometric detail and controlled neutral layering.
+   Ink-wine / champagne / orange remain scoped to the existing Explorer.
+   User-approved direction: continuous parametric contours behind real equipment.
+   A single flat line color; density creates tone. Copy and controls stay clear. */
+body.flat-industrial{--ink:#272b2c;--text:#555e5b;--muted:#69716e;--paper:#fff;--soft:#f6f7f6;--wash:#e3e6e5;--line:#cdd2cf;--steel:#59635f;--on-stage:#f6f7f6;--stage-body:#c4c7c4;--stage-muted:#a5aaa7;background:#fff;color:var(--ink)}
+.flat-industrial *, .flat-industrial *::before, .flat-industrial *::after{box-sizing:border-box}
+.flat-industrial h1,.flat-industrial h2{margin:0}
+.flat-industrial a{color:inherit}
+.flat-industrial .ip-primary{color:#fff}
+.flat-industrial .fi-wrap{width:calc(100% - 96px);max-width:1440px;margin-inline:auto}
+.flat-industrial .fi-review{background:#f6f7f6;color:#555e5b;font-size:11px;line-height:1.5}
+.fi-review>.fi-wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:35px}
+.fi-review-name{margin-left:15px;color:#272b2c}
+.fi-review a{display:flex;align-items:center;gap:8px;min-height:32px}
+.fi-review img{width:13px;height:13px}
+.flat-industrial .utility{background:#fff;color:#555e5b;border:0}
+.flat-industrial .site-header{box-shadow:none;border:0;background:#fff}
+.flat-industrial .btn-primary{background:#741d35;color:white;border-color:#741d35;border-radius:3px}
+.flat-industrial .nav-quote{color:#fff}
+.flat-industrial .btn-primary:hover{background:#541426}
+.flat-industrial .mega-menu,.flat-industrial .search-panel{border-radius:3px;background:#fff}
+.flat-industrial .machine-family .family-photo{background:#f6f7f6}
+.flat-industrial .search-field{border-color:#b8bfbc}
+.flat-industrial .fi-hero{background:#e3e6e5;padding:12px 0 0;overflow:hidden;position:relative;isolation:isolate}
+.fi-hero-field{position:absolute;inset:0 0 60px;pointer-events:none;background:url('./assets/precision-field-wide.svg') center/100% 100% no-repeat;z-index:0}
+.flat-industrial .fi-hero>.fi-wrap{position:relative;z-index:1}
+.fi-hero-grid{display:grid;grid-template-columns:38.5% 61.5%;align-items:center;min-height:615px;gap:0}
+.fi-copy{padding:55px 0 58px;position:relative;z-index:1}
+.flat-industrial .fi-kicker{font-size:10px;font-weight:600;letter-spacing:.14em;line-height:1.7;color:#59635f;margin-bottom:27px}
+.flat-industrial h1{font-size:clamp(48px,4.7vw,74px);font-weight:400;line-height:1.04;letter-spacing:-.049em;text-wrap:balance;max-width:620px}
+.flat-industrial .fi-intro{font-size:16px;line-height:1.8;max-width:410px;color:#4f5955;margin-top:29px}
+.fi-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:33px}
+.flat-industrial .fi-button{display:inline-flex;align-items:center;justify-content:center;gap:26px;background:#741d35;color:#fff;border:1px solid #741d35;border-radius:3px;min-height:52px;padding:14px 20px;font-size:13px;font-weight:600;cursor:pointer;text-decoration:none}
+.flat-industrial .fi-button:hover{background:#541426;border-color:#541426}
+.fi-button img{filter:brightness(0) invert(1);width:18px;height:18px}
+.fi-text-link{display:inline-flex;align-items:center;gap:12px;font-size:13px;min-height:48px}
+.fi-text-link img,.fi-application img{width:16px;height:16px}
+.fi-text-link:hover,.fi-application:hover span{text-decoration:underline;text-underline-offset:5px}
+.fi-application{display:inline-flex;align-items:center;flex-wrap:wrap;gap:6px;font-size:11px;line-height:1.6;color:#59635f!important;margin-top:28px;min-height:28px}
+.fi-application span{color:#272b2c;margin-left:4px}
+.fi-equipment{margin:0;min-width:0;padding:8px 0 12px;align-self:stretch;display:flex;flex-direction:column;justify-content:center;position:relative}
+.fi-equipment-tabs{display:flex;justify-content:flex-end;gap:6px;position:relative;z-index:1}
+.fi-equipment-tabs button{font:inherit;font-size:11px;color:#58615e;background:transparent;padding:8px 13px;border:1px solid transparent;border-radius:3px;min-height:36px;cursor:pointer}
+.fi-equipment-tabs button[aria-pressed=true]{border-color:#aab3ae;color:#272b2c}
+.fi-equipment-tabs button:hover{background:#ffffff60}
+.fi-photo-slot{height:530px;display:flex;align-items:center;justify-content:center;margin:4px -34px 0 -12px;position:relative;isolation:isolate}
+.fi-curve-field{display:none;position:absolute;inset:-48px -120px -12px -84px;pointer-events:none;background:url('./assets/precision-field.svg') center/100% 100% no-repeat;z-index:-1}
+.fi-photo-slot img{display:block;width:100%;height:100%;max-width:none;object-fit:contain;filter:none;position:relative}
+.fi-photo-slot img[data-equipment=clamp]{padding:8px 25px 0}
+.fi-equipment figcaption{display:flex;justify-content:space-between;gap:15px;align-items:start;font-size:9px;line-height:1.6;letter-spacing:.06em;color:#59635f;margin-top:8px;padding-left:12px}
+.fi-equipment figcaption span:last-child{letter-spacing:0;white-space:nowrap}
+.fi-photo-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.fi-capabilities{display:flex;align-items:center;justify-content:space-between;gap:25px;min-height:60px;padding-bottom:8px;font-size:11px;color:#59635f}
+.fi-capabilities nav{display:flex;gap:34px;color:#272b2c}
+.fi-capabilities a{display:flex;align-items:center;gap:16px;min-height:38px}
+.fi-capabilities a:hover{text-decoration:underline;text-underline-offset:5px}
+.fi-capabilities img{width:14px;height:14px;opacity:.7}
+.fi-section-heading{display:flex;align-items:end;justify-content:space-between;gap:70px;margin-bottom:43px}
+.flat-industrial .fi-section-heading h2{font-size:clamp(34px,3.2vw,48px);font-weight:400;line-height:1.12;letter-spacing:-.035em;text-wrap:balance}
+.flat-industrial .fi-section-heading>p{font-size:14px;line-height:1.8;max-width:360px;color:#59635f;padding-bottom:3px}
+.flat-industrial .fi-section-heading .fi-kicker{margin-bottom:18px}
+.fi-explorer{padding:73px 0 54px;scroll-margin-top:100px}
+.flat-industrial .fi-explorer .fi-section-heading>p,.flat-industrial .fi-explorer .fi-kicker{color:var(--stage-body)}
+.flat-industrial .fi-explorer h2{color:#f6f7f6}
+.fi-explorer-wrap{width:calc(100% - 64px);max-width:1600px;margin:auto}
+.flat-industrial .mp-stage{border:0;border-radius:3px}
+.flat-industrial .mp-steps,.flat-industrial .mp-detail{box-shadow:none}
+.fi-inquiry-section{padding:91px 0 96px;scroll-margin-top:100px;background:#fff}
+.fi-inquiry-section>.fi-wrap{max-width:1240px}
+.fi-direction{background:#f6f7f6;padding:32px 0}
+.fi-direction-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.fi-direction .fi-kicker{display:block;margin-bottom:8px;font-size:10px}
+.fi-direction p{font-size:14px;color:#272b2c}
+.fi-swatches{display:flex;gap:20px;flex-wrap:wrap}
+.fi-swatches span{font-size:11px;color:#59635f;display:flex;align-items:center;gap:8px}
+.fi-swatches i{display:inline-block;height:20px;width:20px;border:1px solid #b8bfbc;border-radius:2px}
+.fi-swatches .fi-pattern-swatch{background:#e3e6e5 url('./assets/precision-field.svg') 80% 70%/160px 100px no-repeat}
+.fi-direction a{display:flex;gap:8px;font-size:11px;align-items:center}
+.fi-direction a img{width:14px;height:14px}
+.flat-industrial .cb-footer{background:#fff;color:#272b2c}
+.flat-industrial .cb-footer p,.flat-industrial .cb-footer address,.flat-industrial .cb-footer-bottom{color:#59635f}
+.flat-industrial :focus-visible{outline:2px solid #741d35;outline-offset:5px}
+.flat-industrial .cb-immersive :focus-visible{outline-color:#e8d8af}
+@media(min-width:1600px){.fi-hero-grid{min-height:685px}.fi-photo-slot{height:595px}.fi-copy{padding-block:65px}.fi-intro{font-size:17px}}
+@media(max-width:1180px){.flat-industrial .fi-wrap{width:calc(100% - 64px)}.fi-hero-grid{grid-template-columns:46% 54%;min-height:540px}.flat-industrial h1{font-size:53px}.fi-photo-slot{height:440px;margin-inline:-20px -26px}.fi-curve-field{inset:-25px -90px 0 -40px}.fi-actions{gap:15px}.flat-industrial .fi-button{gap:14px;font-size:12px}.fi-text-link{font-size:12px;gap:8px}.fi-capabilities nav{gap:23px}.fi-equipment figcaption{font-size:8px;flex-direction:column;gap:3px}.fi-section-heading{gap:35px}.fi-direction-inner{flex-wrap:wrap}}
+@media(max-width:760px){.flat-industrial .fi-wrap{width:calc(100% - 40px)}.fi-review-name{margin-left:9px}.fi-review{font-size:10px}.fi-review a{font-size:10px}.fi-hero-grid{display:flex;flex-direction:column;align-items:stretch;min-height:0}.fi-copy{padding:35px 0 0}.flat-industrial h1{font-size:48px;letter-spacing:-.045em}.flat-industrial .fi-kicker{font-size:9px;margin-bottom:22px}.flat-industrial .fi-intro{font-size:14px;line-height:1.75;max-width:430px;margin-top:24px}.fi-actions{margin-top:25px;gap:18px}.flat-industrial .fi-button{min-height:48px;font-size:12px;padding:12px 16px}.fi-text-link{font-size:12px}.fi-application{font-size:10px;margin-top:17px}.fi-equipment{padding:15px 0 8px}.fi-equipment-tabs{justify-content:flex-start;margin-top:9px}.fi-equipment-tabs button{font-size:10px;min-height:38px;padding:7px 12px}.fi-photo-slot{height:auto;aspect-ratio:1.3;margin:0 -16px}.fi-equipment figcaption{margin-top:4px;padding:0;font-size:8px;flex-direction:row}.fi-equipment figcaption span:last-child{max-width:90px;white-space:normal;text-align:right}.fi-capabilities{display:block;padding:20px 0 25px;min-height:0}.fi-capabilities p{font-size:10px;margin-bottom:8px}.fi-capabilities nav{flex-wrap:wrap;gap:5px 22px;font-size:10px}.fi-capabilities a{gap:7px;min-height:35px}.fi-capabilities img{width:12px;height:12px}.fi-section-heading{display:block;margin-bottom:28px}.flat-industrial .fi-section-heading h2{font-size:36px}.flat-industrial .fi-section-heading>p{font-size:13px;margin-top:22px;max-width:400px}.fi-explorer{padding:44px 0 32px}.fi-explorer-wrap{width:calc(100% - 40px)}.fi-inquiry-section{padding:51px 0 58px}.fi-direction{padding:25px 0}.fi-direction-inner{gap:25px}.fi-swatches{gap:16px}.fi-direction p{font-size:13px}.fi-direction .fi-kicker{font-size:9px}.fi-swatches span{font-size:10px}.fi-swatches i{height:17px;width:17px}}
+@media(prefers-reduced-motion:reduce){.flat-industrial{scroll-behavior:auto}}
+@media(min-width:761px) and (max-width:1180px){.fi-hero-field{background-image:url('./assets/precision-field-tablet.svg')}}
+@media(max-width:760px){.fi-hero-field{display:none}.fi-curve-field{display:block;inset:0;background-image:url('./assets/precision-field-mobile.svg')}}

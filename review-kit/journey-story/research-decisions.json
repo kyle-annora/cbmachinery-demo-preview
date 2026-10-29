@@ -1,0 +1,13 @@
+{
+  "purpose": "A three-chapter customer-facing journey presenter; supporting details stay collapsed.",
+  "references": [
+    {"url":"https://tulip.co/","observed":"One shared factory scene; three outcome-led steps with only the current description expanded; short spatial labels and one contextual detail card."},
+    {"url":"https://tulip.co/industries/luxury-goods/","observed":"Separate visual roles for the workstation illustration, system relationship diagram and actual product screenshot."}
+  ],
+  "adaptation": {
+    "structure":"Find / Understand / Move forward; four sequential project states in the third chapter.",
+    "ratio":"Approximately 27% text and 70% visual at desktop widths.",
+    "palette":{"primaryCTA":"#741D35","explorerOnly":"#21191C","canvas":"#F7F8F7","silver":"#E7EAE8"},
+    "rules":["One headline and one short introductory sentence per chapter.","A maximum of three capability labels.","Before and After remain brief; no comparison matrix.","Use real demo captures, with mobile touchpoints in the corresponding phase.","No automatic motion; keyboard and button controls follow the same linear route.","SEO performance and the existing internal quotation process remain unverified.","Branding harness is a proposed ongoing pilot, not a shipped automation platform."]
+  }
+}
