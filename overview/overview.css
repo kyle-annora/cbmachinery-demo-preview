@@ -7,3 +7,20 @@
 
 #call-explorer .mx-workspace{padding-top:0}.review-notes{margin-top:20px}.review-notes p{font-size:13px;line-height:1.6;color:var(--muted);white-space:pre-wrap;overflow-wrap:anywhere}#review-facts{display:block}dl.facts{margin:0}
 @media(max-width:760px){.value-table .value-table-head{display:grid;position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%)}}
+
+/* One overview, followed by the three customer stages. */
+.chapter-nav{grid-template-columns:.78fr 1fr 1.2fr 1.1fr}
+.chapter-nav button[data-chapter="8"]{border-right:1px solid #e3e7e4}
+.pilot-decisions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.pilot-decisions article{padding:28px;border-right:1px solid var(--line)}
+.pilot-decisions article:last-child{border-right:0}
+.pilot-decisions h2{font-size:26px;line-height:1.15;letter-spacing:-.6px;font-weight:400;margin:18px 0 14px}
+.pilot-decisions p{font-size:15px;line-height:1.6;color:var(--muted);margin:0}
+.pilot-owner{display:block;color:var(--wine);font-size:12px;line-height:1.6;margin-top:24px}
+.pilot-measures{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;padding-top:38px}
+.pilot-measures h2{font-size:28px;font-weight:400;line-height:1.15;letter-spacing:-.6px;margin:12px 0}
+.pilot-measures dl{margin:0}
+.pilot-measures dl>div{display:grid;grid-template-columns:1fr 1.5fr;gap:20px;padding:15px 0;border-bottom:1px solid #c7ceca}
+.pilot-measures dt{font-size:14px;color:var(--wine)}
+.pilot-measures dd{font-size:14px;line-height:1.5;margin:0;color:var(--muted)}
+@media(max-width:760px){.chapter-nav{padding-inline:12px;grid-template-columns:.85fr .9fr 1.2fr 1.1fr}.chapter-nav button{justify-content:center;text-align:center;line-height:1.3;padding:10px 6px}.chapter-nav button span{display:none}.pilot-decisions{grid-template-columns:1fr}.pilot-decisions article{padding:22px;border-right:0;border-bottom:1px solid var(--line)}.pilot-decisions article:last-child{border-bottom:0}.pilot-decisions h2{font-size:25px;margin-top:14px}.pilot-measures{grid-template-columns:1fr;gap:12px;padding-top:28px}.pilot-measures h2{font-size:25px}.pilot-measures dl>div{grid-template-columns:.9fr 1.2fr;gap:16px}.call-header .quiet-link{min-height:44px;display:inline-flex;align-items:center}.chapter-nav button[data-chapter="8"]{border-right:0}}

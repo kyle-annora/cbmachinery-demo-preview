@@ -1,13 +1,13 @@
 import {mountMachineExplorer} from '../explorer/explorer.js';
 import {getCallCase,prepareCallCase,saveCallBrief,confirmCallInquiry,prepareCallQuote,recordCallResponse} from './call-case.js?v=call-20261029-3';
 import {escapeHTML as esc,sourceFacts,totals,money} from '../quotes/model.js';
+import {PANEL_HASHES, panelFromHash, adjacentPanel, chapterForPanel} from './presentation-route.js';
 const $=selector=>document.querySelector(selector);
 const $$=selector=>[...document.querySelectorAll(selector)];
 const panels=$$('[data-panel]');
-const hashes=['get-found','build-confidence','brand-assets','brief','review','handoff','quotation','value'];
 const nodes=['machine','robot','ring','process'];
-let page=0,nodeIndex=0,explorer,caseData=null;
-const chapter=()=>page===0?0:page<3?1:3;
+let page=8,nodeIndex=0,explorer,caseData=null;
+const chapter=()=>chapterForPanel(page);
 const facts=(data,limit=6)=>`<dl class="facts">${sourceFacts(data).slice(0,limit).map(([name,value])=>`<div class="fact"><dt>${esc(name)}</dt><dd>${esc(value)}</dd></div>`).join('')}</dl>`;
 function failure(error){const box=$('#call-error');box.hidden=false;box.textContent=error?.message||'The example could not be saved. Check browser storage and try again.';box.tabIndex=-1;box.focus();}
 function clearError(){$('#call-error').hidden=true;}
@@ -43,17 +43,17 @@ function selectNode(index){
  $$('[data-node]').forEach((button,i)=>button.setAttribute('aria-pressed',String(i===index)));updateFooter();
 }
 function updateFooter(){
- const labels=['Explore the machine',nodeIndex<3?['Explore robotic handling','Explore the ring gear','See face grinding'][nodeIndex]:'See the reusable assets','Start the example inquiry','Review the brief',caseData?.inquiry?'Open the confirmed project':'Confirm the example inquiry','Show the example proposal',caseData?.response?'See the value delivered':'Request a scope discussion','Restart the presentation'];
+ const labels=['Explore the machine',nodeIndex<3?['Explore robotic handling','Explore the ring gear','See face grinding'][nodeIndex]:'See the reusable assets','Start the example inquiry','Review the brief',caseData?.inquiry?'Open the confirmed project':'Confirm the example inquiry','Show the example proposal',caseData?.response?'Agree the first live pilot':'Request a scope discussion','Return to the overview','See the customer journey','Start the walkthrough'];
  $('#call-next').innerHTML=`${labels[page]} <span aria-hidden="true">→</span>`;
- $('#call-back').disabled=page===0;
- $('#call-progress').textContent=chapter()===0?'01 / Get found':chapter()===1?'02 / Build confidence':page===7?'Value delivered':'03 / Close the loop';
+ $('#call-back').disabled=page===8;
+ $('#call-progress').textContent=page===8?'Overview / Value':page===9?'Overview / Journey':page===7?'Next / Live pilot':chapter()===0?'01 / Get found':chapter()===1?'02 / Build confidence':'03 / Close the loop';
 }
 function go(index,{focus=true}={}){
  clearError();
  try{
   if(page===3&&index!==3&&caseData?.phase==='brief'&&saveBrief()===false)return;
   if(index>=3&&index<=6){ensureCase();if(index>=5&&!caseData.inquiry)index=3;if(index===6&&!caseData.quotation)index=5;}
-  page=index; panels.forEach((panel,i)=>panel.hidden=i!==page);
+  page=index; panels.forEach(panel=>panel.hidden=Number(panel.dataset.panel)!==page);
   $$('[data-chapter]').forEach(button=>{if(Number(button.dataset.chapter)===chapter())button.setAttribute('aria-current','step');else button.removeAttribute('aria-current');});
   if(page===1){if(!explorer)explorer=mountMachineExplorer($('#call-explorer'));selectNode(nodeIndex);}
   if(page!==2)$('video')?.pause();
@@ -62,8 +62,8 @@ function go(index,{focus=true}={}){
   if(page===5)renderHandoff();
   if(page===6)renderQuotation();
   updateFooter();
-  globalThis.CB_PAGES_REPLACE_STATE(null,'','#'+hashes[page]);
-  if(focus){panels[page].querySelector('h1').focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});}
+  globalThis.CB_PAGES_REPLACE_STATE(null,'','#'+PANEL_HASHES[page]);
+  if(focus){panels.find(panel=>Number(panel.dataset.panel)===page).querySelector('h1').focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});}
  }catch(error){failure(error);}
 }
 function next(){
@@ -74,13 +74,14 @@ function next(){
   if(page===4)caseData=confirmCallInquiry();
   if(page===5)caseData=prepareCallQuote();
   if(page===6&&!caseData.response){respond('discuss');return;}
-  if(page===7){nodeIndex=0;go(0);return;}
-  go(page+1);
+  if(page===7){nodeIndex=0;go(8);return;}
+  go(adjacentPanel(page,1));
  }catch(error){failure(error);}
 }
 $('#call-next').addEventListener('click',next);
-$('#call-back').addEventListener('click',()=>{if(page===1&&nodeIndex>0){selectNode(nodeIndex-1);return;}go(Math.max(0,page-1));});
+$('#call-back').addEventListener('click',()=>{if(page===1&&nodeIndex>0){selectNode(nodeIndex-1);return;}go(adjacentPanel(page,-1));});
 $$('[data-chapter]').forEach(button=>button.addEventListener('click',()=>go(Number(button.dataset.chapter))));
+$$('[data-map-view],[data-jump]').forEach(button=>button.addEventListener('click',()=>go(Number(button.dataset.mapView??button.dataset.jump))));
 $$('[data-node]').forEach((button,i)=>button.addEventListener('click',()=>selectNode(i)));
 $('#call-brief').addEventListener('input',()=>{
  if(page!==3||caseData?.phase!=='brief')return;
@@ -90,7 +91,7 @@ $('#call-brief').addEventListener('input',()=>{
  catch(error){failure(error);}
 });
 $('#call-brief').addEventListener('submit',event=>{event.preventDefault();if(page===3)next();});
-window.addEventListener('hashchange',()=>{const index=hashes.indexOf(location.hash.slice(1));if(index>=0&&index!==page)go(index);});
+window.addEventListener('hashchange',()=>{const index=panelFromHash(location.hash);if(index!==page)go(index);});
 window.addEventListener('storage',event=>{if(event.key?.startsWith('cb-customer-call-v1:')){try{caseData=getCallCase();if(page>=3&&page<=6)go(page,{focus:false});}catch(error){failure(error);}}});
 $('#call-explorer').addEventListener('cb:explorer-focus',event=>{
  const actual=event.detail?.focus;
@@ -99,4 +100,4 @@ $('#call-explorer').addEventListener('cb:explorer-focus',event=>{
  $$('[data-node]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.node===actual)));
  updateFooter();
 });
-const requested=hashes.indexOf(location.hash.slice(1));go(requested>=0?requested:0,{focus:false});
+go(panelFromHash(location.hash),{focus:false});
