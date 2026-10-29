@@ -1,8 +1,8 @@
 import { mountPresentation } from '/cbmachinery-demo-preview/explorer/presentation.js';
 
 const stages={
-  wine:{name:'墨酒红',value:'#21191C',title:'墨酒红背景，酒红动作，浅香槟强调。',why:'接近黑色的深酒红延续 C&B 的品牌底色。设备保持原色，酒红按钮集中承接询价，香槟只点亮关键词与当前步骤。'},
-  graphite:{name:'暖石墨',value:'#242524',title:'暖石墨背景，酒红动作，浅香槟强调。',why:'更中性的暖灰黑承托金属设备，让酒红按钮在色相上更突出。相比墨酒红更克制，也更接近工业产品的展示语境。'}
+  wine:{name:'Ink burgundy',value:'#21191C',title:'Ink-burgundy canvas, burgundy actions, champagne emphasis.',why:'Near-black burgundy extends C&B’s brand color. Equipment keeps its original colors, burgundy buttons lead to inquiries, and champagne highlights only keywords and the current step.'},
+  graphite:{name:'Warm graphite',value:'#242524',title:'Warm-graphite canvas, burgundy actions, champagne emphasis.',why:'A more neutral warm charcoal supports the metal equipment and gives burgundy buttons stronger color contrast. It is more restrained than ink burgundy and closer to an industrial product presentation.'}
 };
 function setStage(key){
   if(!Object.hasOwn(stages,key))key='wine';
@@ -12,7 +12,7 @@ function setStage(key){
   document.querySelector('#palette-why').textContent=selected.why;
   document.querySelector('#stage-name').textContent=selected.name;
   document.querySelector('#stage-value').textContent=selected.value;
-  document.querySelector('#palette-status').textContent='当前背景：'+selected.name+'；酒红 CTA，浅香槟强调。';
+  document.querySelector('#palette-status').textContent='Current background: '+selected.name+'; burgundy CTA, champagne emphasis.';
   document.querySelector('meta[name="theme-color"]').content=selected.value;
   const url=new URL(location.href);url.searchParams.set('palette','sand');url.searchParams.set('stage',key);globalThis.CB_PAGES_REPLACE_STATE(null,'',url);
 }
