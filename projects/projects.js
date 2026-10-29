@@ -2,6 +2,7 @@ import {escapeHTML as e, questions} from '../model.js';
 import {migrateLegacyProjects, listProjects, getProject, projectInquiries, projectQuotations, projectHref} from './store.js';
 import {projectState, projectContext, quotationHref as quoteHref, savedInquiryHref as inquiryHref} from './presentation.js';
 import {accountConversionCard, initAccountConversion} from './account-conversion.js';
+import {CALL_CASE_KEY, getCallCase} from '../overview/call-case.js';
 const root = document.querySelector('#project-main');
 const icon = name => globalThis.CB_PAGES_HTML(`<img src="/cbmachinery-demo-preview/review-kit/icons/${name}.svg" alt="" aria-hidden="true">`);
 const date = value => { const d = new Date(value); return Number.isNaN(d.getTime()) ? 'Recently' : d.toLocaleDateString('en-US', {month:'short',day:'numeric',year:'numeric'}); };
@@ -25,6 +26,15 @@ function list() {
 }
 const show = (v, unit='') => v && v !== 'Not sure yet' ? `${e(v)}${unit ? ' '+e(unit) : ''}` : '<span class="pj-muted">To discuss</span>';
 const fact = (label, value, unit) => `<div><dt>${label}</dt><dd>${show(value,unit)}</dd></div>`;
+function callResponsePanel(project,quotes) {
+  // The presentation's local request is supporting context, not a project sales state.
+  let call;
+  try { call = getCallCase(); } catch { return ''; }
+  const response = call?.response;
+  if (!response || call.projectId !== project.id || !project.requestIds.includes(response.requestId)
+    || !quotes.some(quote=>quote.id === response.quoteId && quote.revision === response.revision && quote.requestId === response.requestId)) return '';
+  return `<section class="pj-section pj-call-response" aria-labelledby="pj-call-response-title"><p class="pj-kicker">DEMO FOLLOW-UP · SAVED LOCALLY</p><h2 id="pj-call-response-title">${response.kind === 'revision'?'Revision request saved.':'Discussion request saved.'}</h2>${response.note?`<p class="pj-response-note">${e(response.note)}</p>`:''}<p class="pj-response-meta"><span>${e(response.quoteId)} · Rev ${String(response.revision).padStart(2,'0')}</span><time datetime="${e(response.savedAt)}">${e(date(response.savedAt))}</time></p><p class="pj-response-boundary">Saved in this browser. Not sent to C&B and not an order or quotation acceptance.</p></section>`;
+}
 function detail(project) {
   const records = projectInquiries(project), quotes = projectQuotations(project), state = projectState(project, records, quotes);
   const latest = state.latestInquiry, q = state.latestQuote, data = state.currentData;
@@ -36,6 +46,7 @@ function detail(project) {
   root.innerHTML = hero(globalThis.CB_PAGES_HTML(`<a class="pj-back" href="/cbmachinery-demo-preview/projects/">${icon('arrow-right')} My projects</a>`), e(projectTitle(project)), e(data.company || project.company || 'Your grinding application'), `<div class="pj-hero-meta">${stateMarkup(state)}<span>${e(project.id)}</span><span>Updated ${e(date(project.updatedAt))}</span></div>`) + globalThis.CB_PAGES_HTML(`<div class="pj-actionbar"><div class="site-wrap"><p>${state.hasDraft?'Your draft is saved. Continue when you’re ready.':q?'Your saved quotation is ready to view.':'Your inquiry is saved. Your requirements are all here.'}</p>${primary}</div></div>${latest?`<div class="site-wrap pj-conversion-wrap">${accountConversionCard(project, data)}</div>`:''}<div class="site-wrap pj-content pj-detail-grid"><div>
     <section class="pj-section"><p class="pj-kicker">${state.hasDraft?'CURRENT DRAFT':'SAVED INQUIRY'}</p><h2>${state.hasDraft?'Your current draft.':'Your saved inquiry.'}</h2>${state.hasDraft&&latest?`<p class="pj-version-note">These are your draft requirements. Saved inquiry ${e(latest.submissionId)} remains unchanged.</p>`:''}<dl class="pj-facts">${fact('Grinding objective',data.goal)}${fact('Material',data.material)}${fact('Outside diameter',data.diameter,data.unit)}${fact('Finished thickness',data.thickness,data.unit)}${fact('Production target',data.volume,data.volumeUnit)}${fact('Target timing',data.timing)}</dl>${data.description?`<div class="pj-description"><h3>In your words</h3><p>${e(data.description)}</p></div>`:''}${latest&&(state.hasDraft||q)?globalThis.CB_PAGES_HTML(`<a class="btn btn-secondary pj-link" href="${inquiryHref(latest)}">Read saved inquiry ${icon('arrow-up-right')}</a>`):''}</section>
     <section class="pj-section pj-quotation"><p class="pj-kicker">QUOTATION</p><h2>${q?'Your saved quotation.':'No quotation added yet.'}</h2>${q?globalThis.CB_PAGES_HTML(`<a class="pj-document-row" href="${quoteHref(q)}">${icon('file-text')}<div><strong>${e(q.title)}</strong><span>Revision ${String(q.revision).padStart(2,'0')} · ${e(date(q.availableAt))}</span><small>Demo document · Not a commercial offer</small></div>${icon('arrow-right')}</a>${quoteSourceNote}`):`<p>${state.hasDraft?'You can finish your inquiry and return to it from this project.':'Your saved inquiry remains available in this project.'}</p><p class="pj-muted">Only saved quotation versions added to this project appear here.</p>`}${quotes.length>1?globalThis.CB_PAGES_HTML(`<details class="pj-history"><summary>Previous quotations ${icon('chevron-down')}</summary><div>${quotes.slice(1).map(item=>globalThis.CB_PAGES_HTML(`<a class="pj-history-link" href="${quoteHref(item)}"><span>${e(item.id)} · Revision ${String(item.revision).padStart(2,'0')}<small>Based on ${e(item.requestId)}</small></span><span>${e(date(item.availableAt))}</span></a>`)).join('')}</div></details>`):''}</section>
+    ${callResponsePanel(project,quotes)}
     ${records.length>1?globalThis.CB_PAGES_HTML(`<details class="pj-history"><summary>Previous inquiry versions ${icon('chevron-down')}</summary><div>${records.slice(1).map(r=>globalThis.CB_PAGES_HTML(`<a class="pj-history-link" href="${inquiryHref(r)}"><span>${e(r.submissionId)}</span><span>${e(date(r.savedAt))}</span></a>`)).join('')}</div></details>`):''}
     </div><aside class="pj-aside"><section><p class="pj-kicker">${state.hasDraft?'DRAFT CONTACT':'INQUIRY CONTACT'}</p><h2>${e(data.name || 'Contact details to add')}</h2><p>${e(data.company || '')}</p><p>${e(data.email || '')}</p>${data.phone?`<p>${e(data.phone)}</p>`:''}</section><section><p class="pj-kicker">${state.hasDraft?'DRAFT OPEN QUESTIONS':'OPEN QUESTIONS'}</p><ul>${openQuestions.slice(0,5).map(v=>`<li>${e(v)}</li>`).join('')}</ul><p class="pj-muted">These details can be discussed with an engineer.</p></section>${localNote}</aside></div>`);
 }
@@ -45,4 +56,4 @@ else list();
 initAccountConversion();
 document.addEventListener('cb-account-preview-change', () => { const p = id && getProject(id); p ? detail(p) : list(); });
 // Refresh when another tab updates the project or prepares its customer quotation.
-window.addEventListener('storage', event => { if (/^(cb-projects-v1:|cb-quotes-v1:|cb-account-demo-v1:)/.test(event.key || '')) { const p = id && getProject(id); p ? detail(p) : list(); } });
+window.addEventListener('storage', event => { if (event.key === CALL_CASE_KEY || /^(cb-projects-v1:|cb-quotes-v1:|cb-account-demo-v1:)/.test(event.key || '')) { const p = id && getProject(id); p ? detail(p) : list(); } });

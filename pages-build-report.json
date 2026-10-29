@@ -2,8 +2,8 @@
   "basePath": "/cbmachinery-demo-preview/",
   "sourceUnchanged": true,
   "htmlFiles": 120,
-  "javascriptFiles": 45,
-  "wrappedHtmlLiterals": 87,
+  "javascriptFiles": 46,
+  "wrappedHtmlLiterals": 89,
   "generatedRoutes": [
     "/request/",
     "/request/confirmation/",

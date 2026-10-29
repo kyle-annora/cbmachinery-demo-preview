@@ -4,7 +4,7 @@ const status=document.querySelector('#patrick-status');
 const error=document.querySelector('#patrick-error');
 const arrow=globalThis.CB_PAGES_HTML('<img src="/cbmachinery-demo-preview/review-kit/icons/arrow-right.svg" alt="">');
 function ready(data) {
-  actions.innerHTML=globalThis.CB_PAGES_HTML(`<a class="btn btn-primary patrick-primary" href="/cbmachinery-demo-preview/projects/?project=${encodeURIComponent(data.savedProjectId)}">Open sample project ${arrow}</a><a class="btn btn-secondary" href="${data.draftAvailable?'/request/?project=':'/projects/?project='}${encodeURIComponent(data.draftProjectId)}">${data.draftAvailable?'Continue sample inquiry':'Open second sample project'}</a>`);
+  actions.innerHTML=globalThis.CB_PAGES_HTML(`<a class="btn btn-primary patrick-primary" href="/cbmachinery-demo-preview/overview/">Open customer call ${arrow}</a><a class="btn btn-secondary" href="/cbmachinery-demo-preview/projects/?project=${encodeURIComponent(data.savedProjectId)}">Open sample project</a><a class="btn btn-secondary" href="${data.draftAvailable?'/request/?project=':'/projects/?project='}${encodeURIComponent(data.draftProjectId)}">${data.draftAvailable?'Continue sample inquiry':'Open second sample project'}</a>`);
   status.textContent='Your examples are ready in this browser. The sample quotation is already available in the customer project.';
   document.querySelector('#setup-heading').textContent='Your demo projects are ready.';
 }

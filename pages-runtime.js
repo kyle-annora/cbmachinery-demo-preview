@@ -25,7 +25,7 @@
     const bits=item.trim().split(/\s+/);bits[0]=url(bits[0]);return bits.join(' ');
   }).join(', ');
   const html = value => String(value)
-    .replace(/(^|[\s<])(href|src|srcset)\s*=\s*(["'])(.*?)\3/gis,
+    .replace(/(^|[\s<])(href|src|srcset|poster)\s*=\s*(["'])(.*?)\3/gis,
       (_,start,name,quote,value)=>start+name+'='+quote+(name.toLowerCase()==='srcset'?set(value):url(value))+quote)
     .replace(/url\(\s*(["']?)(\/(?!\/)[^\s)"']+)\1\s*\)/gi,
       (_,quote,value)=>'url('+quote+url(value)+quote+')');
