@@ -59,7 +59,7 @@
 .cb-site :is(.fi-actions, .product-intro-actions, .sp-actions) .btn-secondary {
   font-size: 13px; padding: 12px 18px;
 }
-.cb-site :is(.home-family-copy, .home-company-copy, .home-resource-stack) .btn-secondary { margin-top: 6px; }
+.cb-site :is(.home-family-copy, .home-company-copy, .home-news-feature, .home-resource-stack) .btn-secondary { margin-top: 6px; }
 @media (max-width: 760px) {
   .cb-site :is(.fi-actions, .product-intro-actions, .sp-actions) .btn-secondary { font-size: 12px; padding-inline: 14px; }
 }
@@ -108,7 +108,6 @@
   .cb-site .sp-card-link:hover :is(h3, .sp-link) { text-decoration: underline; text-underline-offset: .22em; }
   .cb-site .machine-family:hover :is(h3, span) { color: #272b2c; text-decoration: underline; }
   .cb-site :is(.home-family-photo, .home-support-photo, .home-application-visual, .sp-family-image, .sp-resource-image, .sp-resource-text):hover { opacity: .86; }
-  .cb-site .home-news-feature:hover h3 { text-decoration: underline; }
   .cb-site .q-saved-versions .q-revision-link:hover { background-color: #e3e6e5; }
   .cb-site .cb-footer a:hover { color: #272b2c; }
   .cb-site :is(.fi-equipment-tabs button, .sp-tabs button, .sp-filter button):not(:disabled):hover {
