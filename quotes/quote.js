@@ -1,3 +1,5 @@
+import {mountQuoteResponse} from './response-panel.js?v=response-20261029-1';
+import {submitQuotationResponse,getDemoResponse} from '../integrations/annora-responses.js?v=response-20261029-1';
 import {getProjectForRequest, projectHref, shareQuotation, isSharedQuotation, migrateLegacyProjects, recordInquiry} from '../projects/store.js';
 import {QUOTE_KEY,validId,validQuoteShape,createQuote,exampleInquiry,withSamplePricing,validateQuote,revisionSnapshot,escapeHTML as e,totals} from './model.js';
 import {documentHTML} from './document.js';
@@ -10,6 +12,7 @@ if(params.get('from')==='project') {
 }
 try { migrateLegacyProjects(); } catch {}
 const icon=name=>globalThis.CB_PAGES_HTML(`<img src="/cbmachinery-demo-preview/review-kit/icons/${name}.svg" alt="" aria-hidden="true">`);
+let responsePanel=null;
 let bundle=null,draft=null,errorText='',statusText='',storageFailed=false,errors={},busy=false;
 const read=(key,fallback=null)=>{try{return JSON.parse(localStorage.getItem(key))??fallback;}catch{return fallback;}};
 const write=(key,value)=>localStorage.setItem(key,JSON.stringify(value));
@@ -89,6 +92,7 @@ function saveRevision(){
  }catch(error){busy=false;storageFailed=true;errorText='The quotation could not be saved in this browser. Your edits are still here. Check browser storage and try again.';renderEditor();}
 }
 function renderCustomer(saved){
+ responsePanel?.destroy(); responsePanel=null;
  const customerMode=params.get('from')==='project';
  const project=getProjectForRequest(saved.requestId);
  const shared=isSharedQuotation(saved.id,saved.revision);
@@ -100,7 +104,11 @@ function renderCustomer(saved){
  if(customerMode){const header=document.querySelector('.q-app-header');header.querySelector('span').innerHTML='YOUR QUOTATION <small>Local demo</small>';const link=header.querySelector('a:last-child');link.href=globalThis.CB_PAGES_URL('/projects/');link.textContent='My projects';}
  const back=customerMode?projectHref(project.id):'/quotes/?quote='+encodeURIComponent(saved.id);
  const publish=project?(shared?globalThis.CB_PAGES_HTML(`<a class="q-button" href="${projectHref(project.id)}">View customer project ${icon('arrow-right')}</a>`):`<button class="q-button q-primary" id="q-share">Add to customer project ${icon('arrow-right')}</button>`):'';
- app.innerHTML=globalThis.CB_PAGES_HTML(`<section class="q-customer-head"><div><p class="q-overline">${customerMode?'YOUR QUOTATION':'C&B DOCUMENT REVIEW'}</p><h1>${e(saved.customer.company)}</h1><p>Revision ${String(saved.revision).padStart(2,'0')} · ${customerMode?'Demo document · Not a commercial offer':shared?'Available in the customer project · Local demo':'Saved for internal review · Not yet in the customer project'}</p></div><span class="q-saved-reference">${e(saved.id)}</span></section><section class="q-customer-toolbar" aria-label="Quotation actions"><a class="q-back${customerMode?'':' q-button'}" href="${back}">${icon('arrow-right')} ${customerMode?'Back to project':'Edit quotation'}</a><div class="q-actions"><button class="q-button" id="q-print">${icon('file-text')} Print / save PDF</button>${customerMode?'':publish}</div></section><p class="q-share-status" id="q-share-status" role="status"></p><div class="q-customer-stage">${documentHTML(saved)}</div><div class="q-customer-bottom"><span>This saved revision stays unchanged when the working draft is edited.</span><a class="q-revision-link" href="${sourceHref}">${saved.requestId&&saved.requestId!=='EXAMPLE-INQUIRY'?'View source inquiry':'My projects'}</a></div>`);
+ app.innerHTML=globalThis.CB_PAGES_HTML(`<section class="q-customer-head"><div><p class="q-overline">${customerMode?'YOUR QUOTATION':'C&B DOCUMENT REVIEW'}</p><h1>${e(saved.customer.company)}</h1><p>Revision ${String(saved.revision).padStart(2,'0')} · ${customerMode?'Demo document · Not a commercial offer':shared?'Available in the customer project · Local demo':'Saved for internal review · Not yet in the customer project'}</p></div><span class="q-saved-reference">${e(saved.id)}</span></section><section class="q-customer-toolbar" aria-label="Quotation actions"><a class="q-back${customerMode?'':' q-button'}" href="${back}">${icon('arrow-right')} ${customerMode?'Back to project':'Edit quotation'}</a><div class="q-actions"><button class="q-button" id="q-print">${icon('file-text')} Print / save PDF</button>${customerMode?'':publish}</div></section><p class="q-share-status" id="q-share-status" role="status"></p><div class="q-customer-stage">${documentHTML(saved)}</div>${customerMode?'<div id="quotation-response" class="q-response-stage"></div>':''}<div class="q-customer-bottom"><span>This saved revision stays unchanged when the working draft is edited.</span><a class="q-revision-link" href="${sourceHref}">${saved.requestId&&saved.requestId!=='EXAMPLE-INQUIRY'?'View source inquiry':'My projects'}</a></div>`);
+ if(customerMode) {
+  const context={projectId:project.id,requestId:saved.requestId,quoteId:saved.id,revision:saved.revision,demo:true};
+  responsePanel=mountQuoteResponse(document.querySelector('#quotation-response'),{context,initialNote:'Please review the drawing, surface requirements and proposed loading scope.',submit:submitQuotationResponse,receipt:getDemoResponse(context),onReceipt:()=>document.dispatchEvent(new CustomEvent('cb-quotation-response-change'))});
+ }
  document.querySelector('#q-print').addEventListener('click',()=>window.print());
  document.querySelector('#q-share')?.addEventListener('click',()=>{
   try{shareQuotation(saved.id,saved.revision);renderCustomer(saved);document.querySelector('#q-share-status').textContent='Quotation added to the customer project in this browser. No email has been sent.';}

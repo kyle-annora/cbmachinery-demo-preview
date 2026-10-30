@@ -96,3 +96,8 @@ body.quote-body.cb-silver{background:#f6f7f6;color:#272b2c}
  .q-customer-toolbar:has(.q-actions>.q-button:nth-child(2)){align-items:flex-start;flex-wrap:wrap}
  .q-customer-toolbar:has(.q-actions>.q-button:nth-child(2)) .q-actions{width:100%;display:flex;flex-wrap:wrap}
 }
+
+/* Customer feedback follows the reviewed, immutable document. */
+.q-response-stage{padding:0 24px}.q-response-stage .qr-response{max-width:816px}
+@media(max-width:600px){.q-response-stage{padding:0 12px}}
+@media print{.q-response-stage{display:none!important}}

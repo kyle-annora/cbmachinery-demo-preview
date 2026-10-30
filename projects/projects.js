@@ -1,3 +1,4 @@
+import {getDemoResponse} from '../integrations/annora-responses.js?v=response-20261029-1';
 import {escapeHTML as e, questions} from '../model.js';
 import {migrateLegacyProjects, listProjects, getProject, projectInquiries, projectQuotations, projectHref} from './store.js';
 import {projectState, projectContext, quotationHref as quoteHref, savedInquiryHref as inquiryHref} from './presentation.js';
@@ -42,6 +43,12 @@ function callResponsePanel(project,quotes) {
     || !quotes.some(quote=>quote.id === response.quoteId && quote.revision === response.revision && quote.requestId === response.requestId)) return '';
   return `<section class="pj-section pj-call-response" aria-labelledby="pj-call-response-title"><p class="pj-kicker">DEMO FOLLOW-UP · SAVED LOCALLY</p><h2 id="pj-call-response-title">${response.kind === 'revision'?'Revision request saved.':'Discussion request saved.'}</h2>${response.note?`<p class="pj-response-note">${e(response.note)}</p>`:''}<p class="pj-response-meta"><span>${e(response.quoteId)} · Rev ${String(response.revision).padStart(2,'0')}</span><time datetime="${e(response.savedAt)}">${e(date(response.savedAt))}</time></p><p class="pj-response-boundary">Saved in this browser. Not sent to C&B and not an order or quotation acceptance.</p></section>`;
 }
+function quotationResponsePanel(project,quotes) {
+  const q=quotes[0];
+  const receipt=q&&getDemoResponse({projectId:project.id,requestId:q.requestId,quoteId:q.id,revision:q.revision});
+  if(!receipt)return callResponsePanel(project,quotes);
+  return `<section class="pj-section pj-call-response" aria-labelledby="pj-customer-response-title"><p class="pj-kicker">CUSTOMER RESPONSE · DEMO</p><h2 id="pj-customer-response-title">${receipt.intent==='revision'?'Revision requested.':'Discussion requested.'}</h2>${receipt.note?`<p class="pj-response-note">${e(receipt.note)}</p>`:''}<p class="pj-response-meta"><span>${e(q.id)} · Rev ${String(q.revision).padStart(2,'0')}</span><span>${e(receipt.submissionId)}</span><time datetime="${e(receipt.receivedAt)}">${e(date(receipt.receivedAt))}</time></p><p class="pj-response-boundary">Demo response submitted. Saved in this browser; nothing sent to C&amp;B.</p></section>`;
+}
 function detail(project) {
   const records = projectInquiries(project), quotes = projectQuotations(project), state = projectState(project, records, quotes);
   const latest = state.latestInquiry, q = state.latestQuote, data = state.currentData;
@@ -60,7 +67,7 @@ function detail(project) {
       ${records.length>1?globalThis.CB_PAGES_HTML(`<details class="pj-history"><summary>Previous inquiry versions ${icon('chevron-down')}</summary><div>${records.slice(1).map(r=>globalThis.CB_PAGES_HTML(`<a class="pj-history-link" href="${inquiryHref(r)}"><span>${e(r.submissionId)}</span><span>${e(date(r.savedAt))}</span></a>`)).join('')}</div></details>`):''}
     </section>
     <section class="pj-section pj-quotation" aria-labelledby="pj-quotation-title"><header class="pj-section-heading"><h2 id="pj-quotation-title">Quotations</h2><span class="pj-section-reference">${quotes.length?`${quotes.length} saved ${quotes.length===1?'version':'versions'}`:'No quotation yet'}</span></header>${q?globalThis.CB_PAGES_HTML(`<a class="pj-document-row" href="${quoteHref(q)}">${icon('file-text')}<div><strong>${e(q.title)}</strong><span>Revision ${String(q.revision).padStart(2,'0')} · ${e(date(q.availableAt))}</span><small>Demo document · Not a commercial offer</small></div>${icon('arrow-right')}</a>${quoteSourceNote}`):`<div class="pj-document-empty">${icon('file-text')}<div><h3>No quotation added yet.</h3><p>${state.hasDraft?'Finish your inquiry to prepare for the next conversation.':'Your inquiry is saved. Only saved quotation versions added to this project appear here.'}</p></div></div>`}${quotes.length>1?globalThis.CB_PAGES_HTML(`<details class="pj-history"><summary>Previous quotations ${icon('chevron-down')}</summary><div>${quotes.slice(1).map(item=>globalThis.CB_PAGES_HTML(`<a class="pj-history-link" href="${quoteHref(item)}"><span>${e(item.id)} · Revision ${String(item.revision).padStart(2,'0')}<small>Based on ${e(item.requestId)}</small></span><span>${e(date(item.availableAt))}</span></a>`)).join('')}</div></details>`):''}</section>
-    ${callResponsePanel(project,quotes)}
+    ${quotationResponsePanel(project,quotes)}
     </div><aside class="pj-aside"><section class="pj-section" aria-labelledby="pj-contact-title"><p class="pj-kicker">${state.hasDraft?'DRAFT CONTACT':'INQUIRY CONTACT'}</p><h2 id="pj-contact-title">Contact details</h2><dl class="pj-contact-facts">${fact('Name',data.name)}${fact('Company',data.company)}${fact('Email',data.email)}${fact('Phone',data.phone)}</dl></section><section class="pj-section pj-open-questions" aria-labelledby="pj-questions-title"><p class="pj-kicker">${state.hasDraft?'DRAFT OPEN QUESTIONS':'FOR THE NEXT CONVERSATION'}</p><h2 id="pj-questions-title">Open questions <span>${openQuestions.length}</span></h2>${openQuestions.length?`<ul>${openQuestions.map(v=>`<li>${e(v)}</li>`).join('')}</ul>`:'<p>Confirm application fit and the next step with an engineer.</p>'}<p class="pj-muted">Unknown requirements can be discussed with an engineer.</p></section></aside></div>${latest?`<div class="site-wrap pj-conversion-wrap">${accountConversionCard(project, data)}</div>`:''}<div class="site-wrap pj-detail-footer">${localNote}</div>`);
 }
 const id = new URLSearchParams(location.search).get('project');
@@ -69,4 +76,4 @@ else list();
 initAccountConversion();
 document.addEventListener('cb-account-preview-change', () => { const p = id && getProject(id); p ? detail(p) : list(); });
 // Refresh when another tab updates the project or prepares its customer quotation.
-window.addEventListener('storage', event => { if (event.key === CALL_CASE_KEY || /^(cb-projects-v1:|cb-quotes-v1:|cb-account-demo-v1:)/.test(event.key || '')) { const p = id && getProject(id); p ? detail(p) : list(); } });
+window.addEventListener('storage', event => { if (event.key === CALL_CASE_KEY || /^(cb-projects-v1:|cb-quotes-v1:|cb-account-demo-v1:|cb-annora-response-demo-v1:)/.test(event.key || '')) { const p = id && getProject(id); p ? detail(p) : list(); } });

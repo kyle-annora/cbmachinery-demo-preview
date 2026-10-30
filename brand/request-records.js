@@ -1,5 +1,7 @@
 import { COMPANY as C } from '../config.js';
 import { escapeHTML as e, explorationDetails, websiteDetails, questions } from '../model.js';
+import { getProjectForRequest, projectQuotations } from '../projects/store.js';
+import { getDemoResponse } from '../integrations/annora-responses.js?v=response-20261029-1';
 
 const icon = name => name === 'printer' ? `<svg class="record-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6zM18 12h.01"/></svg>` : globalThis.CB_PAGES_HTML(`<img class="record-icon" src="/cbmachinery-demo-preview/review-kit/icons/${name}.svg" alt="" aria-hidden="true">`);
 const firstName = d => String(d.name || '').trim().split(/\s+/)[0];
@@ -22,6 +24,26 @@ function entryDetails(d) {
 
 function inquiryOptions(d) {
   return globalThis.CB_PAGES_HTML(`<details class="record-options"><summary>Inquiry options ${icon('chevron-down')}</summary><div class="record-options-content"><a class="record-quiet-link" href="/cbmachinery-demo-preview/inquiry-document/?request=${recordPath(d)}">${icon('file-text')} View your inquiry document</a><button class="record-secondary-button" id="print-summary" type="button">${icon('printer')} Print inquiry summary</button></div></details>`);
+}
+
+// Optional, read-only feedback belongs to the exact inquiry and shared quotation revision.
+// Missing or unavailable browser storage must not prevent the inquiry view from opening.
+function receiverResponses(d) {
+  try {
+    const project = getProjectForRequest(d.submissionId);
+    if (!project) return '';
+    const unique = new Map();
+    for (const quote of projectQuotations(project)) {
+      if (quote.requestId !== d.submissionId) continue;
+      const receipt = getDemoResponse({projectId:project.id,requestId:d.submissionId,quoteId:quote.id,revision:quote.revision});
+      if (receipt) unique.set(`${quote.id}:${quote.revision}`, {quote,receipt});
+    }
+    return [...unique.values()]
+      .sort((a,b) => Date.parse(b.receipt.receivedAt) - Date.parse(a.receipt.receivedAt))
+      .slice(0,3)
+      .map(({quote,receipt},index) => `<section class="receiver-response" aria-labelledby="receiver-response-${index}"><span class="record-small-label">CUSTOMER RESPONSE · DEMO</span><h2 id="receiver-response-${index}">${receipt.intent === 'revision' ? 'Revision requested' : 'Discussion requested'}</h2>${receipt.note ? `<p class="receiver-response-note">${e(receipt.note)}</p>` : ''}<dl><div><dt>Quotation</dt><dd>${e(quote.id)} · Revision ${e(quote.revision)}</dd></div><div><dt>Submission receipt</dt><dd>${e(receipt.submissionId)}</dd></div><div><dt>Saved</dt><dd>${e(new Intl.DateTimeFormat('en-US',{dateStyle:'medium',timeStyle:'short'}).format(new Date(receipt.receivedAt)))}</dd></div></dl><p class="receiver-response-boundary">Saved in this browser. Nothing sent to C&amp;B.</p></section>`)
+      .join('');
+  } catch { return ''; }
 }
 
 const demoNote = `<div class="record-demo-note">Local demo only. Nothing has been sent to C&amp;B. No email, CRM record, or C&amp;B notification was created. File contents were not uploaded.</div>`;
@@ -100,7 +122,8 @@ export function receiverView(d, summaryHTML) {
         <p class="record-reading-intro">The original request, with specifications and unknowns kept together.</p>
         <div class="record-summary-content">${summaryHTML}</div>
       </section>
-      <aside class="receiver-sidebar" aria-label="Contact and handoff details">
+      <aside class="receiver-sidebar" aria-label="Customer response, contact and handoff details">
+        ${receiverResponses(d)}
         <section class="receiver-contact" aria-labelledby="receiver-contact-heading">
           <span class="record-small-label">YOUR CONTACT</span>
           <h2 id="receiver-contact-heading">${e(String(d.name || '').trim() || 'Contact not provided')}</h2>

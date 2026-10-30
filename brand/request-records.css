@@ -72,6 +72,14 @@
 .flow-body .record-discussion-link .record-icon { width: 14px; height: 14px; }
 .flow-body .record-reading-intro { margin: 13px 0 0; color: var(--muted); font-size: 12px; line-height: 1.65; }
 .flow-body .receiver-sidebar { display: grid; gap: 25px; min-width: 0; }
+.flow-body .receiver-response { min-width:0; padding:24px; border:1px solid #cdd2cf; border-radius:3px; background:#fff; }
+.flow-body .receiver-response h2 { margin:10px 0 14px; color:var(--ink); font-size:21px; line-height:1.25; font-weight:400; letter-spacing:-.3px; }
+.flow-body .receiver-response-note { margin:0 0 18px; color:var(--text); font-size:13px; line-height:1.65; white-space:pre-wrap; overflow-wrap:anywhere; }
+.flow-body .receiver-response dl { display:grid; gap:12px; margin:0; }
+.flow-body .receiver-response dt { margin-bottom:4px; color:var(--muted); font-size:10px; }
+.flow-body .receiver-response dd { margin:0; color:var(--text); font-size:11px; line-height:1.5; overflow-wrap:anywhere; }
+.flow-body .receiver-response-boundary { margin:18px 0 0; padding-top:14px; border-top:1px solid #e0e4e1; color:var(--muted); font-size:10px; line-height:1.6; }
+@media print { .flow-body .receiver-response { display:none!important; } }
 .flow-body .receiver-contact { padding: 30px; border-radius: 3px; background: #fff; color: var(--ink); }
 .flow-body .receiver-contact h2 { margin: 13px 0 6px; color: var(--ink); font-size: 24px; font-weight: 400; letter-spacing: -.5px; overflow-wrap: anywhere; }
 .flow-body .receiver-contact-company { margin: 0; color: var(--text); font-size: 12px; }

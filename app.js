@@ -1,6 +1,6 @@
 import { COMPANY as C } from './config.js';
 import { ensureForDraft, recordInquiry, getProject, getProjectDraft, getProjectForRequest } from './projects/store.js';
-import { confirmationView, receiverView } from './brand/request-records.js?v=tasks-20261029-1';
+import { confirmationView, receiverView } from './brand/request-records.js?v=response-20261029-1';
 import { newDraft, escapeHTML as e, applyValue, validate, questions, snapshot, normalizeExplorationContext, explorationContextFromSearch, explorationDetails, applyExplorationEntry, normalizeWebsiteContext, websiteContextFromSearch, websiteDetails, applyWebsiteEntry } from './model.js';
 
 const KEY = 'cb-demo-v1';
