@@ -6,7 +6,7 @@
   gap: 14px;
   min-height: 44px;
   padding: 11px 16px;
-  border: 1px solid #a6b0ab;
+  border: 1px solid #aeaeae;
   border-radius: 4px;
   color: var(--ink);
   white-space: nowrap;
@@ -76,7 +76,7 @@
   min-height: 44px;
   margin-top: 3px;
   padding: 11px 15px;
-  border: 1px solid #9ba8a1;
+  border: 1px solid #a5a5a5;
   border-radius: 4px;
   font-size: 13px;
   line-height: 1.35;

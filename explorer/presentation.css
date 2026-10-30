@@ -10,7 +10,7 @@
 .mp-scene{position:absolute;inset:0;width:100%;height:100%;min-width:0;isolation:isolate}
 .mp-scene canvas{position:absolute;inset:0;width:100%;height:100%;display:block;outline:none}
 .mp-machine>.mx-machine-fallback,.mp-ring>.rg-fallback,.mp-photo>img{position:absolute;inset:0;object-fit:contain;width:100%;height:100%;padding:15px 15px 30px;display:block;mix-blend-mode:normal}
-.mp-ring>.rg-fallback{background:#f3f5f6;border-radius:6px}
+.mp-ring>.rg-fallback{background:#f5f5f5;border-radius:6px}
 .mp-machine[data-render-mode=webgl]>.mx-machine-fallback,.mp-ring[data-render-mode=webgl]>.rg-fallback{display:none}
 .mp-ring .rg-scene-labels text{fill:var(--mp-body);stroke:var(--mp-bg)}
 .mp-ring .rg-scene-labels path{stroke:var(--mp-body)}

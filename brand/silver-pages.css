@@ -1,50 +1,50 @@
 /* Inner-page extension of the approved silver / continuous-curve homepage.
    The curves belong to the light introduction. The functional Explorer retains
    its ink-wine stage, original model, and orange selection language. */
-.cb-silver .silver-product-hero{background:#e3e6e5;position:relative;isolation:isolate;overflow:hidden;padding-top:22px}
+.cb-silver .silver-product-hero{background:#e5e5e5;position:relative;isolation:isolate;overflow:hidden;padding-top:22px}
 .cb-silver .silver-page-wrap{width:calc(100% - 96px);max-width:1440px;margin-inline:auto;position:relative;z-index:1}
-.cb-silver .silver-page-field{position:absolute;inset:32px 0 64px;pointer-events:none;background:url('/cbmachinery-demo-preview/brand/assets/precision-field-wide.svg') center/100% 100% no-repeat;z-index:0}
-.cb-silver .silver-product-hero .app-breadcrumb{font-size:10px;gap:8px;margin-bottom:0;color:#59635f;min-height:24px}
+.cb-silver .silver-page-field{position:absolute;inset:32px 0 64px;pointer-events:none;background:url('/cbmachinery-demo-preview/brand/assets/precision-field-wide.svg?v=neutral-20261029-1') center/100% 100% no-repeat;z-index:0}
+.cb-silver .silver-product-hero .app-breadcrumb{font-size:10px;gap:8px;margin-bottom:0;color:#616161;min-height:24px}
 .cb-silver .silver-product-hero .app-breadcrumb img{width:12px;height:12px}
 .cb-silver .silver-page-grid{display:grid;grid-template-columns:42% 58%;align-items:center;min-height:558px;gap:0}
 .cb-silver .silver-page-copy{position:relative;z-index:2;padding:34px 0 70px}
-.cb-silver .silver-page-copy .eyebrow{font-size:10px;font-weight:600;letter-spacing:.14em;line-height:1.7;color:#59635f;margin:0 0 25px}
-.cb-silver .silver-page-copy h1{font-size:clamp(44px,4.55vw,68px);font-weight:400;letter-spacing:-.049em;line-height:1.04;color:#272b2c;margin:0;text-wrap:balance;max-width:590px}
-.cb-silver .silver-page-intro{font-size:15px;line-height:1.8;max-width:415px;color:#4f5955;margin:27px 0 0}
+.cb-silver .silver-page-copy .eyebrow{font-size:10px;font-weight:600;letter-spacing:.14em;line-height:1.7;color:#616161;margin:0 0 25px}
+.cb-silver .silver-page-copy h1{font-size:clamp(44px,4.55vw,68px);font-weight:400;letter-spacing:-.049em;line-height:1.04;color:#2a2a2a;margin:0;text-wrap:balance;max-width:590px}
+.cb-silver .silver-page-intro{font-size:15px;line-height:1.8;max-width:415px;color:#575757;margin:27px 0 0}
 .cb-silver .silver-page-copy .product-intro-actions{margin-top:29px;gap:14px 23px}
 .cb-silver .silver-page-copy .btn-primary{min-height:50px;padding:14px 20px;border-radius:3px;font-size:13px;background:#741d35;border-color:#741d35;color:#fff}
 
 body:not(.cb-site) .cb-silver .silver-page-copy .btn-primary:hover,body.flat-industrial .cb-silver .silver-page-copy .btn-primary:hover{background:#541426;border-color:#541426}
-.cb-silver .silver-page-copy .text-link{font-size:13px;color:#272b2c}
+.cb-silver .silver-page-copy .text-link{font-size:13px;color:#2a2a2a}
 .cb-silver .silver-page-copy .text-link .icon{width:15px;height:15px}
-.cb-silver .silver-page-related{display:flex;align-items:center;flex-wrap:wrap;gap:5px 6px;font-size:11px;line-height:1.7;color:#59635f;margin:23px 0 0;min-height:25px}
-.cb-silver .silver-page-related span,.cb-silver .silver-page-related a{color:#272b2c}
+.cb-silver .silver-page-related{display:flex;align-items:center;flex-wrap:wrap;gap:5px 6px;font-size:11px;line-height:1.7;color:#616161;margin:23px 0 0;min-height:25px}
+.cb-silver .silver-page-related span,.cb-silver .silver-page-related a{color:#2a2a2a}
 .cb-silver .silver-page-related a{display:inline-flex;align-items:center;gap:6px}
 .cb-silver .silver-page-related img{width:13px;height:13px}
 
 body:not(.cb-site) .cb-silver a.silver-page-related:hover span,body.flat-industrial .cb-silver a.silver-page-related:hover span,body:not(.cb-site) .cb-silver .silver-page-related a:hover,body.flat-industrial .cb-silver .silver-page-related a:hover{text-decoration:underline;text-underline-offset:4px}
 .cb-silver .silver-page-visual{position:relative;isolation:isolate;align-self:stretch;display:flex;flex-direction:column;justify-content:center;min-width:0;margin:0;padding:5px 0 32px}
-.cb-silver .silver-visual-field{display:none;position:absolute;inset:0;z-index:-1;background:url('/cbmachinery-demo-preview/brand/assets/precision-field-mobile.svg') center/100% 100% no-repeat;pointer-events:none}
+.cb-silver .silver-visual-field{display:none;position:absolute;inset:0;z-index:-1;background:url('/cbmachinery-demo-preview/brand/assets/precision-field-mobile.svg?v=neutral-20261029-1') center/100% 100% no-repeat;pointer-events:none}
 .cb-silver .silver-machine-photo{display:block;width:calc(100% + 45px);max-width:none;height:475px;object-fit:contain;margin-left:-12px}
-.cb-silver .silver-page-visual figcaption{display:flex;align-items:start;justify-content:space-between;gap:16px;font-size:9px;line-height:1.7;letter-spacing:.055em;color:#59635f;padding-left:10px;margin-top:12px}
+.cb-silver .silver-page-visual figcaption{display:flex;align-items:start;justify-content:space-between;gap:16px;font-size:9px;line-height:1.7;letter-spacing:.055em;color:#616161;padding-left:10px;margin-top:12px}
 .cb-silver .silver-page-visual figcaption span:last-child{letter-spacing:0;white-space:nowrap}
-.cb-silver .silver-product-hero .product-section-nav{padding:0 0 15px;min-height:64px;gap:12px 35px;font-size:11px;color:#59635f}
+.cb-silver .silver-product-hero .product-section-nav{padding:0 0 15px;min-height:64px;gap:12px 35px;font-size:11px;color:#616161}
 .cb-silver .silver-product-hero .product-section-nav a{min-height:40px}
 
-body:not(.cb-site) .cb-silver .silver-product-hero .product-section-nav a:hover,body.flat-industrial .cb-silver .silver-product-hero .product-section-nav a:hover{color:#272b2c}
+body:not(.cb-site) .cb-silver .silver-product-hero .product-section-nav a:hover,body.flat-industrial .cb-silver .silver-product-hero .product-section-nav a:hover{color:#2a2a2a}
 .cb-silver .silver-explorer-stage{padding-top:30px}
 .cb-silver .silver-ring-drawing{width:100%;height:440px;display:block;overflow:visible}
 .cb-silver .silver-ring-geometry{filter:grayscale(1)}
-.cb-silver .silver-ring-labels{stroke:#59635f;stroke-width:1.1}
-.cb-silver .silver-ring-labels circle{fill:#e3e6e5}
-.cb-silver .silver-ring-label-text{fill:#424c47;font-family:Arial,Helvetica,sans-serif;font-size:13px}
+.cb-silver .silver-ring-labels{stroke:#616161;stroke-width:1.1}
+.cb-silver .silver-ring-labels circle{fill:#e5e5e5}
+.cb-silver .silver-ring-label-text{fill:#4a4a4a;font-family:Arial,Helvetica,sans-serif;font-size:13px}
 .cb-silver .silver-ring-visual figcaption{margin-top:30px}
 /* Quiet neutral surfaces around the existing editorial content. */
-.cb-silver .product-reference,.cb-silver .app-reference{background:#f6f7f6}
+.cb-silver .product-reference,.cb-silver .app-reference{background:#f7f7f7}
 .cb-silver .product-reference figure{position:relative;isolation:isolate}
-.cb-silver .product-reference figure::before{content:"";position:absolute;inset:-15px -15px -20px;z-index:-1;background:url('/cbmachinery-demo-preview/brand/assets/precision-field-mobile.svg') center/100% 100% no-repeat;opacity:.65;pointer-events:none}
+.cb-silver .product-reference figure::before{content:"";position:absolute;inset:-15px -15px -20px;z-index:-1;background:url('/cbmachinery-demo-preview/brand/assets/precision-field-mobile.svg?v=neutral-20261029-1') center/100% 100% no-repeat;opacity:.65;pointer-events:none}
 .cb-silver .product-reference figure img{mix-blend-mode:normal}
-.cb-silver .product-preparation-list{background:#f6f7f6;border-radius:3px}
+.cb-silver .product-preparation-list{background:#f7f7f7;border-radius:3px}
 .cb-silver .product-story h2,.cb-silver .product-reference h2,.cb-silver .app-context h2,.cb-silver .app-reference h2,.cb-silver .app-faq h2{font-weight:400}
 @media(min-width:1600px){.cb-silver .silver-page-grid{min-height:595px}.cb-silver .silver-machine-photo{height:525px}.cb-silver .silver-ring-drawing{height:485px}.cb-silver .silver-page-intro{font-size:16px}}
 @media(max-width:1180px){
@@ -63,7 +63,7 @@ body:not(.cb-site) .cb-silver .silver-product-hero .product-section-nav a:hover,
 .cb-silver .silver-page-visual figcaption{font-size:8px;flex-direction:column;gap:2px}
 .cb-silver .silver-ring-visual figcaption{margin-top:9px}
 .cb-silver .silver-page-related{font-size:10px;max-width:355px}
-.cb-silver .silver-page-field{background-image:url('/cbmachinery-demo-preview/brand/assets/precision-field-tablet.svg')}
+.cb-silver .silver-page-field{background-image:url('/cbmachinery-demo-preview/brand/assets/precision-field-tablet.svg?v=neutral-20261029-1')}
 }
 .cb-silver :is(#explore,#application-overview,#machine-reference,#reference-case,#prepare-brief){scroll-margin-top:100px}
 @media(max-width:760px){

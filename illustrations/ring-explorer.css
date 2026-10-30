@@ -1,4 +1,4 @@
-.rg-explorer{--rg-ink:#252b2f;--rg-body:#59636b;--rg-surface:#f3f5f6;--rg-steel:#49616e;--rg-selected:#eaf0f3;color:var(--rg-ink);font-family:Arial,Helvetica,sans-serif}
+.rg-explorer{--rg-ink:#252b2f;--rg-body:#59636b;--rg-surface:#f5f5f5;--rg-steel:#49616e;--rg-selected:#eaf0f3;color:var(--rg-ink);font-family:Arial,Helvetica,sans-serif}
 .rg-explorer button,.rg-explorer a{-webkit-tap-highlight-color:transparent}
 .rg-explorer button{font:inherit;cursor:pointer;border:0}
 .rg-explorer button:focus-visible,.rg-explorer a:focus-visible{outline:3px solid var(--rg-steel);outline-offset:4px}

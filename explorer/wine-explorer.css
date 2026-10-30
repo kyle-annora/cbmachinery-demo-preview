@@ -15,8 +15,8 @@
 /* Content progression is secondary to Quote; orange marks scene selection. */
 .cb-site .mx-explorer .mx-follow{min-height:44px;background:transparent!important;border-color:#a99b98!important;color:var(--mx-ink)!important}
 .cb-site .mx-explorer .mx-follow>.mx-icon{filter:brightness(0) invert(1);opacity:.85}
-@media(hover:hover) and (pointer:fine){.cb-site .mx-explorer .mx-follow:hover:not(:disabled){background:#3a2c31!important;border-color:#c4c7c4!important;color:var(--mx-ink)!important}}
-.cb-site .mx-explorer .mx-follow:active:not(:disabled){background:#514047!important;border-color:#c4c7c4!important}
+@media(hover:hover) and (pointer:fine){.cb-site .mx-explorer .mx-follow:hover:not(:disabled){background:#3a2c31!important;border-color:#c6c6c6!important;color:var(--mx-ink)!important}}
+.cb-site .mx-explorer .mx-follow:active:not(:disabled){background:#514047!important;border-color:#c6c6c6!important}
 .cb-site .mx-quote{background:var(--mx-wine);border-color:var(--action-edge,#b86c7f);color:#fff!important}
 .cb-site .mx-quote:hover{background:var(--action-hover,#a03751)}
 .cb-site .mx-machine-fallback,.cb-site .mx-official-photo>img{mix-blend-mode:normal}
