@@ -1,4 +1,4 @@
-import {mountQuoteResponse} from './response-panel.js?v=response-20261029-1';
+import {mountQuoteResponse} from './response-panel.js?v=review-20261029-1';
 import {submitQuotationResponse,getDemoResponse} from '../integrations/annora-responses.js?v=response-20261029-1';
 import {getProjectForRequest, projectHref, shareQuotation, isSharedQuotation, migrateLegacyProjects, recordInquiry} from '../projects/store.js';
 import {QUOTE_KEY,validId,validQuoteShape,createQuote,exampleInquiry,withSamplePricing,validateQuote,revisionSnapshot,escapeHTML as e,totals} from './model.js';
@@ -107,7 +107,7 @@ function renderCustomer(saved){
  app.innerHTML=globalThis.CB_PAGES_HTML(`<section class="q-customer-head"><div><p class="q-overline">${customerMode?'YOUR QUOTATION':'C&B DOCUMENT REVIEW'}</p><h1>${e(saved.customer.company)}</h1><p>Revision ${String(saved.revision).padStart(2,'0')} · ${customerMode?'Demo document · Not a commercial offer':shared?'Available in the customer project · Local demo':'Saved for internal review · Not yet in the customer project'}</p></div><span class="q-saved-reference">${e(saved.id)}</span></section><section class="q-customer-toolbar" aria-label="Quotation actions"><a class="q-back${customerMode?'':' q-button'}" href="${back}">${icon('arrow-right')} ${customerMode?'Back to project':'Edit quotation'}</a><div class="q-actions"><button class="q-button" id="q-print">${icon('file-text')} Print / save PDF</button>${customerMode?'':publish}</div></section><p class="q-share-status" id="q-share-status" role="status"></p><div class="q-customer-stage">${documentHTML(saved)}</div>${customerMode?'<div id="quotation-response" class="q-response-stage"></div>':''}<div class="q-customer-bottom"><span>This saved revision stays unchanged when the working draft is edited.</span><a class="q-revision-link" href="${sourceHref}">${saved.requestId&&saved.requestId!=='EXAMPLE-INQUIRY'?'View source inquiry':'My projects'}</a></div>`);
  if(customerMode) {
   const context={projectId:project.id,requestId:saved.requestId,quoteId:saved.id,revision:saved.revision,demo:true};
-  responsePanel=mountQuoteResponse(document.querySelector('#quotation-response'),{context,initialNote:'Please review the drawing, surface requirements and proposed loading scope.',submit:submitQuotationResponse,receipt:getDemoResponse(context),onReceipt:()=>document.dispatchEvent(new CustomEvent('cb-quotation-response-change'))});
+  responsePanel=mountQuoteResponse(document.querySelector('#quotation-response'),{context,submit:submitQuotationResponse,receipt:getDemoResponse(context),onReceipt:()=>document.dispatchEvent(new CustomEvent('cb-quotation-response-change'))});
  }
  document.querySelector('#q-print').addEventListener('click',()=>window.print());
  document.querySelector('#q-share')?.addEventListener('click',()=>{
