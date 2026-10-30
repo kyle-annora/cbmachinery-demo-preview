@@ -1,10 +1,10 @@
 /* Promoted from the approved continuous-curve preview. The line field crosses
    the equipment and the lower-left space; copy and CTA remain unobstructed. */
 .cb-silver .fi-wrap{width:calc(100% - 96px);max-width:1440px;margin-inline:auto}
-.fi-hero{background:#e5e5e5;padding:12px 0 0;overflow:hidden;position:relative;isolation:isolate}
+.fi-hero{--fi-viewport:100vh;--fi-chrome-height:148px;--fi-available-height:calc(var(--fi-viewport) - var(--fi-chrome-height) - 12px);background:#e5e5e5;padding:12px 0 0;overflow:hidden;position:relative;isolation:isolate}
 .fi-hero-field{position:absolute;inset:0;pointer-events:none;background:url('./assets/precision-field-wide.svg?v=neutral-20261029-1') center/100% 100% no-repeat;z-index:0}
 .fi-hero>.fi-wrap{position:relative;z-index:1}
-.fi-hero-grid{display:grid;grid-template-columns:38.5% 61.5%;align-items:center;min-height:615px;gap:0}
+.fi-hero-grid{display:grid;grid-template-columns:38.5% 61.5%;align-items:center;min-height:max(615px,var(--fi-available-height));gap:0}
 .fi-copy{padding:55px 0 58px;position:relative;z-index:1}
 .cb-silver .fi-kicker{font-size:10px;font-weight:600;letter-spacing:.14em;line-height:1.7;color:#616161;margin-bottom:27px}
 .fi-hero h1{font-size:clamp(48px,4.7vw,74px);font-weight:400;line-height:1.04;letter-spacing:-.049em;text-wrap:balance;max-width:620px;margin:0}
@@ -26,7 +26,7 @@ body:not(.cb-site) .fi-text-link:hover,body.flat-industrial .fi-text-link:hover,
 .fi-equipment-tabs button[aria-pressed=true]{border-color:#b1b1b1;color:#2a2a2a}
 
 body:not(.cb-site) .fi-equipment-tabs button:hover,body.flat-industrial .fi-equipment-tabs button:hover{background:#ffffff60}
-.fi-photo-slot{height:530px;display:flex;align-items:center;justify-content:center;margin:4px -34px 0 -12px;position:relative;isolation:isolate}
+.fi-photo-slot{height:clamp(530px,calc(var(--fi-available-height) - 90px),840px);display:flex;align-items:center;justify-content:center;margin:4px -34px 0 -12px;position:relative;isolation:isolate}
 .fi-curve-field{display:none;position:absolute;inset:0;pointer-events:none;background:url('./assets/precision-field-mobile.svg?v=neutral-20261029-1') center/100% 100% no-repeat;z-index:-1}
 .fi-photo-slot img{display:block;width:100%;height:100%;max-width:none;object-fit:contain;filter:none;position:relative}
 .fi-photo-slot img[data-equipment=clamp]{padding:8px 25px 0}
@@ -49,9 +49,15 @@ body:not(.cb-site) .fi-capabilities a:hover,body.flat-industrial .fi-capabilitie
 .fi-explorer-wrap{width:calc(100% - 64px);max-width:1600px;margin:auto}
 .cb-silver .fi-explorer .mp-stage{border:0;border-radius:3px}
 .cb-silver .fi-explorer .mp-steps,.cb-silver .fi-explorer .mp-detail{box-shadow:none}
-@media(min-width:1600px){.fi-hero-grid{min-height:685px}.fi-photo-slot{height:595px}.fi-copy{padding-block:65px}.cb-silver .fi-intro{font-size:17px}}
-@media(max-width:1180px){.cb-silver .fi-wrap{width:calc(100% - 64px)}.fi-hero-grid{grid-template-columns:46% 54%;min-height:540px}.fi-hero h1{font-size:53px}.fi-photo-slot{height:440px;margin-inline:-20px -26px}.fi-actions{gap:15px}.cb-silver .fi-button{gap:14px;font-size:12px}.fi-text-link{font-size:12px;gap:8px}.fi-capabilities nav{gap:23px}.fi-equipment figcaption{font-size:8px;flex-direction:column;gap:3px}.fi-section-heading{gap:35px}}
+@media(min-width:1600px){.fi-hero-grid{min-height:max(685px,var(--fi-available-height))}.fi-photo-slot{height:clamp(595px,calc(var(--fi-available-height) - 90px),840px)}.fi-copy{padding-block:65px}.cb-silver .fi-intro{font-size:17px}}
+@media(max-width:1180px){.cb-silver .fi-wrap{width:calc(100% - 64px)}.fi-hero-grid{grid-template-columns:46% 54%;min-height:max(540px,var(--fi-available-height))}.fi-hero h1{font-size:53px}.fi-photo-slot{height:440px;margin-inline:-20px -26px}.fi-actions{gap:15px}.cb-silver .fi-button{gap:14px;font-size:12px}.fi-text-link{font-size:12px;gap:8px}.fi-capabilities nav{gap:23px}.fi-equipment figcaption{font-size:8px;flex-direction:column;gap:3px}.fi-section-heading{gap:35px}}
 @media(min-width:761px) and (max-width:1180px){.fi-hero-field{background-image:url('./assets/precision-field-tablet.svg?v=neutral-20261029-1')}}
-@media(max-width:760px){.cb-silver .fi-wrap{width:calc(100% - 40px)}.fi-hero-grid{display:flex;flex-direction:column;align-items:stretch;min-height:0}.fi-copy{padding:35px 0 0}.fi-hero h1{font-size:48px;letter-spacing:-.045em}.cb-silver .fi-kicker{font-size:9px;margin-bottom:22px}.cb-silver .fi-intro{font-size:14px;line-height:1.75;max-width:430px;margin-top:24px}.fi-actions{margin-top:25px;gap:18px}.cb-silver .fi-button{min-height:48px;font-size:12px;padding:12px 16px}.fi-text-link{font-size:12px}.fi-application{font-size:10px;margin-top:17px}.fi-equipment{padding:15px 0 8px}.fi-equipment-tabs{justify-content:flex-start;margin-top:9px}.fi-equipment-tabs button{font-size:10px;min-height:38px;padding:7px 12px}.fi-photo-slot{height:auto;aspect-ratio:1.3;margin:0 -16px}.fi-equipment figcaption{margin-top:4px;padding:0;font-size:8px;flex-direction:row}.fi-equipment figcaption span:last-child{max-width:90px;white-space:normal;text-align:right}.fi-capabilities{display:block;padding:20px 0 25px;min-height:0}.fi-capabilities p{font-size:10px;margin-bottom:8px}.fi-capabilities nav{flex-wrap:wrap;gap:5px 22px;font-size:10px}.fi-capabilities a{gap:7px;min-height:35px}.fi-capabilities img{width:12px;height:12px}.fi-section-heading{display:block;margin-bottom:28px}.cb-silver .fi-section-heading h2{font-size:36px}.cb-silver .fi-section-heading>p{font-size:13px;margin-top:22px;max-width:400px}.fi-explorer{padding:44px 0 32px}.fi-explorer-wrap{width:calc(100% - 40px)}.fi-hero-field{display:none}.fi-curve-field{display:block}}
+@media(max-width:760px){.cb-silver .fi-wrap{width:calc(100% - 40px)}.fi-hero-grid{display:flex;flex-direction:column;align-items:stretch;min-height:max(0px,var(--fi-available-height));justify-content:space-between}.fi-copy{padding:35px 0 0}.fi-hero h1{font-size:48px;letter-spacing:-.045em}.cb-silver .fi-kicker{font-size:9px;margin-bottom:22px}.cb-silver .fi-intro{font-size:14px;line-height:1.75;max-width:430px;margin-top:24px}.fi-actions{margin-top:25px;gap:18px}.cb-silver .fi-button{min-height:48px;font-size:12px;padding:12px 16px}.fi-text-link{font-size:12px}.fi-application{font-size:10px;margin-top:17px}.fi-equipment{padding:15px 0 8px}.fi-equipment-tabs{justify-content:flex-start;margin-top:9px}.fi-equipment-tabs button{font-size:10px;min-height:38px;padding:7px 12px}.fi-photo-slot{height:auto;aspect-ratio:1.3;margin:0 -16px}.fi-equipment figcaption{margin-top:4px;padding:0;font-size:8px;flex-direction:row}.fi-equipment figcaption span:last-child{max-width:90px;white-space:normal;text-align:right}.fi-capabilities{display:block;padding:20px 0 25px;min-height:0}.fi-capabilities p{font-size:10px;margin-bottom:8px}.fi-capabilities nav{flex-wrap:wrap;gap:5px 22px;font-size:10px}.fi-capabilities a{gap:7px;min-height:35px}.fi-capabilities img{width:12px;height:12px}.fi-section-heading{display:block;margin-bottom:28px}.cb-silver .fi-section-heading h2{font-size:36px}.cb-silver .fi-section-heading>p{font-size:13px;margin-top:22px;max-width:400px}.fi-explorer{padding:44px 0 32px}.fi-explorer-wrap{width:calc(100% - 40px)}.fi-hero-field{display:none}.fi-curve-field{display:block}}
 /* Keep the headline compact on narrow phones. */
 @media(max-width:380px){.fi-hero h1{font-size:42px;line-height:1.06}}
+
+/* Fill the first viewport; content can grow on small or short screens. */
+@supports(height:100svh){.fi-hero{--fi-viewport:100svh}}
+@media(min-width:1101px) and (pointer:coarse){.fi-hero{--fi-chrome-height:160px}}
+@media(max-width:1100px){.fi-hero{--fi-chrome-height:108px}}
+@media(max-width:520px){.fi-hero{--fi-chrome-height:111px}}
