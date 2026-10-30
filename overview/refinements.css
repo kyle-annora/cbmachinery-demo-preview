@@ -66,6 +66,7 @@
 .storyboard-preview img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
 .storyboard-preview:focus-visible { outline-offset: -4px; }
 .film-direction figcaption { gap: 13px; }
+.film-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; }
 .film-direction figcaption strong { font-size: 19px; line-height: 1.3; }
 .film-direction figcaption p { max-width: 520px; font-size: 14px; }
 .film-review-link {

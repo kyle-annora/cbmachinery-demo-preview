@@ -139,7 +139,7 @@ function go(index,{focus=true}={}){
   page=index; panels.forEach(panel=>panel.hidden=Number(panel.dataset.panel)!==page);
   $$('[data-chapter]').forEach(button=>{if(Number(button.dataset.chapter)===chapter())button.setAttribute('aria-current','step');else button.removeAttribute('aria-current');});
   if(page===1){if(!explorer)explorer=mountMachineExplorer($('#call-explorer'));selectNode(nodeIndex);}
-  if(page!==2)$('video')?.pause();
+  if(page!==2)$$('video').forEach(video=>video.pause());
   if(page===3)renderBrief();
   if(page===4)renderReview();
   if(page===5)renderHandoff();
