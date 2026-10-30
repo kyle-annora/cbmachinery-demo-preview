@@ -1,4 +1,4 @@
-import {renderInquiryDocument} from './view.js';
+import {renderInquiryDocument} from './view.js?v=tasks-20261029-1';
 const id=new URLSearchParams(location.search).get('request');
 let record=null;
 try{record=id?JSON.parse(localStorage.getItem('cb-demo-v1:request:'+id)):null;}catch{}

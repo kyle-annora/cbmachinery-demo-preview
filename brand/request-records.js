@@ -85,8 +85,8 @@ export function receiverView(d, summaryHTML) {
       <div class="flow-shell">
         <div class="receiver-topline"><a class="record-quiet-link record-back-link" href="/cbmachinery-demo-preview/demo/">${icon('arrow-right')} Back to inquiry desk</a><span class="record-small-label">C&amp;B RECEIVING VIEW · DEMO</span></div>
         <div class="receiver-hero-layout">
-          <div><p class="record-kicker">C&amp;B INQUIRY DESK</p><h1 id="receiver-title">${e(d.part || 'New application')}</h1><p class="receiver-company">${e(d.company)}</p></div>
-          <div class="receiver-reference"><span class="record-local-status">Saved demo inquiry</span><strong>${e(d.submissionId)}</strong><span>Saved ${e(savedDate(d))}</span></div>
+          <div><h1 id="receiver-title">${e(d.part || 'New application')}</h1><p class="receiver-company">${e(d.company)}</p></div>
+          <div class="receiver-reference" aria-label="Saved inquiry reference"><strong>${e(d.submissionId)}</strong><span>Saved ${e(savedDate(d))}</span></div>
         </div>
         <div class="record-action-bar">
           ${inquiryOptions(d)}

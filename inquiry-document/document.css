@@ -38,3 +38,7 @@
  .id-intro::before{display:none}
 }
 @media print{.id-intro::before{display:none}}
+/* A document uses the same information categories as the workflow. */
+.id-requirements .id-category th{width:auto;padding:11px 12px 7px;background:#f6f7f6;font-size:10px;font-weight:600;color:#414947;border-bottom:0}
+.id-requirements tbody td,.id-requirements tbody th{padding-block:8px}
+.id-requirements .id-category{break-after:avoid}

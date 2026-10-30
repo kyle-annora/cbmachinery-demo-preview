@@ -3,6 +3,7 @@ import {getProject, projectInquiries} from './store.js';
 import {getAccountPreview, saveAccountPreview, linkProjectToPreview} from './account-store.js';
 
 const icon = name => globalThis.CB_PAGES_HTML(`<img src="/cbmachinery-demo-preview/review-kit/icons/${name}.svg" alt="">`);
+const completedMark = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>';
 const titleOf = project => project.title && project.title !== 'Not sure yet' ? project.title : 'Grinding project';
 
 // Conversion follows a saved inquiry. It never gates a draft, document or quotation.
@@ -14,8 +15,8 @@ export function accountConversionCard(project, data = {}, {compact = false} = {}
   const label = profile ? (linked ? 'Account details' : 'Add this project') : 'Create an account';
   const heading = linked ? 'This project is in your account preview.' : profile ? 'Keep this project with your account.' : compact ? 'Keep your projects beyond this device.' : 'Your inquiry is saved. Keep the project.';
   const description = linked ? `${profile.email} · This browser only` : 'Return to your inquiries and quotations from one account.';
-  const style = linked || project.draft ? 'btn-secondary' : 'btn-primary';
-  return `<section class="ac-prompt${compact?' ac-prompt-compact':''}${linked?' ac-prompt-linked':''}" aria-label="Project account access"><div class="ac-prompt-copy"><ol class="ac-stages" aria-label="Your project journey"><li class="ac-stage-complete">${icon('circle-check')}Inquiry saved</li><li${linked?' class="ac-stage-complete"':''}><span>02</span>${linked?'Account preview':'Keep your project'}</li></ol><h2>${e(heading)}</h2><p>${e(description)}</p><small>${linked?'Demo account preview. Project data remains on this device.':'Demo: explore account setup. No real account, email or cloud sync.'}</small></div><button class="btn ${style} ac-prompt-action" type="button" data-account-action="${action}" data-account-project="${e(project.id)}">${label}${icon('arrow-right')}</button></section>`;
+  const style = 'btn-secondary';
+  return `<section class="ac-prompt${compact?' ac-prompt-compact':''}${linked?' ac-prompt-linked':''}" aria-label="Project account access"><div class="ac-prompt-copy"><ol class="ac-stages" aria-label="Saved inquiry and optional account access"><li class="ac-stage-complete" aria-label="Inquiry saved, complete"><span class="ac-stage-marker" aria-hidden="true">${completedMark}</span><span class="ac-stage-label">Inquiry saved</span></li><li class="${linked?'ac-stage-complete':'ac-stage-current'}"${linked?' aria-label="Account preview, complete"':' aria-current="step"'}><span class="ac-stage-marker" aria-hidden="true">${linked?completedMark:'2'}</span><span class="ac-stage-label">${linked?'Account preview':'Keep project'}${linked?'':'<span class="ac-stage-optional">Optional</span>'}</span></li></ol><h2>${e(heading)}</h2><p>${e(description)}</p><small>${linked?'Demo account preview. Project data remains on this device.':'Demo: explore account setup. No real account, email or cloud sync.'}</small></div><button class="btn ${style} ac-prompt-action" type="button" data-account-action="${action}" data-account-project="${e(project.id)}">${label}${icon('arrow-right')}</button></section>`;
 }
 
 export function initAccountConversion() {

@@ -5,6 +5,29 @@
 .flow-body.cb-silver .flow-hero{position:relative;isolation:isolate;overflow:hidden;background:#e3e6e5}
 .flow-body.cb-silver .flow-hero::after{content:"";position:absolute;inset:0 0 0 auto;width:34%;z-index:-1;pointer-events:none;background:url('./assets/precision-field-mobile.svg') center/cover no-repeat;opacity:.45}
 .flow-body.cb-silver .flow-top{position:relative;z-index:1}
+/* Task chrome is compact: progress first, then one title and one helper line. */
+.flow-body.cb-silver .flow-hero .flow-top{padding-block:20px!important}
+.flow-body.cb-silver .flow-hero::after{width:25%;opacity:.22}
+.flow-body.cb-silver .flow-hero .flow-topline{flex-direction:row;align-items:center;gap:16px}
+.flow-body.cb-silver .flow-hero .step-heading{margin-top:16px}
+.flow-body.cb-silver .flow-hero .step-heading h1{font-size:32px;line-height:1.15;margin-bottom:6px}
+.flow-body.cb-silver .flow-hero .step-heading>p{font-size:14px;line-height:1.5}
+.flow-body.cb-silver .flow-hero .stepper{margin:0;gap:0;max-width:none;width:auto;flex-shrink:0}
+.flow-body.cb-silver .flow-hero .stepper li{font-size:12px;line-height:1.4;gap:8px}
+.flow-body.cb-silver .flow-hero .stepper li:not(:last-child)::after{position:static;display:block;content:"";width:36px;height:1px;flex:none;background:#aab3ae;margin:0 12px}
+.flow-body.cb-silver .flow-hero .stepper li>span{width:24px;height:24px;flex-basis:24px}
+.flow-body.cb-silver .flow-hero .stepper li.active>span{background:#741d35;color:#fff;border-color:#741d35}
+.flow-body.cb-silver .flow-hero .stepper li.complete>span{background:#fff;border-color:#59635f;color:#272b2c}
+.flow-body.cb-silver .flow-hero .draft-status{font-size:11px;line-height:1.5}
+@media(max-width:760px){
+ .flow-body.cb-silver .flow-hero .flow-top{padding-block:16px!important}
+ .flow-body.cb-silver .flow-hero .flow-topline{flex-wrap:wrap;flex-direction:column;align-items:flex-start;gap:8px 16px}
+ .flow-body.cb-silver .flow-hero .step-heading{margin-top:12px}
+ .flow-body.cb-silver .flow-hero .step-heading h1{font-size:27px;line-height:1.15}
+ .flow-body.cb-silver .flow-hero .step-heading>p{font-size:13px;max-width:46ch}
+ .flow-body.cb-silver .flow-hero .draft-status{font-size:10px}
+ .flow-body.cb-silver .flow-hero .stepper li:not(:last-child)::after{width:24px;margin-inline:10px}
+}
 .flow-body.cb-silver .step-heading h1{color:#272b2c;font-size:clamp(34px,3.3vw,46px);letter-spacing:-.04em}
 .flow-body.cb-silver .brand-emphasis{color:inherit}
 .flow-body.cb-silver .flow-title{font-size:10px;font-weight:600;letter-spacing:.13em;color:#59635f}
@@ -114,3 +137,7 @@
   .flow-body.cb-silver .intake-requirements .intake-section { padding-inline: 17px; }
   .flow-body.cb-silver .project-access { display: inline-flex; font-size: 12px; }
 }
+/* These same categories appear in review, receiving and project details. */
+.flow-body.cb-silver .review-group .review-subheading{font-size:12px;font-weight:600;line-height:1.5;margin:20px 0 10px;color:#414947}
+.flow-body.cb-silver .review-group .group-title+.review-subheading{margin-top:0}
+.flow-body.cb-silver .review-group dl+.review-subheading{padding-top:16px;border-top:1px solid #e0e4e1}

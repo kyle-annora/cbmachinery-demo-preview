@@ -48,7 +48,7 @@ function itemRow(item,index){return `<fieldset class="q-item"><legend>Scope item
 function renderEditor(){
  document.title='Quotation studio · '+draft.id;
  const latest=bundle.revisions?.at(-1);
- app.innerHTML=globalThis.CB_PAGES_HTML(`<section class="q-workspace-head"><div><p class="q-overline">C&B QUOTATION STUDIO</p><h1>From a clear brief<br>to a clear proposal.</h1><p>Define the scope, review the document, then save a customer preview.</p></div><div class="q-workspace-context"><span>FOR</span><strong>${e(draft.customer.company||'Customer company')}</strong><span>${e(draft.requestId||'Standalone demo')}</span><small>Local demo · No quotation is sent</small></div></section>
+ app.innerHTML=globalThis.CB_PAGES_HTML(`<section class="q-workspace-head"><div><p class="q-overline">C&B QUOTATION STUDIO</p><h1>Prepare quotation</h1><p>Define the scope, review the document, then save a customer preview.</p></div><div class="q-workspace-context"><span>FOR</span><strong>${e(draft.customer.company||'Customer company')}</strong><span>${e(draft.requestId||'Standalone demo')}</span><small>Local demo · No quotation is sent</small></div></section>
  <div class="q-action-bar"><div class="q-action-origin"><a class="q-back" href="${requestHref()}">${icon('arrow-right')} ${draft.requestId==='EXAMPLE-INQUIRY'?'Back to inquiry guide':'Back to inquiry'}</a><span id="q-draft-status" role="status"></span></div><div class="q-actions"><button class="q-button q-primary" id="q-save">Save & preview ${icon('arrow-right')}</button></div></div>
  ${errorText?`<div class="q-alert" role="alert">${e(errorText)}</div>`:''}
  <div class="q-workspace"><form class="q-editor" id="q-editor" novalidate>
