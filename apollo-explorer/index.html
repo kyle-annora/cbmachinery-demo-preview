@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#1b1719">
   <meta name="description" content="An independent interactive study of the Apollo 11 crew hatch. Explore its assemblies, isolate a component and reveal the construction.">
   <title>Apollo 11 · Explorer Lab</title>
-  <script type="module" crossorigin src="./assets/index-Dq3dxU79.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BpRwSVHY.css">
+  <script type="module" crossorigin src="./assets/index-uQrXZsrg.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-ubJQyuJC.css">
 </head>
 <body>
   <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
@@ -23,6 +23,8 @@
     <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-11v1"/></symbol>
     <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6m-1-5-9 9M10 4H4v16h16v-6"/></symbol>
     <symbol id="i-appearance" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4v16M12 4a8 8 0 0 1 0 16" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-performance" viewBox="0 0 24 24"><path d="M4 18a9 9 0 1 1 16 0M12 14l5-7M5 18h14"/><circle cx="12" cy="14" r="1.5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
     <symbol id="i-collapse" viewBox="0 0 24 24"><path d="m6 14 6-6 6 6"/></symbol>
     <symbol id="i-window" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="12" r="5"/></symbol>
     <symbol id="i-handle" viewBox="0 0 24 24"><circle cx="7" cy="17" r="3"/><path d="m9 15 8-9m-2-2 5 5M5 20l-1 1"/></symbol>
@@ -66,7 +68,7 @@
       <section class="theme-panel floating-panel" id="theme-panel" role="dialog" aria-label="Appearance settings" hidden>
         <div class="theme-heading"><h2 class="eyebrow">Accent color</h2><button class="icon-button" id="theme-close" type="button" aria-label="Close appearance settings"><svg><use href="#i-close"/></svg></button></div>
         <div id="theme-options" class="theme-options"></div>
-        <label class="custom-accent-row" for="custom-accent"><span>Custom color</span><input id="custom-accent" type="color" value="#ff633b" aria-label="Choose a custom accent color"></label>
+        <label class="custom-accent-row" for="custom-accent"><span>Custom color</span><input id="custom-accent" type="color" value="#ff6840" aria-label="Choose a custom accent color"></label>
       </section>
     </div>
 
@@ -87,7 +89,7 @@
             <div class="explosion-range"><label class="sr-only" for="explode-range">Assembly separation</label><input type="range" id="explode-range" min="0" max="100" step="1" value="0"><output id="explode-value" for="explode-range">0%</output></div>
           </div>
           <span class="tool-divider" aria-hidden="true"></span>
-          <button type="button" class="tool-button render-mode" id="render-mode" aria-label="Technical view" aria-pressed="false"><svg><use href="#i-linework"/></svg><span>Technical view</span></button>
+          <button type="button" class="tool-button render-mode" id="render-mode" aria-label="Switch from engineering materials to technical linework" aria-pressed="false"><svg><use href="#i-linework"/></svg><span>Technical</span></button>
         </div>
 
       <aside class="detail-panel floating-panel" aria-label="Selected component details">
@@ -100,14 +102,31 @@
         </div>
       </aside>
 
+    <section id="perf-panel" class="performance-panel floating-panel" role="dialog" aria-label="Performance check" hidden>
+      <div class="panel-heading"><h2 class="eyebrow">Performance check</h2><button id="perf-close" class="icon-button" type="button" aria-label="Close performance check"><svg><use href="#i-close"/></svg></button></div>
+      <div class="performance-body">
+        <label class="quality-label" for="perf-quality"><span>Render quality</span><select id="perf-quality"><option value="balanced" selected>Balanced</option><option value="performance">Performance</option><option value="quality">Quality</option></select></label>
+        <p class="benchmark-description">A repeatable orbit, separation and reassembly check on this device.</p>
+        <button id="perf-run" class="accent-button benchmark-action" type="button" disabled><svg><use href="#i-performance"/></svg><span>Run 12-second check</span></button>
+        <button id="perf-cancel" class="secondary-button" type="button" hidden>Cancel check</button>
+        <p id="perf-status" class="benchmark-status" role="status" aria-live="polite">Ready when the model has loaded.</p>
+        <div id="perf-results" class="benchmark-results"></div>
+        <button id="perf-download" class="secondary-button" type="button" disabled><svg><use href="#i-download"/></svg><span>Download results</span></button>
+        <p class="performance-note">Measured locally. No data is uploaded.</p>
+      </div>
+    </section>
+
     <div class="viewport-hint"><span class="mouse-symbol" aria-hidden="true"></span><span>Drag to orbit <b>·</b> Scroll to zoom <b>·</b> Select to inspect</span></div>
     <footer class="app-footer">
       <div class="footer-status"><span class="status-dot"></span><span id="status-message" role="status" aria-live="polite">Preparing model</span></div>
-      <button type="button" class="source-button" id="open-sources"><span>Model: Smithsonian · Project Egress</span><svg><use href="#i-info"/></svg></button>
+      <div class="footer-utilities">
+        <button id="perf-toggle" class="performance-toggle" type="button" aria-expanded="false" aria-controls="perf-panel"><svg><use href="#i-performance"/></svg><span>Performance</span></button>
+        <button type="button" class="source-button" id="open-sources" aria-label="Model source and material information"><span>Smithsonian · Project Egress</span><svg><use href="#i-info"/></svg></button>
+      </div>
     </footer>
     <div class="tree-backdrop" id="tree-backdrop" hidden></div>
     </div>
   </div>
-  <dialog id="source-dialog" class="source-dialog" aria-labelledby="source-title"><div class="source-header"><span class="eyebrow">Model provenance</span><button type="button" class="icon-button" id="close-sources" aria-label="Close model information"><svg><use href="#i-close"/></svg></button></div><h2 id="source-title">Apollo 11 crew hatch</h2><p>This independent Explorer study uses Andrew Barth's Project Egress model, published by the Smithsonian. The object and its components retain their original identity.</p><p class="source-note">The 801 components preserve their assembled positions. Explorer groups are an explanatory organization; they are not a manufacturer parts list. Separation illustrates spatial relationships and is not a service procedure.</p><a href="https://3d.si.edu/object/3d/hatch-crew-apollo-11-cad-model:936d1822-b237-4431-bb3f-a1f9d39a2e90" target="_blank" rel="noopener noreferrer">View the Smithsonian source<svg><use href="#i-external"/></svg></a></dialog>
+  <dialog id="source-dialog" class="source-dialog" aria-labelledby="source-title"><div class="source-header"><span class="eyebrow">Model provenance</span><button type="button" class="icon-button" id="close-sources" aria-label="Close model information"><svg><use href="#i-close"/></svg></button></div><h2 id="source-title">Apollo 11 crew hatch</h2><p>This independent Explorer study uses Andrew Barth's Project Egress model, published by the Smithsonian. The object and its components retain their original identity.</p><p class="source-note">The 801 components preserve their assembled positions. Explorer groups are an explanatory organization; they are not a manufacturer parts list. Surface finishes are presentation choices, not verified physical materials. Separation illustrates spatial relationships and is not a service procedure.</p><a href="https://3d.si.edu/object/3d/hatch-crew-apollo-11-cad-model:936d1822-b237-4431-bb3f-a1f9d39a2e90" target="_blank" rel="noopener noreferrer">View the Smithsonian source<svg><use href="#i-external"/></svg></a></dialog>
 </body>
 </html>
