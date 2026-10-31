@@ -1,0 +1,1106 @@
+{
+  "source": {
+    "title": "Apollo 11 hatch — Project Egress",
+    "institution": "Smithsonian Institution",
+    "url": "https://3d.si.edu/object/3d/hatch-crew-apollo-11-cad-model:936d1822-b237-4431-bb3f-a1f9d39a2e90",
+    "asset": "Hatch.blend",
+    "sourcePoseFrame": 571,
+    "rights": "Public domain, as indicated by the Smithsonian download page",
+    "notes": "Original assembly positions preserved. Web materials and geometry detail adapted. Group labels use source collections/materials and spatial clusters; they are an explanatory organization, not a manufacturer BOM.",
+    "modelAuthor": "Andrew Barth",
+    "packageUrl": "https://3d-api.si.edu/content/document/3d_package:936d1822-b237-4431-bb3f-a1f9d39a2e90/resources/project_egress-blender_model.zip",
+    "groupCuration": {
+      "windowSurround": {
+        "meshNames": [
+          "part_0185",
+          "part_0186"
+        ],
+        "sourceNames": [
+          "Body1:143",
+          "Body1:144"
+        ],
+        "basis": "Visually confirmed central coated surround plates adjoining the window; curated into the window group."
+      },
+      "latchAssemblies": {
+        "basis": "Each subgroup follows one unique source assembly parent and contains 20 colocated components.",
+        "count": 15,
+        "verifiedSpatially": true
+      }
+    },
+    "preparedFrom": "apollo-hatch.glb",
+    "preparedFromSha256": "60d76269c5848a810cecbb21d99ba07af612e0fd69065b681845dcd54157923c",
+    "sourceAssemblyId": "latch-body1-1-003"
+  },
+  "id": "latch-body1-1-003",
+  "title": "Latch assembly 01",
+  "materialInterpretation": "All twenty source components use Brushed steel. Any material differentiation in the review is presentation art direction, not verified engineering material data.",
+  "stats": {
+    "meshCount": 20,
+    "triangles": 15538,
+    "sourceMaterialCount": 1,
+    "glbBytes": 348948,
+    "edgeBytes": 205368,
+    "edgeSegments": 8557
+  },
+  "bounds": [
+    [
+      -4.808765292167664,
+      7.386340141296387,
+      0.6804308891296387
+    ],
+    [
+      -2.0256303548812866,
+      10.726890429854393,
+      2.9169373512268066
+    ]
+  ],
+  "center": [
+    -3.417197823524475,
+    9.05661528557539,
+    1.7986841201782227
+  ],
+  "size": [
+    2.783134937286377,
+    3.3405502885580063,
+    2.236506462097168
+  ],
+  "orientation": {
+    "up": "Y",
+    "interiorFacing": "positive Z",
+    "initialCameraDirection": [
+      0.45,
+      0.18,
+      1
+    ]
+  },
+  "edges": {
+    "file": "latch-edges.bin",
+    "format": "float32-le",
+    "coordinates": "mesh-local",
+    "topology": "line-segments",
+    "creaseAngle": 35,
+    "transform": "Apply the matching source mesh node transform to each line geometry."
+  },
+  "parts": [
+    {
+      "id": "part_0002",
+      "meshName": "part_0002",
+      "sourceName": "Body1.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -3.3234639763832092,
+        10.119569599628448,
+        2.1112815737724304
+      ],
+      "bounds": [
+        [
+          -3.7652385234832764,
+          9.561015903949738,
+          1.3056257963180542
+        ],
+        [
+          -2.881689429283142,
+          10.67812329530716,
+          2.9169373512268066
+        ]
+      ],
+      "triangles": 324,
+      "title": "Component 01",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -3.3232388496398926,
+        10.119433403015137,
+        2.111955404281616,
+        1
+      ],
+      "edges": {
+        "byteOffset": 0,
+        "vertexCount": 462,
+        "segmentCount": 231
+      }
+    },
+    {
+      "id": "part_0034",
+      "meshName": "part_0034",
+      "sourceName": "Body1:1.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -3.417197823524475,
+        8.792738258838654,
+        1.682639867067337
+      ],
+      "bounds": [
+        [
+          -4.808765292167664,
+          7.453943133354187,
+          1.0242308974266052
+        ],
+        [
+          -2.0256303548812866,
+          10.13153338432312,
+          2.341048836708069
+        ]
+      ],
+      "triangles": 286,
+      "title": "Component 02",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -3.414907217025757,
+        8.790959358215332,
+        1.682025671005249,
+        1
+      ],
+      "edges": {
+        "byteOffset": 5544,
+        "vertexCount": 420,
+        "segmentCount": 210
+      }
+    },
+    {
+      "id": "part_0063",
+      "meshName": "part_0063",
+      "sourceName": "Body1:10.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -3.419682025909424,
+        8.328763008117676,
+        1.5246834754943848
+      ],
+      "bounds": [
+        [
+          -3.575615882873535,
+          7.390438079833984,
+          1.404848337173462
+        ],
+        [
+          -3.2637481689453125,
+          9.267087936401367,
+          1.6445186138153076
+        ]
+      ],
+      "triangles": 188,
+      "title": "Component 03",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -3.419682025909424,
+        8.328763008117676,
+        1.5246834754943848,
+        1
+      ],
+      "edges": {
+        "byteOffset": 10584,
+        "vertexCount": 192,
+        "segmentCount": 96
+      }
+    },
+    {
+      "id": "part_0089",
+      "meshName": "part_0089",
+      "sourceName": "Body1:11.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -3.731542468070984,
+        7.45518159866333,
+        1.5399782061576843
+      ],
+      "bounds": [
+        [
+          -4.205052852630615,
+          7.386340141296387,
+          1.3297761678695679
+        ],
+        [
+          -3.2580320835113525,
+          7.524023056030273,
+          1.7501802444458008
+        ]
+      ],
+      "triangles": 386,
+      "title": "Component 04",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -3.7315425872802734,
+        7.45518159866333,
+        1.539978265762329,
+        1
+      ],
+      "edges": {
+        "byteOffset": 12888,
+        "vertexCount": 382,
+        "segmentCount": 191
+      }
+    },
+    {
+      "id": "part_0115",
+      "meshName": "part_0115",
+      "sourceName": "Body1:12.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -4.009041599929333,
+        7.7303516715765,
+        1.5539734661579132
+      ],
+      "bounds": [
+        [
+          -4.156831428408623,
+          7.4114241898059845,
+          1.40819850564003
+        ],
+        [
+          -3.8612517714500427,
+          8.049279153347015,
+          1.6997484266757965
+        ]
+      ],
+      "triangles": 1580,
+      "title": "Component 05",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -4.008597373962402,
+        7.730308532714844,
+        1.553932547569275,
+        1
+      ],
+      "edges": {
+        "byteOffset": 17472,
+        "vertexCount": 1858,
+        "segmentCount": 929
+      }
+    },
+    {
+      "id": "part_0141",
+      "meshName": "part_0141",
+      "sourceName": "Body1:13.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -2.872207760810852,
+        9.47809362411499,
+        2.2714200019836426
+      ],
+      "bounds": [
+        [
+          -3.4681143760681152,
+          8.897988319396973,
+          1.784715175628662
+        ],
+        [
+          -2.276301145553589,
+          10.058198928833008,
+          2.758124828338623
+        ]
+      ],
+      "triangles": 316,
+      "title": "Component 06",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -2.8722076416015625,
+        9.478094100952148,
+        2.2714200019836426,
+        1
+      ],
+      "edges": {
+        "byteOffset": 39768,
+        "vertexCount": 316,
+        "segmentCount": 158
+      }
+    },
+    {
+      "id": "part_0167",
+      "meshName": "part_0167",
+      "sourceName": "Body1:14.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -3.2882202863693237,
+        9.898885726928711,
+        2.521048069000244
+      ],
+      "bounds": [
+        [
+          -3.4073493480682373,
+          9.763286590576172,
+          2.1394786834716797
+        ],
+        [
+          -3.16909122467041,
+          10.03448486328125,
+          2.9026174545288086
+        ]
+      ],
+      "triangles": 484,
+      "title": "Component 07",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -3.2882204055786133,
+        9.898885726928711,
+        2.521048069000244,
+        1
+      ],
+      "edges": {
+        "byteOffset": 43560,
+        "vertexCount": 484,
+        "segmentCount": 242
+      }
+    },
+    {
+      "id": "part_0193",
+      "meshName": "part_0193",
+      "sourceName": "Body1:15.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -2.4879446029663086,
+        9.163952827453613,
+        1.9723409414291382
+      ],
+      "bounds": [
+        [
+          -2.781068801879883,
+          8.91981315612793,
+          1.7617199420928955
+        ],
+        [
+          -2.1948204040527344,
+          9.408092498779297,
+          2.182961940765381
+        ]
+      ],
+      "triangles": 500,
+      "title": "Component 08",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -2.4879446029663086,
+        9.163952827453613,
+        1.9723409414291382,
+        1
+      ],
+      "edges": {
+        "byteOffset": 49368,
+        "vertexCount": 500,
+        "segmentCount": 250
+      }
+    },
+    {
+      "id": "part_0220",
+      "meshName": "part_0220",
+      "sourceName": "Body1:16.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -2.2981269359588623,
+        9.022050857543945,
+        2.084133803844452
+      ],
+      "bounds": [
+        [
+          -2.428618907928467,
+          8.987794876098633,
+          1.8641303777694702
+        ],
+        [
+          -2.167634963989258,
+          9.056306838989258,
+          2.3041372299194336
+        ]
+      ],
+      "triangles": 188,
+      "title": "Component 09",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -2.2981269359588623,
+        9.022050857543945,
+        2.0841338634490967,
+        1
+      ],
+      "edges": {
+        "byteOffset": 55368,
+        "vertexCount": 192,
+        "segmentCount": 96
+      }
+    },
+    {
+      "id": "part_0246",
+      "meshName": "part_0246",
+      "sourceName": "Body1:17.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -2.8971736058592796,
+        8.162965327501297,
+        2.499744236469269
+      ],
+      "bounds": [
+        [
+          -3.1155276745557785,
+          7.4687305092811584,
+          2.2821830362081528
+        ],
+        [
+          -2.6788195371627808,
+          8.857200145721436,
+          2.717305436730385
+        ]
+      ],
+      "triangles": 2914,
+      "title": "Component 10",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -2.8977737426757812,
+        8.162389755249023,
+        2.5008411407470703,
+        1
+      ],
+      "edges": {
+        "byteOffset": 57672,
+        "vertexCount": 3228,
+        "segmentCount": 1614
+      }
+    },
+    {
+      "id": "part_0272",
+      "meshName": "part_0272",
+      "sourceName": "Body1:18.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -2.9470454454421997,
+        7.633568309247494,
+        2.502635955810547
+      ],
+      "bounds": [
+        [
+          -3.153273344039917,
+          7.47331827878952,
+          2.2753992080688477
+        ],
+        [
+          -2.7408175468444824,
+          7.793818339705467,
+          2.729872703552246
+        ]
+      ],
+      "triangles": 1012,
+      "title": "Component 11",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -2.94704532623291,
+        7.633816242218018,
+        2.502635955810547,
+        1
+      ],
+      "edges": {
+        "byteOffset": 96408,
+        "vertexCount": 1386,
+        "segmentCount": 693
+      }
+    },
+    {
+      "id": "part_0298",
+      "meshName": "part_0298",
+      "sourceName": "Body1:19.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -3.3177212476730347,
+        9.856772422790527,
+        2.3036906719207764
+      ],
+      "bounds": [
+        [
+          -3.554840564727783,
+          9.817924499511719,
+          2.2631914615631104
+        ],
+        [
+          -3.080601930618286,
+          9.895620346069336,
+          2.3441898822784424
+        ]
+      ],
+      "triangles": 188,
+      "title": "Component 12",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -3.317721366882324,
+        9.856772422790527,
+        2.3036906719207764,
+        1
+      ],
+      "edges": {
+        "byteOffset": 113040,
+        "vertexCount": 192,
+        "segmentCount": 96
+      }
+    },
+    {
+      "id": "part_0325",
+      "meshName": "part_0325",
+      "sourceName": "Body1:2.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -3.359510064125061,
+        9.7743558883667,
+        1.5217325091362
+      ],
+      "bounds": [
+        [
+          -4.0722527503967285,
+          9.647000312805176,
+          1.3893203735351562
+        ],
+        [
+          -2.6467673778533936,
+          9.901711463928223,
+          1.6541446447372437
+        ]
+      ],
+      "triangles": 188,
+      "title": "Component 13",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -3.3595099449157715,
+        9.7743558883667,
+        1.5217325687408447,
+        1
+      ],
+      "edges": {
+        "byteOffset": 115344,
+        "vertexCount": 192,
+        "segmentCount": 96
+      }
+    },
+    {
+      "id": "part_0467",
+      "meshName": "part_0467",
+      "sourceName": "Body1:3.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -3.2845524102449417,
+        10.50310929864645,
+        2.432514764368534
+      ],
+      "bounds": [
+        [
+          -3.5312674045562744,
+          10.279328167438507,
+          2.207623317837715
+        ],
+        [
+          -3.037837415933609,
+          10.726890429854393,
+          2.657406210899353
+        ]
+      ],
+      "triangles": 228,
+      "title": "Component 14",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -3.2844533920288086,
+        10.503287315368652,
+        2.4319908618927,
+        1
+      ],
+      "edges": {
+        "byteOffset": 117648,
+        "vertexCount": 58,
+        "segmentCount": 29
+      }
+    },
+    {
+      "id": "part_0517",
+      "meshName": "part_0517",
+      "sourceName": "Body1:4.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -3.2844533920288086,
+        10.503287315368652,
+        2.4319908618927
+      ],
+      "bounds": [
+        [
+          -3.680997610092163,
+          10.418927192687988,
+          2.344878911972046
+        ],
+        [
+          -2.887909173965454,
+          10.587647438049316,
+          2.5191028118133545
+        ]
+      ],
+      "triangles": 188,
+      "title": "Component 15",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -3.2844533920288086,
+        10.503287315368652,
+        2.4319908618927,
+        1
+      ],
+      "edges": {
+        "byteOffset": 118344,
+        "vertexCount": 192,
+        "segmentCount": 96
+      }
+    },
+    {
+      "id": "part_0552",
+      "meshName": "part_0552",
+      "sourceName": "Body1:5.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -4.385267607867718,
+        9.816848114132881,
+        1.1882748007774353
+      ],
+      "bounds": [
+        [
+          -4.620590716600418,
+          9.580933913588524,
+          0.7806273400783539
+        ],
+        [
+          -4.149944499135017,
+          10.052762314677238,
+          1.5959222614765167
+        ]
+      ],
+      "triangles": 1350,
+      "title": "Component 16",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -4.386013984680176,
+        9.816977500915527,
+        1.188340663909912,
+        1
+      ],
+      "edges": {
+        "byteOffset": 120648,
+        "vertexCount": 1380,
+        "segmentCount": 690
+      }
+    },
+    {
+      "id": "part_0582",
+      "meshName": "part_0582",
+      "sourceName": "Body1:6.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -2.3422843664884567,
+        9.731867365539074,
+        1.0880785137414932
+      ],
+      "bounds": [
+        [
+          -2.577633485198021,
+          9.49696558713913,
+          0.6804308891296387
+        ],
+        [
+          -2.1069352477788925,
+          9.966769143939018,
+          1.4957261383533478
+        ]
+      ],
+      "triangles": 1350,
+      "title": "Component 17",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -2.3430051803588867,
+        9.731733322143555,
+        1.088144302368164,
+        1
+      ],
+      "edges": {
+        "byteOffset": 137208,
+        "vertexCount": 1414,
+        "segmentCount": 707
+      }
+    },
+    {
+      "id": "part_0696",
+      "meshName": "part_0696",
+      "sourceName": "Body1:7.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -4.468104965984821,
+        7.850184895098209,
+        1.1647974699735641
+      ],
+      "bounds": [
+        [
+          -4.625643774867058,
+          7.69256192445755,
+          0.7870443165302277
+        ],
+        [
+          -4.310566157102585,
+          8.007807865738869,
+          1.5425506234169006
+        ]
+      ],
+      "triangles": 1800,
+      "title": "Component 18",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -4.468742370605469,
+        7.850184917449951,
+        1.164381504058838,
+        1
+      ],
+      "edges": {
+        "byteOffset": 154176,
+        "vertexCount": 1944,
+        "segmentCount": 972
+      }
+    },
+    {
+      "id": "part_0728",
+      "meshName": "part_0728",
+      "sourceName": "Body1:8.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -2.425095833837986,
+        7.764941014349461,
+        1.064601019024849
+      ],
+      "bounds": [
+        [
+          -2.582634523510933,
+          7.608308166265488,
+          0.6868478953838348
+        ],
+        [
+          -2.267557144165039,
+          7.9215738624334335,
+          1.442354142665863
+        ]
+      ],
+      "triangles": 1800,
+      "title": "Component 19",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -2.4257335662841797,
+        7.764941215515137,
+        1.0641850233078003,
+        1
+      ],
+      "edges": {
+        "byteOffset": 177504,
+        "vertexCount": 1932,
+        "segmentCount": 966
+      }
+    },
+    {
+      "id": "part_0754",
+      "meshName": "part_0754",
+      "sourceName": "Body1:9.003",
+      "group": "latches",
+      "subgroup": "latch-body1-1-003",
+      "center": [
+        -2.9130795001983643,
+        8.636407613754272,
+        1.9976014494895935
+      ],
+      "bounds": [
+        [
+          -3.7560545802116394,
+          7.756904125213623,
+          1.1784552335739136
+        ],
+        [
+          -2.070104420185089,
+          9.515911102294922,
+          2.8167476654052734
+        ]
+      ],
+      "triangles": 268,
+      "title": "Component 20",
+      "sourceMaterial": "Brushed steel",
+      "materialRole": "brushed-steel",
+      "matrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -2.929326295852661,
+        8.634546279907227,
+        2.0070929527282715,
+        1
+      ],
+      "edges": {
+        "byteOffset": 200688,
+        "vertexCount": 390,
+        "segmentCount": 195
+      }
+    }
+  ]
+}
