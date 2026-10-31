@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#1b1719">
   <meta name="description" content="Explore the Apollo crew hatch and an animated crank-slider mechanism in one interactive assembly viewer. Inspect components, reveal their construction and follow operating motion.">
   <title>Explorer Lab · Interactive assemblies</title>
-  <script type="module" crossorigin src="./assets/index-DwC7WXeJ.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/three-DfiA9po7.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-BTxRy3w9.css">
+  <script type="module" crossorigin src="./assets/index-zvGOvNp9.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three-C-IhcKZu.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-DyZvWm-r.css">
 </head>
 <body data-mode="explore">
   <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
@@ -127,7 +127,8 @@
             <button type="button" id="view-rear" aria-pressed="false">Exterior</button>
           </div>
           <span class="tool-divider orientation-divider" aria-hidden="true"></span>
-          <button type="button" class="tool-button render-mode" id="render-mode" aria-label="Switch from engineering materials to technical linework" aria-pressed="false"><svg><use href="#i-linework"/></svg><span>Technical</span></button>
+          <label class="sr-only" for="render-mode">Rendering style</label>
+          <select class="render-mode" id="render-mode" aria-label="Rendering style"><option value="engineering">Engineering</option><option value="linework">Linework</option><option value="flat" id="render-flat">Flat Ember</option></select>
         </div>
         <p id="operation-availability" class="operation-availability">Operating motion is available in Crank-slider.</p>
         <div class="explosion-control" id="explode-controls" hidden>
