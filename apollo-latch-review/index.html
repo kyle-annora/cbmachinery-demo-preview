@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#1b181d">
-  <meta name="description" content="Compare Engineering, Linework and X-ray views of the same Apollo latch, with optional selected-part material focus.">
+  <meta name="description" content="Compare Engineering, Linework and X-ray views of the same Apollo latch, with crisp contours and optional flat accent or material emphasis.">
   <title>Latch Rendering Study · Explorer Lab</title>
-  <script type="module" crossorigin src="./assets/index-dTUq8vsR.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CrFwjaFQ.css">
+  <script type="module" crossorigin src="./assets/index-Bj9eYZ6f.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-B-6Vo42d.css">
 </head>
 <body>
   <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
@@ -72,8 +72,7 @@
           <button id="mode-linework" type="button" aria-pressed="false" disabled><svg aria-hidden="true"><use href="#i-linework"/></svg><span>Linework</span></button>
           <button id="mode-xray" type="button" aria-pressed="false" disabled><svg aria-hidden="true"><use href="#i-xray"/></svg><span>X-ray</span></button>
         </div>
-        <label class="material-focus" for="material-focus" title="Keep the selected part in engineering material"><input id="material-focus" type="checkbox" disabled aria-describedby="material-focus-description"><span>Material focus</span></label>
-        <span id="material-focus-description" class="sr-only">Keep the selected part in engineering material in Linework or X-ray. Select a part first.</span>
+        <label class="focus-style" for="focus-style"><span>Selected part</span><select id="focus-style" aria-label="Selected part rendering" disabled aria-describedby="mode-description"><option value="none">Lines only</option><option value="flat">Flat Ember</option><option value="material">Material</option></select></label>
       </div>
       <p id="mode-description" class="mode-description" aria-live="polite">Distinct finishes reveal each part. Select a part to inspect it.</p>
       <div id="stage-tools" class="stage-tools" aria-label="Assembly controls">
