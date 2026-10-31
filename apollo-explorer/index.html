@@ -6,9 +6,9 @@
   <meta name="theme-color" content="#1b1719">
   <meta name="description" content="Explore the Apollo crew hatch and an animated crank-slider mechanism in one interactive assembly viewer. Inspect components, reveal their construction and follow operating motion.">
   <title>Explorer Lab · Interactive assemblies</title>
-  <script type="module" crossorigin src="./assets/index-eDCp0Cb4.js"></script>
+  <script type="module" crossorigin src="./assets/index-DwC7WXeJ.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/three-DfiA9po7.js">
-  <link rel="stylesheet" crossorigin href="./assets/index-CH0dNa3f.css">
+  <link rel="stylesheet" crossorigin href="./assets/index-BTxRy3w9.css">
 </head>
 <body data-mode="explore">
   <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
@@ -65,7 +65,7 @@
 
     <div class="stage-heading floating-panel">
       <div class="model-context">
-        <button class="icon-button mobile-only" id="toggle-tree" type="button" aria-label="Open assembly index" aria-expanded="false" aria-controls="assembly-panel"><svg><use href="#i-layers"/></svg></button>
+        <button class="icon-button mobile-only" id="toggle-tree" type="button" aria-label="Open assembly index" aria-expanded="false" aria-controls="assembly-panel"><svg><use href="#i-layers"/></svg><span class="assembly-toggle-label">Assembly</span></button>
         <label class="model-select-label" for="model-select"><svg aria-hidden="true"><use href="#i-cube"/></svg><span class="sr-only">Choose assembly</span></label>
         <select id="model-select" aria-label="Choose assembly"><option value="apollo">Apollo crew hatch</option><option value="kinetic-01">Crank-slider</option></select>
         <button class="icon-button reset-view" id="reset-view" type="button" aria-label="Reset camera view" title="Reset view"><svg><use href="#i-reset"/></svg></button>
@@ -93,12 +93,13 @@
 
       <section id="tour-panel" class="tour-panel floating-panel" aria-label="Guided assembly tour" hidden>
         <div class="tour-heading">
-          <div><p id="tour-count" class="eyebrow">Guided tour</p><h2 id="tour-title">See how it works.</h2></div>
+          <button id="tour-chapters-toggle" class="tour-chapters-toggle" type="button" aria-label="Choose tour chapter" aria-expanded="false" aria-controls="tour-chapters"><span id="tour-count">01 / 06</span><svg aria-hidden="true"><use href="#i-chevron"/></svg></button>
+          <h2 id="tour-title">See how it works.</h2>
           <button id="tour-exit" class="icon-button" type="button" title="Return to explorer" aria-label="Return to explorer"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
         </div>
         <p id="tour-caption" class="tour-caption" aria-live="polite" aria-atomic="true">Follow the assembly from its complete form to its moving parts.</p>
         <p id="tour-status" class="tour-status" role="status">Drag the model to pause and explore.</p>
-        <nav id="tour-chapters" class="tour-chapters" aria-label="Tour chapters"></nav>
+        <nav id="tour-chapters" class="tour-chapters floating-panel" aria-label="Tour chapters" hidden></nav>
         <div class="tour-transport">
           <div class="tour-playback">
             <button id="tour-prev" class="icon-button" type="button" title="Previous chapter" aria-label="Previous chapter"><svg aria-hidden="true"><use href="#i-back"/></svg></button>
