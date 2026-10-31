@@ -6,8 +6,9 @@
   <meta name="theme-color" content="#1b1719">
   <meta name="description" content="Explore the Apollo crew hatch and an animated crank-slider mechanism in one interactive assembly viewer. Inspect components, reveal their construction and follow operating motion.">
   <title>Explorer Lab · Interactive assemblies</title>
-  <script type="module" crossorigin src="./assets/index-enY1ya4a.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-C1t4SyQX.css">
+  <script type="module" crossorigin src="./assets/index-C5vJilxG.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three-DfiA9po7.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-CH0dNa3f.css">
 </head>
 <body data-mode="explore">
   <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
@@ -48,6 +49,7 @@
           <div class="loading-track"><div id="loading-progress"></div></div>
         </div>
         <div id="hover-label" class="hover-label" hidden></div>
+        <div id="tour-annotations" class="tour-annotations" aria-hidden="true"></div>
         <span class="axis-marker" aria-hidden="true"><i data-axis="x"></i><i data-axis="y"></i><i data-axis="z"></i><b data-axis="x">X</b><b data-axis="y">Y</b><b data-axis="z">Z</b></span>
       </div>
     </main>
@@ -80,11 +82,36 @@
       </section>
     </div>
 
+      <div class="assembly-region">
       <aside class="assembly-panel floating-panel" id="assembly-panel" aria-label="Assembly navigation">
         <div class="panel-heading"><span class="eyebrow">Assembly index</span><button class="icon-button mobile-only" id="close-tree" type="button" aria-label="Close assembly index"><svg><use href="#i-close"/></svg></button></div>
         <nav id="component-tree" aria-label="Components"></nav>
         <div class="index-footer"><span class="status-dot"></span><span id="model-count">Preparing assembly</span></div>
       </aside>
+      <button id="tour-start" class="tour-entry floating-panel" type="button" disabled><svg aria-hidden="true"><use href="#i-play"/></svg><span>Start guided tour</span><span id="tour-duration" class="tour-duration">70 sec</span></button>
+      </div>
+
+      <section id="tour-panel" class="tour-panel floating-panel" aria-label="Guided assembly tour" hidden>
+        <div class="tour-heading">
+          <div><p id="tour-count" class="eyebrow">Guided tour</p><h2 id="tour-title">See how it works.</h2></div>
+          <button id="tour-exit" class="icon-button" type="button" title="Return to explorer" aria-label="Return to explorer"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+        </div>
+        <p id="tour-caption" class="tour-caption" aria-live="polite" aria-atomic="true">Follow the assembly from its complete form to its moving parts.</p>
+        <p id="tour-status" class="tour-status" role="status">Drag the model to pause and explore.</p>
+        <nav id="tour-chapters" class="tour-chapters" aria-label="Tour chapters"></nav>
+        <div class="tour-transport">
+          <div class="tour-playback">
+            <button id="tour-prev" class="icon-button" type="button" title="Previous chapter" aria-label="Previous chapter"><svg aria-hidden="true"><use href="#i-back"/></svg></button>
+            <button id="tour-play" class="play-button" type="button" aria-label="Pause guided tour"><svg aria-hidden="true"><use href="#i-pause"/></svg><span>Pause</span></button>
+            <button id="tour-next" class="icon-button" type="button" title="Next chapter" aria-label="Next chapter"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+          <div class="tour-timeline"><label class="sr-only" for="tour-progress">Guided tour progress</label><input id="tour-progress" type="range" min="0" max="100" step="0.1" value="0"><output id="tour-time" for="tour-progress">0:00 / 1:10</output></div>
+          <div class="tour-completion">
+            <button id="tour-replay" class="tour-replay" type="button" hidden><svg aria-hidden="true"><use href="#i-reset"/></svg><span>Replay</span></button>
+            <button id="tour-explore" class="accent-button" type="button" hidden><span>Explore this assembly</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+        </div>
+      </section>
 
       <section class="stage-tools floating-panel" aria-label="Viewing and operation controls">
         <div class="dock-toolbar">
@@ -145,7 +172,7 @@
     <footer class="app-footer">
       <div class="footer-status"><span class="status-dot"></span><span id="status-message" role="status" aria-live="polite">Preparing model</span></div>
       <div class="footer-utilities">
-        <button id="perf-toggle" class="performance-toggle" type="button" aria-expanded="false" aria-controls="perf-panel"><svg><use href="#i-performance"/></svg><span>Performance</span></button>
+        <button id="perf-toggle" class="performance-toggle" type="button" aria-expanded="false" aria-controls="perf-panel" aria-label="Performance check" title="Performance check"><svg><use href="#i-performance"/></svg><span>Performance</span></button>
         <button type="button" class="source-button" id="open-sources" aria-label="Model source and material information"><span>Smithsonian · Project Egress</span><svg><use href="#i-info"/></svg></button>
       </div>
     </footer>
