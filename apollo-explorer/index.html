@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#1b1719">
   <meta name="description" content="An independent interactive study of the Apollo 11 crew hatch. Explore its assemblies, isolate a component and reveal the construction.">
-  <title>Apollo 11 · Explorer Lab</title>
-  <script type="module" crossorigin src="./assets/index-uQrXZsrg.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-ubJQyuJC.css">
+  <title>Explorer Lab · Interactive assemblies</title>
+  <script type="module" crossorigin src="./assets/index-CIRCaeT0.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-C1t4SyQX.css">
 </head>
-<body>
+<body data-mode="explore">
   <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
     <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5m6 6-6-6 6-6"/></symbol>
@@ -25,6 +25,10 @@
     <symbol id="i-appearance" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4v16M12 4a8 8 0 0 1 0 16" fill="currentColor" stroke="none"/></symbol>
     <symbol id="i-performance" viewBox="0 0 24 24"><path d="M4 18a9 9 0 1 1 16 0M12 14l5-7M5 18h14"/><circle cx="12" cy="14" r="1.5"/></symbol>
     <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7V5Z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+    <symbol id="i-isolate" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/><rect x="8" y="8" width="8" height="8" rx="1"/></symbol>
+    <symbol id="i-focus" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M8 12h8m-4-4v8"/></symbol>
     <symbol id="i-collapse" viewBox="0 0 24 24"><path d="m6 14 6-6 6 6"/></symbol>
     <symbol id="i-window" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="12" r="5"/></symbol>
     <symbol id="i-handle" viewBox="0 0 24 24"><circle cx="7" cy="17" r="3"/><path d="m9 15 8-9m-2-2 5 5M5 20l-1 1"/></symbol>
@@ -54,13 +58,17 @@
         <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
         <span>ANNORA<span class="brand-divider">/</span><span class="brand-product">EXPLORER LAB</span></span>
       </a>
-      <span class="header-subject">APOLLO 11 <span>/</span> CREW HATCH</span>
+      <span class="header-subject">INTERACTIVE ASSEMBLIES</span>
     </header>
 
     <div class="stage-heading floating-panel">
-      <button class="icon-button mobile-only" id="toggle-tree" type="button" aria-label="Open assembly index" aria-expanded="false" aria-controls="assembly-panel"><svg><use href="#i-layers"/></svg></button>
-      <nav class="breadcrumbs" id="breadcrumbs" aria-label="Current component"><span>Crew hatch</span></nav>
-      <button class="icon-button reset-view" id="reset-view" type="button" aria-label="Reset camera view" title="Reset view"><svg><use href="#i-reset"/></svg></button>
+      <div class="model-context">
+        <button class="icon-button mobile-only" id="toggle-tree" type="button" aria-label="Open assembly index" aria-expanded="false" aria-controls="assembly-panel"><svg><use href="#i-layers"/></svg></button>
+        <label class="model-select-label" for="model-select"><svg aria-hidden="true"><use href="#i-cube"/></svg><span class="sr-only">Choose assembly</span></label>
+        <select id="model-select" aria-label="Choose assembly"><option value="apollo">Apollo crew hatch</option><option value="kinetic-01">Crank-slider</option></select>
+        <button class="icon-button reset-view" id="reset-view" type="button" aria-label="Reset camera view" title="Reset view"><svg><use href="#i-reset"/></svg></button>
+      </div>
+      <nav class="breadcrumbs" id="breadcrumbs" aria-label="Inspected assembly path"><span>Crew hatch</span></nav>
     </div>
 
     <div class="appearance-control">
@@ -78,27 +86,44 @@
         <div class="index-footer"><span class="status-dot"></span><span id="model-count">Preparing assembly</span></div>
       </aside>
 
-        <div class="stage-tools floating-panel" aria-label="Model display controls">
-          <div class="view-controls" aria-label="Camera views">
+      <section class="stage-tools floating-panel" aria-label="Viewing and operation controls">
+        <div class="dock-toolbar">
+          <div class="display-modes" role="group" aria-label="Display mode">
+            <button id="mode-explore" type="button" aria-pressed="true">Explore</button>
+            <button id="mode-explode" type="button" aria-pressed="false">Explode</button>
+            <button id="mode-operate" type="button" aria-pressed="false" disabled aria-describedby="operation-availability">Operate</button>
+          </div>
+          <span class="tool-divider" aria-hidden="true"></span>
+          <div class="view-controls" role="group" aria-label="Camera views">
             <button type="button" id="view-front" aria-pressed="true">Interior</button>
             <button type="button" id="view-rear" aria-pressed="false">Exterior</button>
           </div>
           <span class="tool-divider orientation-divider" aria-hidden="true"></span>
-          <div class="explosion-control">
-            <button type="button" class="tool-button" id="explode-toggle" aria-pressed="false"><svg><use href="#i-expand"/></svg><span>Explode</span></button>
-            <div class="explosion-range"><label class="sr-only" for="explode-range">Assembly separation</label><input type="range" id="explode-range" min="0" max="100" step="1" value="0"><output id="explode-value" for="explode-range">0%</output></div>
-          </div>
-          <span class="tool-divider" aria-hidden="true"></span>
           <button type="button" class="tool-button render-mode" id="render-mode" aria-label="Switch from engineering materials to technical linework" aria-pressed="false"><svg><use href="#i-linework"/></svg><span>Technical</span></button>
         </div>
+        <p id="operation-availability" class="operation-availability">Operating motion is available in Crank-slider.</p>
+        <div class="explosion-control" id="explode-controls" hidden>
+          <button type="button" class="tool-button" id="explode-toggle" aria-pressed="false"><svg><use href="#i-expand"/></svg><span>Separate</span></button>
+          <div class="explosion-range"><label class="sr-only" for="explode-range">Assembly separation</label><input type="range" id="explode-range" min="0" max="100" step="1" value="0"><output id="explode-value" for="explode-range">0%</output></div>
+        </div>
+        <div class="operation-controls" id="operation-controls" hidden>
+          <div class="operation-heading"><span id="operation-stage">Ready to operate</span><label class="follow-view" for="operation-follow"><input id="operation-follow" type="checkbox"><span>Follow view</span></label></div>
+          <div class="operation-transport">
+            <button id="operation-play" type="button" class="play-button" aria-label="Play operation" aria-pressed="false"><svg><use href="#i-play"/></svg><span>Play</span></button>
+            <button id="operation-reset" type="button" class="icon-button" aria-label="Reset operation" title="Reset operation"><svg><use href="#i-reset"/></svg></button>
+            <div class="operation-timeline"><label class="sr-only" for="operation-range">Operating cycle</label><input id="operation-range" type="range" min="0" max="100" step="0.1" value="0"><output id="operation-progress" for="operation-range">0%</output></div>
+            <label class="sr-only" for="operation-speed">Playback speed</label><select id="operation-speed" aria-label="Playback speed"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option></select>
+          </div>
+        </div>
+      </section>
 
       <aside class="detail-panel floating-panel" aria-label="Selected component details">
-        <div class="detail-heading"><div class="detail-topline"><span class="eyebrow">In focus</span><span class="selection-badge" id="selection-badge">ASSEMBLY</span></div><h1 id="selection-title">Crew hatch</h1><button class="icon-button detail-toggle" id="toggle-details" type="button" aria-expanded="true" aria-controls="detail-body" aria-label="Collapse component details" title="Collapse details"><svg><use href="#i-collapse"/></svg></button></div>
+        <div class="detail-heading"><div class="detail-topline"><span class="eyebrow">Selected</span><span class="selection-badge" id="selection-badge">ASSEMBLY</span></div><h1 id="selection-title">Crew hatch</h1><button class="icon-button detail-toggle" id="toggle-details" type="button" aria-expanded="true" aria-controls="detail-body" aria-label="Collapse component details" title="Collapse details"><svg><use href="#i-collapse"/></svg></button></div>
         <div class="detail-body" id="detail-body">
-        <p class="selection-description" id="selection-description">A complete mechanical system, one component at a time. Select an assembly to see how the hatch comes together.</p>
-        <dl class="selection-meta" id="selection-meta"></dl>
-        <div class="detail-actions"><button class="accent-button" type="button" id="focus-selection"><span>Inspect assembly</span><svg><use href="#i-arrow"/></svg></button><button class="back-button" type="button" id="back-selection" hidden><svg><use href="#i-back"/></svg><span>Back to assembly</span></button></div>
-        <div class="detail-components"><h2 class="eyebrow">Explore within</h2><div id="detail-children"></div></div>
+          <p class="selection-description" id="selection-description">Select a part to inspect it. Focus an assembly to explore what is inside.</p>
+          <p class="selection-context" id="selection-context" hidden></p>
+          <dl class="selection-meta" id="selection-meta"></dl>
+          <div class="detail-actions"><button class="accent-button" type="button" id="focus-selection"><span>Focus assembly</span><svg><use href="#i-arrow"/></svg></button><button class="isolate-button" type="button" id="isolate-selection" aria-pressed="false"><svg><use href="#i-isolate"/></svg><span>Isolate</span></button></div>
         </div>
       </aside>
 
@@ -116,7 +141,7 @@
       </div>
     </section>
 
-    <div class="viewport-hint"><span class="mouse-symbol" aria-hidden="true"></span><span>Drag to orbit <b>·</b> Scroll to zoom <b>·</b> Select to inspect</span></div>
+    <div class="viewport-hint"><span class="mouse-symbol" aria-hidden="true"></span><span>Drag to orbit <b>·</b> Scroll to zoom <b>·</b> Click to select</span></div>
     <footer class="app-footer">
       <div class="footer-status"><span class="status-dot"></span><span id="status-message" role="status" aria-live="polite">Preparing model</span></div>
       <div class="footer-utilities">
