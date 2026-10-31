@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#1b181d">
-  <meta name="description" content="A focused Apollo latch study comparing engineering finishes and technical linework, with a repeatable local performance check.">
-  <title>Latch Finish Study · Explorer Lab</title>
-  <script type="module" crossorigin src="./assets/index-Ces8k-w1.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Bohu-kRo.css">
+  <meta name="description" content="Compare Engineering, Linework and X-ray views of the same Apollo latch, with optional selected-part material focus.">
+  <title>Latch Rendering Study · Explorer Lab</title>
+  <script type="module" crossorigin src="./assets/index-dTUq8vsR.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CrFwjaFQ.css">
 </head>
 <body>
   <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
@@ -19,6 +19,7 @@
     <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5m6 6-6-6 6-6"/></symbol>
     <symbol id="i-cube" viewBox="0 0 24 24"><path d="m12 3 9 5v8l-9 5-9-5V8l9-5Zm0 10 9-5M3 8l9 5v8M7.5 5.5l9 5v8"/></symbol>
     <symbol id="i-linework" viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18m-14-14v18M12 3v18m5-18v18"/></symbol>
+    <symbol id="i-xray" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M8 8h8v8H8zM4 4l4 4m8 8 4 4M20 4l-4 4M4 20l4-4" stroke-dasharray="2 2"/></symbol>
     <symbol id="i-appearance" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor" stroke="none"/></symbol>
     <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-11v1"/></symbol>
     <symbol id="i-performance" viewBox="0 0 24 24"><path d="M4 18a9 9 0 1 1 16 0M12 14l5-7M5 18h14"/><circle cx="12" cy="14" r="1.5"/></symbol>
@@ -40,14 +41,12 @@
   <div class="interface">
     <header class="app-header">
       <a class="lab-brand" href="./" aria-label="Explorer Lab latch study home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-copy">ANNORA <span class="brand-separator">/</span> <span class="brand-product">EXPLORER LAB</span></span></a>
-      <span class="header-subject">LATCH <span>/</span> FINISH STUDY</span>
+      <span class="header-subject">RENDERING STUDY</span>
     </header>
 
-    <button id="parts-toggle" aria-label="Components" class="parts-toggle floating-panel mobile-only" type="button" aria-expanded="false" aria-controls="parts-panel"><svg><use href="#i-layers"/></svg><span>Components</span></button>
-
-    <div class="mode-switch floating-panel" role="group" aria-label="Rendering style">
-      <button id="mode-engineering" type="button" aria-pressed="true"><svg><use href="#i-cube"/></svg><span>Engineering</span></button>
-      <button id="mode-technical" type="button" aria-pressed="false"><svg><use href="#i-linework"/></svg><span>Technical</span></button>
+    <div class="study-heading floating-panel">
+      <h1>Apollo latch 01</h1>
+      <button id="parts-toggle" aria-label="Open components" class="parts-toggle" type="button" aria-expanded="false" aria-controls="parts-panel"><svg aria-hidden="true"><use href="#i-layers"/></svg><span>Components</span></button>
     </div>
 
     <div class="appearance-control">
@@ -60,22 +59,33 @@
     </div>
 
     <aside id="parts-panel" class="parts-panel floating-panel" aria-label="Latch components">
-      <div class="parts-header"><div><span class="eyebrow">Apollo 11 / Detail study</span><h1>Latch assembly 01</h1><span class="component-count">20 original components</span></div><button id="parts-close" class="icon-button mobile-only" type="button" aria-label="Close components"><svg><use href="#i-close"/></svg></button></div>
-      <div class="finish-legend" aria-label="Presentation finishes"><span><i class="finish-dot satin"></i>Satin silver</span><span><i class="finish-dot machined"></i>Dark machined</span><span><i class="finish-dot polished"></i>Bright hardware</span></div>
-      <div class="list-heading"><span class="eyebrow">Components</span><span class="column-label">Finish</span></div>
+      <div class="parts-header"><div><h2>Components</h2><span class="component-count">20 source parts</span></div><button id="parts-close" class="icon-button" type="button" aria-label="Close components"><svg><use href="#i-close"/></svg></button></div>
       <nav id="parts-list" class="parts-list" aria-label="Select a component"></nav>
-      <div class="selection-summary"><span class="eyebrow">In focus</span><h2 id="selection-title">Complete assembly</h2><p id="selection-finish">Three presentation finishes</p><button id="assembly-back" class="back-button" type="button"><svg><use href="#i-back"/></svg><span>View assembly</span></button></div>
+      <div class="selection-summary"><span class="eyebrow">Selected</span><h2 id="selection-title">No part selected</h2><p id="selection-finish">Select a part in the model or list.</p></div>
       <p class="parts-note">Display finishes, not verified materials.</p>
     </aside>
 
-    <div id="stage-tools" class="stage-tools floating-panel" aria-label="Assembly controls">
+    <section id="comparison-panel" class="comparison-panel floating-panel" aria-label="Rendering comparison">
+      <div class="comparison-row">
+        <div class="mode-switch" role="group" aria-label="Rendering style">
+          <button id="mode-engineering" type="button" aria-pressed="true" disabled><svg aria-hidden="true"><use href="#i-cube"/></svg><span>Engineering</span></button>
+          <button id="mode-linework" type="button" aria-pressed="false" disabled><svg aria-hidden="true"><use href="#i-linework"/></svg><span>Linework</span></button>
+          <button id="mode-xray" type="button" aria-pressed="false" disabled><svg aria-hidden="true"><use href="#i-xray"/></svg><span>X-ray</span></button>
+        </div>
+        <label class="material-focus" for="material-focus" title="Keep the selected part in engineering material"><input id="material-focus" type="checkbox" disabled aria-describedby="material-focus-description"><span>Material focus</span></label>
+        <span id="material-focus-description" class="sr-only">Keep the selected part in engineering material in Linework or X-ray. Select a part first.</span>
+      </div>
+      <p id="mode-description" class="mode-description" aria-live="polite">Distinct finishes reveal each part. Select a part to inspect it.</p>
+      <div id="stage-tools" class="stage-tools" aria-label="Assembly controls">
       <button id="explode-toggle" class="tool-button" type="button" aria-pressed="false"><svg><use href="#i-expand"/></svg><span>Explode</span></button>
       <div class="explosion-range"><label class="sr-only" for="explode-range">Assembly separation</label><input id="explode-range" type="range" min="0" max="100" step="1" value="0"><output id="explode-value" for="explode-range">0%</output></div>
       <span class="tool-divider" aria-hidden="true"></span>
+      <button id="assembly-back" class="icon-button" type="button" disabled title="Clear selection" aria-label="Clear selection"><svg aria-hidden="true"><use href="#i-close"/></svg></button>
       <button id="reset-view" class="icon-button" type="button" aria-label="Reset camera view"><svg><use href="#i-reset"/></svg></button>
-    </div>
+      </div>
+    </section>
 
-    <button id="performance-toggle" class="performance-toggle floating-panel" type="button" aria-expanded="false" aria-controls="performance-panel"><svg><use href="#i-performance"/></svg><span>Performance</span></button>
+    <button id="performance-toggle" class="performance-toggle floating-panel" type="button" aria-label="Performance check" title="Performance check" aria-expanded="false" aria-controls="performance-panel"><svg><use href="#i-performance"/></svg><span>Performance</span></button>
     <section id="performance-panel" class="performance-panel floating-panel" role="dialog" aria-label="Performance check" hidden>
       <div class="panel-heading"><h2 class="eyebrow">Performance check</h2><button id="performance-close" class="icon-button" type="button" aria-label="Close performance check"><svg><use href="#i-close"/></svg></button></div>
       <div class="performance-body">
@@ -90,7 +100,6 @@
       </div>
     </section>
 
-    <div class="viewport-hint" aria-hidden="true">Drag to orbit <span>·</span> Scroll to zoom <span>·</span> Select to inspect</div>
     <footer class="app-footer"><div class="footer-status"><i class="status-dot" aria-hidden="true"></i><span id="status" role="status" aria-live="polite">Preparing latch study</span></div><button id="sources-toggle" class="source-button" type="button" aria-label="Model source and material information"><span>Smithsonian · Project Egress</span><svg><use href="#i-info"/></svg></button></footer>
     <button id="parts-backdrop" class="parts-backdrop" type="button" tabindex="-1" aria-label="Close components" hidden></button>
   </div>
